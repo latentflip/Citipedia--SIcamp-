@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090620153925) do
+ActiveRecord::Schema.define(:version => 20090620175811) do
 
   create_table "proposals", :force => true do |t|
     t.text     "description"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(:version => 20090620153925) do
   end
 
   create_table "sites", :force => true do |t|
-    t.integer  "latitude"
-    t.integer  "longitude"
+    t.float    "latitude"
+    t.float    "longitude"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"

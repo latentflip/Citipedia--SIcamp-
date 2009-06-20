@@ -2011,3 +2011,1256 @@ Rendering sites/show
   [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 3) [0m
 Rendered proposals/_list (1.8ms)
 Completed in 37ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/sites/3]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 18:15:13) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 76ms (View: 37, DB: 1) | 200 OK [http://127.0.0.1/sites]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:15:15) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 63ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-20 18:15:28) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "site"=>{"photo"=>"Photo", "latitude"=>"1", "title"=>"Title", "description"=>"", "longitude"=>"3"}}
+  [4;35;1mSite Create (0.6ms)[0m   [0mINSERT INTO "sites" ("photo", "latitude", "updated_at", "title", "description", "longitude", "created_at") VALUES('Photo', 1, '2009-06-20 17:15:28', 'Title', '', 3, '2009-06-20 17:15:28')[0m
+Redirected to http://127.0.0.1:3000/sites/4
+Completed in 40ms (DB: 1) | 302 Found [http://127.0.0.1/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 18:15:28) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 4) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 4) [0m
+Rendered proposals/_list (1.6ms)
+Completed in 45ms (View: 38, DB: 1) | 200 OK [http://127.0.0.1/sites/4]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 18:15:28) [GET]
+  Parameters: {"id"=>"Photo"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=Photo):
+  app/controllers/sites_controller.rb:32:in `show'
+
+Rendered rescues/_trace (39.5ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 18:15:34) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#edit (for 127.0.0.1 at 2009-06-20 18:15:37) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 4) [0m
+Rendering template within layouts/sites
+Rendering sites/edit
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/sites/4/edit]
+
+
+Processing SitesController#update (for 127.0.0.1 at 2009-06-20 18:15:41) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "id"=>"4", "site"=>{"photo"=>"Photo", "latitude"=>"1", "title"=>"Title", "description"=>"This is stuff", "longitude"=>"3"}}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 4) [0m
+  [4;36;1mSite Update (0.4ms)[0m   [0;1mUPDATE "sites" SET "description" = 'This is stuff', "updated_at" = '2009-06-20 17:15:41' WHERE "id" = 4[0m
+Redirected to http://127.0.0.1:3000/sites/4
+Completed in 12ms (DB: 1) | 302 Found [http://127.0.0.1/sites/4]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 18:15:41) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 4) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 4) [0m
+Rendered proposals/_list (1.1ms)
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/sites/4]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 18:15:41) [GET]
+  Parameters: {"id"=>"Photo"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=Photo):
+  app/controllers/sites_controller.rb:32:in `show'
+
+Rendered rescues/_trace (35.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 18:15:45) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 18:19:18) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:19:19) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:19:43) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 16ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:20:00) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:20:54) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:21:29) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:21:50) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 90ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:22:08) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:29:13) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:29:48) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:35:09) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:36:57) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 90ms (View: 83, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:37:07) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:37:19) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:37:20) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:37:37) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:37:48) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 18:41:33) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/sites]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:41:35) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-20 18:41:50) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "site"=>{"photo"=>"", "latitude"=>"55.86527815343323", "title"=>"This is a shithole", "description"=>"", "longitude"=>"-4.249134063720703"}}
+  [4;35;1mSite Create (0.4ms)[0m   [0mINSERT INTO "sites" ("photo", "latitude", "updated_at", "title", "description", "longitude", "created_at") VALUES('', 55, '2009-06-20 17:41:50', 'This is a shithole', '', -4, '2009-06-20 17:41:50')[0m
+Redirected to http://127.0.0.1:3000/sites/5
+Completed in 13ms (DB: 0) | 302 Found [http://127.0.0.1/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 18:41:50) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 5) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 5) [0m
+Rendered proposals/_list (0.7ms)
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/sites/5]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 18:41:50) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 5) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 5) [0m
+Rendered proposals/_list (0.6ms)
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/sites/5]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 18:41:53) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/sites]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:45:52) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+/!\ FAILSAFE /!\  Sat Jun 20 18:51:36 +0100 2009
+  Status: 500 Internal Server Error
+  /Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:26: syntax error, unexpected '<', expecting kEND
+<table>
+ ^
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:29: unknown regexp options - th
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:30: syntax error, unexpected '<'
+    <th>Description</th>
+     ^
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:31: unknown regexp options - tr
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:33: syntax error, unexpected '<'
+<% @sites.each do |site| %>
+ ^
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:33: syntax error, unexpected kDO, expecting kEND
+<% @sites.each do |site| %>
+                 ^
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:35: syntax error, unexpected '<', expecting kEND
+    <td><%=h site.latitude %></td>
+     ^
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:36: syntax error, unexpected tIDENTIFIER, expecting kEND
+    <td><%=h site.longitude %></td>
+            ^
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:37: syntax error, unexpected '<', expecting kEND
+    <td><%=h site.description %></td>
+     ^
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:38: syntax error, unexpected tIDENTIFIER, expecting kEND
+    <td><%= link_to 'Show', site %></td>
+                   ^
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:38: syntax error, unexpected tSTRING_BEG, expecting kDO or '{' or '('
+    <td><%= link_to 'Show', site %></td>
+                                   ^
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:39: syntax error, unexpected '<', expecting kEND
+    <td><%= link_to 'Edit', edit_site_path(site) %></td>
+     ^
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:40: syntax error, unexpected tIDENTIFIER, expecting kEND
+    <td><%= link_to 'Destroy', site, :confirm => 'Are you sure?', :method => :delete %></td>
+                   ^
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:40: syntax error, unexpected '>'
+    <td><%= link_to 'Destroy', site, :confirm => 'Are you sure?', :method => :delete %></td>
+                                                                                       ^
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:41: unknown regexp options - tr
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:42: syntax error, unexpected '<'
+<% end %>
+ ^
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:42: syntax error, unexpected '>'
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:47: syntax error, unexpected '<'
+<%= link_to 'New site', new_site_path %>
+ ^
+/Applications/rubystack-1.5-2/projects/Citipedia--SIcamp-/config/routes.rb:48: syntax error, unexpected ',', expecting kEND
+  #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
+                                                                  ^
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:145:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:145:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:145:in `load'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:286:in `load_routes!'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:286:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:286:in `load_routes!'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:266:in `load!'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:281:in `reload'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:59:in `reload_application'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:8:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/latentflip/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    /Users/latentflip/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+    /Users/latentflip/.gem/ruby/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 18:51:38) [GET]
+
+ActionController::RoutingError (No route matches "/sites/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 18:51:42) [GET]
+
+ActionController::RoutingError (No route matches "/sites/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 18:52:01) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:52:03) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:53:08) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 18:53:10) [GET]
+  Parameters: {"id"=>"snow"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 18:53:10) [GET]
+  Parameters: {"id"=>"snow-shadow"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 18:53:10) [GET]
+  Parameters: {"id"=>"storm"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 18:53:10) [GET]
+  Parameters: {"id"=>"storm-shadow"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 18:53:10) [GET]
+  Parameters: {"id"=>"sun"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 18:53:10) [GET]
+  Parameters: {"id"=>"sun-shadow"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 18:53:10) [GET]
+  Parameters: {"id"=>"rain"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 18:53:10) [GET]
+  Parameters: {"id"=>"rain-shadow"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 18:53:42) [GET]
+  Parameters: {"id"=>"storm"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 18:53:42) [GET]
+  Parameters: {"id"=>"storm-shadow"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 18:53:42) [GET]
+  Parameters: {"id"=>"rain"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 18:53:42) [GET]
+  Parameters: {"id"=>"rain-shadow"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 18:53:42) [GET]
+  Parameters: {"id"=>"snow"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 18:53:42) [GET]
+  Parameters: {"id"=>"snow-shadow"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 18:53:42) [GET]
+  Parameters: {"id"=>"sun"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 18:53:42) [GET]
+  Parameters: {"id"=>"sun-shadow"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 18:54:49) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090620141656)
+Migrating to CreateProposals (20090620141801)
+Migrating to AddTitleToSites (20090620152724)
+Migrating to AddPhotoToSite (20090620153925)
+Migrating to ChangeIntegersToFloat (20090620175811)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (21.3ms)[0m   [0mCREATE TEMPORARY TABLE "altered_sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" integer, "longitude" integer, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "sites"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" integer, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_sites")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "altered_sites"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TEMPORARY TABLE "altered_sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" integer, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDROP TABLE "sites"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" float, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_sites")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "altered_sites"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090620175811')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("proposals")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 19:02:45) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 59ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-20 19:02:56) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "site"=>{"photo"=>"asdf", "latitude"=>"55.85892010485916", "title"=>"blah", "description"=>"this better be a float", "longitude"=>"-4.269218444824219"}}
+  [4;36;1mSite Create (0.6ms)[0m   [0;1mINSERT INTO "sites" ("photo", "latitude", "updated_at", "title", "description", "longitude", "created_at") VALUES('asdf', 55.8589201048592, '2009-06-20 18:02:56', 'blah', 'this better be a float', -4.26921844482422, '2009-06-20 18:02:56')[0m
+Redirected to http://127.0.0.1:3000/sites/6
+Completed in 41ms (DB: 1) | 302 Found [http://127.0.0.1/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 19:02:56) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+Rendered proposals/_list (3.1ms)
+Completed in 48ms (View: 42, DB: 0) | 200 OK [http://127.0.0.1/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 19:02:57) [GET]
+  Parameters: {"id"=>"asdf"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=asdf):
+  app/controllers/sites_controller.rb:32:in `show'
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 19:04:24) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+Rendered proposals/_list (0.6ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 19:04:24) [GET]
+  Parameters: {"id"=>"asdf"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=asdf):
+  app/controllers/sites_controller.rb:32:in `show'
+
+Rendered rescues/_trace (35.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 19:04:29) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 19:04:32) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-20 19:04:40) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "site"=>{"photo"=>"", "latitude"=>"55.862388260354315", "title"=>"hgfh", "description"=>"", "longitude"=>"-4.250507354736328"}}
+  [4;36;1mSite Create (0.4ms)[0m   [0;1mINSERT INTO "sites" ("photo", "latitude", "updated_at", "title", "description", "longitude", "created_at") VALUES('', 55.8623882603543, '2009-06-20 18:04:40', 'hgfh', '', -4.25050735473633, '2009-06-20 18:04:40')[0m
+Redirected to http://127.0.0.1:3000/sites/7
+Completed in 12ms (DB: 0) | 302 Found [http://127.0.0.1/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 19:04:40) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 7) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 7) [0m
+Rendered proposals/_list (0.6ms)
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/sites/7]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 19:04:40) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 7) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 7) [0m
+Rendered proposals/_list (0.6ms)
+Completed in 90ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/sites/7]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 19:06:40) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 19:08:22) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+
+ActionView::TemplateError (undefined method `images_link_tag' for #<ActionView::Base:0x242b6dc>) on line #11 of app/views/layouts/sites.html.erb:
+8:   <%= stylesheet_link_tag 'scaffold' %>
+9: </head>
+10: <body>
+11: <%= images_link_tag 'rails' %>
+12: <p style="color: green"><%= flash[:notice] %></p>
+13: 
+14: <%= yield %>
+
+    app/views/layouts/sites.html.erb:11
+    app/controllers/sites_controller.rb:45:in `new'
+
+Rendered rescues/_trace (109.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 19:08:44) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+
+ActionView::TemplateError (undefined method `image_link_tag' for #<ActionView::Base:0x246c54c>) on line #11 of app/views/layouts/sites.html.erb:
+8:   <%= stylesheet_link_tag 'scaffold' %>
+9: </head>
+10: <body>
+11: <%= image_link_tag 'rails' %>
+12: <p style="color: green"><%= flash[:notice] %></p>
+13: 
+14: <%= yield %>
+
+    app/views/layouts/sites.html.erb:11
+    app/controllers/sites_controller.rb:45:in `new'
+
+Rendered rescues/_trace (110.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 19:08:54) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 19:08:54) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:08:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:09:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 19:09:46) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 19:12:33) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 89ms (View: 81, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 19:12:35) [GET]
+  Parameters: {"id"=>"snow"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:12:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/snow-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 19:12:35) [GET]
+  Parameters: {"id"=>"storm"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:12:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/storm-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 19:12:35) [GET]
+  Parameters: {"id"=>"sun"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:12:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/sun-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-20 19:12:35) [GET]
+  Parameters: {"id"=>"rain"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 19:12:51) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:12:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/sun.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:12:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/sun-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:12:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/storm.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:12:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/storm-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:12:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/snow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:12:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/snow-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:13:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/sun.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:13:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/sun-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:13:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/storm.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:13:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/storm-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:13:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/snow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:13:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/snow-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:14:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/storm.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:14:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/storm-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:14:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/sun.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:14:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/sun-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:14:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/snow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:14:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/snow-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:15:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/storm.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:15:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/storm-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:15:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/sun.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:15:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/sun-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:15:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/snow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:15:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/snow-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:26:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/storm.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:26:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/storm-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:26:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/snow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:26:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/snow-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:26:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/sun.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 19:26:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/sun-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 20:34:37) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 20:34:41) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 20:34:42) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 20:34:42) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 20:34:42) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 20:34:48) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 20:35:13) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 20:35:36) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 20:36:23) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 20:36:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/sun.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 20:36:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/sun-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 20:36:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/storm.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 20:36:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/storm-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 20:36:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/snow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 20:36:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/snow-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 20:37:49) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 20:38:37) [GET]
+  [4;36;1mSite Load (1.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 84ms (View: 78, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 20:39:13) [GET]
+  [4;35;1mSite Load (1.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 20:39:16) [GET]
+  [4;36;1mSite Load (0.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 20:42:56) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 20:44:41) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 20:45:07) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 20:45:11) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 94ms (View: 89, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 20:46:05) [GET]
+  [4;36;1mSite Load (0.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 20:46:54) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 20:49:25) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 20:51:50) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 20:56:00) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 20:56:15) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 20:57:07) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/sites/]

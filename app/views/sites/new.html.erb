@@ -1,5 +1,60 @@
 <h1>New site</h1>
 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <script src="http://maps.google.com/maps?file=api&v=2.133d&key=ABQIAAAAYSHQGH7DwQYnligG_HNMtRRi_j0U6kJrkFvY4-OX2XYmEAa76BSbYtjHLWhy721irRhOUCrXiNZ2Ug" type="text/javascript"></script>
+  <script type="text/javascript">
+
+  var map = null;
+  var geocoder = null;
+
+	function updateCoordForm(latitude, longitude) {
+	    $('#site_latitude').val(latitude);
+	    $('#site_longitude').val(longitude);
+	}
+	
+  function initialize() {
+    if (GBrowserIsCompatible()) {
+      map = new GMap2(document.getElementById("map_canvas"));
+      map.setCenter(new GLatLng(55.86731700468314, -4.250335693359375), 13);
+      map.addControl(new GSmallZoomControl());
+      geocoder = new GClientGeocoder();
+      GEvent.addListener(map, "click", clicked);
+      map.openInfoWindow(map.getCenter(), "Click the map!");
+    }
+  }
+
+  function clicked(overlay, latlng) {
+    if (latlng) {
+      geocoder.getLocations(latlng, function(addresses) {
+        if(addresses.Status.code != 200) {
+          //alert("reverse geocoder failed to find an address for " + latlng.toUrlValue());
+	    var myHtml = latlng;
+	    map.openInfoWindow(latlng, myHtml);          
+	}
+        else {
+          address = addresses.Placemark[0];
+          var myHtml = address.address;
+		  updateCoordForm(latlng.y, latlng.x);
+          map.openInfoWindow(latlng, myHtml);
+        }
+      });
+    }
+  }
+  </script>
+</head>
+
+<body onload="initialize()" onunload="GUnload()">
+
+<script type="text/javascript"> 
+	body.onload=initialize();
+	body.onunload=GUnload();
+</script>
+
+    <div id="map_canvas" style="width: 600px; height: 450px"></div>
+
+
+
+
 <% form_for(@site) do |f| %>
   <%= f.error_messages %>
 <p>
@@ -10,11 +65,11 @@
     <%= f.label :photo %><br />
     <%= f.text_field :photo %>
   </p>
-  <p>
+  <p style="display:none;">
     <%= f.label :latitude %><br />
     <%= f.text_field :latitude %>
   </p>
-  <p>
+  <p style="display:none;">
     <%= f.label :longitude %><br />
     <%= f.text_field :longitude %>
   </p>
@@ -28,3 +83,19 @@
 <% end %>
 
 <%= link_to 'Back', sites_path %>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+    
+
+
+
+
+
+
+
