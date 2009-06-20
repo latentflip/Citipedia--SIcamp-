@@ -1033,3 +1033,981 @@ Rendering sites/show
   [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
 Rendered proposals/_list (0.9ms)
 Completed in 16ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 16:36:11) [GET]
+  [4;36;1mSite Load (1.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 32ms (View: 14, DB: 2) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:36:20) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (2.0ms)
+Completed in 37ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 16:36:29) [GET]
+  [4;35;1mSite Load (1.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 34ms (View: 15, DB: 2) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:36:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (1.8ms)
+Completed in 47ms (View: 26, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:36:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (1.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (0.9ms)
+Completed in 92ms (View: 71, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 16:37:10) [GET]
+  [4;36;1mSite Load (1.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 28ms (View: 8, DB: 2) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:37:14) [GET]
+  Parameters: {"id"=>"proposals"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=proposals):
+  app/controllers/sites_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (66.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-20 16:37:18) [GET]
+  Parameters: {"site_id"=>"2"}
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+Rendered proposals/_list (0.4ms)
+Completed in 34ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/sites/2/proposals]
+
+
+Processing ProposalsController#new (for 127.0.0.1 at 2009-06-20 16:37:20) [GET]
+  Parameters: {"site_id"=>"2"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/proposals
+Rendering proposals/new
+Completed in 16ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/sites/2/proposals/new]
+
+
+Processing ProposalsController#create (for 127.0.0.1 at 2009-06-20 16:37:25) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"ZNjIMEzSrXFnvoL5Z3qLgZVC8+JFPYwkdfSW/z43G3M=", "proposal"=>{"description"=>"Wow make it better"}, "site_id"=>"2"}
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Create (0.6ms)[0m   [0;1mINSERT INTO "proposals" ("created_at", "updated_at", "description", "site_id") VALUES('2009-06-20 15:37:25', '2009-06-20 15:37:25', 'Wow make it better', 2)[0m
+Redirected to http://0.0.0.0:3000/sites/2/proposals/1
+Completed in 45ms (DB: 1) | 302 Found [http://0.0.0.0/sites/2/proposals]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-20 16:37:25) [GET]
+  Parameters: {"id"=>"1", "site_id"=>"2"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1 AND ("proposals".site_id = 2)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 22ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/sites/2/proposals/1]
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-20 16:37:27) [GET]
+  Parameters: {"site_id"=>"2"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendered proposals/_list (4.3ms)
+Completed in 22ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/sites/2/proposals]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:37:33) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendered proposals/_list (5.0ms)
+Completed in 32ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:37:56) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendered proposals/_list (6.0ms)
+Completed in 57ms (View: 36, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090620141656)
+Migrating to CreateProposals (20090620141801)
+Migrating to AddTitleToSites (20090620152724)
+Migrating to AddPhotoToSite (20090620153925)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "sites" ADD "photo" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090620153925')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("proposals")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("sites")[0m
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:42:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendered proposals/_list (5.4ms)
+Completed in 30ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:42:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.7ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendered proposals/_list (11.9ms)
+Completed in 48ms (View: 26, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:44:56) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendered proposals/_list (5.3ms)
+Completed in 24ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:44:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendered proposals/_list (5.1ms)
+Completed in 31ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing ProposalsController#edit (for 127.0.0.1 at 2009-06-20 16:45:04) [GET]
+  Parameters: {"id"=>"1", "site_id"=>"2"}
+  [4;36;1mSite Load (14.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1 AND ("proposals".site_id = 2)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/edit
+Completed in 47ms (View: 8, DB: 14) | 200 OK [http://0.0.0.0/sites/2/proposals/1/edit]
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-20 16:45:07) [GET]
+  Parameters: {"site_id"=>"2"}
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;35;1mProposal Load (0.7ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendered proposals/_list (11.3ms)
+Completed in 45ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/sites/2/proposals]
+
+
+Processing SitesController#edit (for 127.0.0.1 at 2009-06-20 16:45:12) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/edit
+Completed in 55ms (View: 27, DB: 1) | 200 OK [http://0.0.0.0/sites/2/edit]
+
+
+Processing SitesController#update (for 127.0.0.1 at 2009-06-20 16:45:27) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"ZNjIMEzSrXFnvoL5Z3qLgZVC8+JFPYwkdfSW/z43G3M=", "id"=>"2", "site"=>{"photo"=>"http://lh4.ggpht.com/_ax3--cJ7Ulw/SbprG5aa1gI/AAAAAAAAADI/qQcXKEPy8gI/s512/24.jpg", "latitude"=>"55050", "title"=>"Hope", "description"=>"Somewhere", "longitude"=>"55020"}}
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;35;1mSite Update (0.5ms)[0m   [0mUPDATE "sites" SET "updated_at" = '2009-06-20 15:45:27', "photo" = 'http://lh4.ggpht.com/_ax3--cJ7Ulw/SbprG5aa1gI/AAAAAAAAADI/qQcXKEPy8gI/s512/24.jpg' WHERE "id" = 2[0m
+Redirected to http://0.0.0.0:3000/sites/2
+Completed in 37ms (DB: 1) | 302 Found [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:45:27) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendered proposals/_list (17.3ms)
+Completed in 114ms (View: 94, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:45:31) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.8ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendered proposals/_list (12.6ms)
+Completed in 51ms (View: 29, DB: 2) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:45:55) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendered proposals/_list (5.3ms)
+Completed in 55ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 16:46:52) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/sites/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:46:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.7ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendered proposals/_list (12.0ms)
+Completed in 47ms (View: 27, DB: 2) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 16:49:15) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 16:55:35) [GET]
+  [4;36;1mSite Load (1.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 44ms (View: 26, DB: 2) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 16:56:53) [GET]
+  [4;35;1mSite Load (1.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 33ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 16:59:55) [GET]
+  [4;36;1mSite Load (1.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 58ms (View: 37, DB: 2) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:00:11) [GET]
+  [4;35;1mSite Load (1.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 31ms (View: 13, DB: 2) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:03:43) [GET]
+  [4;36;1mSite Load (1.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 44ms (View: 27, DB: 2) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 17:03:56) [GET]
+  Parameters: {"id"=>"data"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=data):
+  app/controllers/sites_controller.rb:42:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 17:04:15) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=index):
+  app/controllers/sites_controller.rb:42:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 17:04:20) [GET]
+  Parameters: {"id"=>"data"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=data):
+  app/controllers/sites_controller.rb:42:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 17:06:28) [GET]
+  Parameters: {"id"=>"data"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=data):
+  app/controllers/sites_controller.rb:42:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (99.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 17:06:29) [GET]
+  Parameters: {"id"=>"data"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=data):
+  app/controllers/sites_controller.rb:42:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 17:08:36) [GET]
+  Parameters: {"id"=>"data"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=data):
+  app/controllers/sites_controller.rb:42:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (97.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 17:08:45) [GET]
+  Parameters: {"id"=>"data"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=data):
+  app/controllers/sites_controller.rb:42:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 17:08:46) [GET]
+  Parameters: {"id"=>"data"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=data):
+  app/controllers/sites_controller.rb:42:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 17:08:46) [GET]
+  Parameters: {"id"=>"data"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=data):
+  app/controllers/sites_controller.rb:42:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 17:08:47) [GET]
+  Parameters: {"id"=>"data"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=data):
+  app/controllers/sites_controller.rb:42:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-20 17:09:06) [GET]
+
+Errno::ENOENT (No such file or directory - /home/jamespjh/devel/citipedia/app/views/sites/_site.html.erb):
+  app/controllers/sites_controller.rb:5:in `read'
+  app/controllers/sites_controller.rb:5:in `data'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (111.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#data (for 127.0.0.1 at 2009-06-20 17:11:26) [GET]
+
+SyntaxError (/home/jamespjh/devel/citipedia/app/controllers/sites_controller.rb:10: syntax error, unexpected tSYMBEG, expecting '}'
+        :details => site.description
+         ^
+/home/jamespjh/devel/citipedia/app/controllers/sites_controller.rb:11: syntax error, unexpected '}', expecting kEND
+/home/jamespjh/devel/citipedia/app/controllers/sites_controller.rb:101: syntax error, unexpected $end, expecting kEND):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-20 17:11:35) [GET]
+  [4;35;1mSite Load (1.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 24ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/sites/data]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:13:05) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:15:20) [GET]
+  [4;35;1mSite Load (1.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 39ms (View: 12, DB: 2) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:15:28) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 20ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:16:49) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:17:27) [GET]
+  [4;36;1mSite Load (1.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 32ms (View: 14, DB: 2) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:18:15) [GET]
+  [4;35;1mSite Load (1.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 43ms (View: 24, DB: 2) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:18:32) [GET]
+  [4;36;1mSite Load (1.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 33ms (View: 16, DB: 2) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:18:50) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:22:08) [GET]
+  [4;36;1mSite Load (1.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 35ms (View: 17, DB: 2) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:22:35) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 133ms (View: 115, DB: 2) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:22:48) [GET]
+  [4;36;1mSite Load (1.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 33ms (View: 15, DB: 2) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:23:28) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 26ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 17:23:31) [GET]
+  Parameters: {"0"=>nil}
+
+ActionController::RoutingError (No route matches "/__history__.html" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:23:41) [GET]
+  [4;36;1mSite Load (2.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 42ms (View: 24, DB: 2) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#destroy (for 127.0.0.1 at 2009-06-20 17:23:49) [DELETE]
+  Parameters: {"authenticity_token"=>"ZNjIMEzSrXFnvoL5Z3qLgZVC8+JFPYwkdfSW/z43G3M=", "id"=>"2"}
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mSite Destroy (0.4ms)[0m   [0;1mDELETE FROM "sites" WHERE "id" = 2[0m
+Redirected to http://0.0.0.0:3000/sites
+Completed in 38ms (DB: 1) | 302 Found [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:23:50) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#destroy (for 127.0.0.1 at 2009-06-20 17:23:52) [DELETE]
+  Parameters: {"authenticity_token"=>"ZNjIMEzSrXFnvoL5Z3qLgZVC8+JFPYwkdfSW/z43G3M=", "id"=>"1"}
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+  [4;35;1mSite Destroy (0.4ms)[0m   [0mDELETE FROM "sites" WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3000/sites
+Completed in 33ms (DB: 1) | 302 Found [http://0.0.0.0/sites/1]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:23:53) [GET]
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:23:55) [GET]
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:24:36) [GET]
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 38ms (View: 23, DB: 0) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:25:13) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 37ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 17:25:16) [GET]
+  Parameters: {"0"=>nil}
+
+ActionController::RoutingError (No route matches "/__history__.html" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:25:26) [GET]
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 15ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-20 17:25:51) [GET]
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/sites/data]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:27:19) [GET]
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:28:54) [GET]
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:29:07) [GET]
+  [4;36;1mSite Load (1.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 20ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:29:07) [GET]
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:31:08) [GET]
+  [4;36;1mSite Load (1.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 28ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:31:49) [GET]
+  [4;35;1mSite Load (1.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 28ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 17:31:51) [GET]
+  Parameters: {"0"=>nil}
+
+ActionController::RoutingError (No route matches "/__history__.html" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:32:08) [GET]
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 28ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:33:15) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 50ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 17:33:17) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 23ms (View: 14, DB: 0) | 200 OK [http://0.0.0.0/sites/new]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-20 17:33:44) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"ZNjIMEzSrXFnvoL5Z3qLgZVC8+JFPYwkdfSW/z43G3M=", "site"=>{"photo"=>"http://lh4.ggpht.com/_ax3--cJ7Ulw/SbprG5aa1gI/AAAAAAAAADI/qQcXKEPy8gI/s512/24.jpg", "latitude"=>"52", "title"=>"A house", "description"=>"Somewhere near my house", "longitude"=>"0"}}
+  [4;36;1mSite Create (0.2ms)[0m   [0;1mINSERT INTO "sites" ("photo", "latitude", "created_at", "title", "updated_at", "longitude", "description") VALUES('http://lh4.ggpht.com/_ax3--cJ7Ulw/SbprG5aa1gI/AAAAAAAAADI/qQcXKEPy8gI/s512/24.jpg', 52, '2009-06-20 16:33:44', 'A house', '2009-06-20 16:33:44', 0, 'Somewhere near my house')[0m
+Redirected to http://0.0.0.0:3000/sites/3
+Completed in 21ms (DB: 0) | 302 Found [http://0.0.0.0/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 17:33:44) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 3) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 3) [0m
+Rendered proposals/_list (5.7ms)
+Completed in 24ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/sites/3]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 17:34:23) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 3) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 3) [0m
+Rendered proposals/_list (1.0ms)
+Completed in 34ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/sites/3]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 17:37:01) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 3) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 3) [0m
+Rendered proposals/_list (1.8ms)
+Completed in 87ms (View: 72, DB: 1) | 200 OK [http://0.0.0.0/sites/3]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 17:37:27) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 3) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 3) [0m
+Rendered proposals/_list (0.9ms)
+Completed in 48ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/sites/3]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 17:37:59) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 3) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 3) [0m
+Rendered proposals/_list (2.1ms)
+Completed in 41ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/sites/3]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-20 17:38:17) [GET]
+  [4;36;1mSite Load (0.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/sites/data]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 17:50:49) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 3) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 3) [0m
+Rendered proposals/_list (1.8ms)
+Completed in 88ms (View: 73, DB: 1) | 200 OK [http://0.0.0.0/sites/3]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:51:55) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-20 17:52:05) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 39ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/sites/new]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 17:55:19) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/sites/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 17:55:44) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 3) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 3) [0m
+Rendered proposals/_list (1.8ms)
+Completed in 37ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/sites/3]

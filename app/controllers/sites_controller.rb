@@ -1,6 +1,22 @@
 class SitesController < ApplicationController
   # GET /sites
   # GET /sites.xml
+    def data
+      @sites = Site.all
+      data = @sites.map do |site|
+      {
+        :label => site.title,
+        :latlng => "#{site.latitude},#{site.longitude}",
+        :details => site.description
+      }
+    end
+    data.compact!
+
+    respond_to do |format|
+      format.json { render :json => { :items => data } }
+    end
+  end
+
   def index
     @sites = Site.all
 

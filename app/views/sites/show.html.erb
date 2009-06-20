@@ -1,13 +1,18 @@
 <h1>Site <%= h @site.title %> at: <%=h @site.latitude %> <%=h @site.longitude %> </h1>
 
-<h2>Proposals for this site</h2>
+<img src="<%= @site.photo%>"> </img>
 
 <p>
   <b>Description:</b>
   <%=h @site.description %>
 </p>
+
+<h2>Proposals for this site</h2>
+
 <% @proposals=@site.proposals %>
 <%=  render :partial=>'proposals/list'%>
+
+
 
 <%= link_to 'Edit', edit_site_path(@site) %> |
 <%= link_to 'Back', sites_path %>
