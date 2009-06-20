@@ -692,3 +692,344 @@ Rendering sites/show
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
 Rendered proposals/_list (6.3ms)
 Completed in 22ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 16:12:00) [GET]
+  [4;35;1mSite Load (1.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 30ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:15:15) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendered proposals/_list (5.6ms)
+Completed in 105ms (View: 83, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-20 16:21:15) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:21:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.7ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendered proposals/_list (12.0ms)
+Completed in 45ms (View: 26, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:22:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendered proposals/_list (5.0ms)
+Completed in 39ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:23:51) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendered proposals/_list (4.9ms)
+Completed in 45ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:24:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendered proposals/_list (5.2ms)
+Completed in 33ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090620141656)
+Migrating to CreateProposals (20090620141801)
+Migrating to AddTitleToSites (20090620152724)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090620152724')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("proposals")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:28:35) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+
+ActionView::TemplateError (undefined method `title' for #<Site:0xb604abf8>) on line #1 of app/views/sites/show.html.erb:
+1: <h1>Site <%= h @site.title %> at: <%=h @site.latitude %> <%=h @site.longitude %> </h1>
+2: 
+3: <h2>Proposals for this site</h2>
+4: 
+
+    app/views/sites/show.html.erb:1
+    app/controllers/sites_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (50.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090620141656)
+Migrating to CreateProposals (20090620141801)
+Migrating to AddTitleToSites (20090620152724)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("proposals")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("sites")[0m
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:30:51) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+
+ActionView::TemplateError (undefined method `title' for #<Site:0xb5effa00>) on line #1 of app/views/sites/show.html.erb:
+1: <h1>Site <%= h @site.title %> at: <%=h @site.latitude %> <%=h @site.longitude %> </h1>
+2: 
+3: <h2>Proposals for this site</h2>
+4: 
+
+    app/views/sites/show.html.erb:1
+    app/controllers/sites_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (117.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:30:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+
+ActionView::TemplateError (undefined method `title' for #<Site:0xb602383c>) on line #1 of app/views/sites/show.html.erb:
+1: <h1>Site <%= h @site.title %> at: <%=h @site.latitude %> <%=h @site.longitude %> </h1>
+2: 
+3: <h2>Proposals for this site</h2>
+4: 
+
+    app/views/sites/show.html.erb:1
+    app/controllers/sites_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (50.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090620141656)
+Migrating to CreateProposals (20090620141801)
+Migrating to AddTitleToSites (20090620152724)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("proposals")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("sites")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddTitleToSites (20090620152724)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TEMPORARY TABLE "altered_sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" integer, "longitude" integer, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "sites"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" integer, "longitude" integer, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_sites")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDROP TABLE "altered_sites"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090620152724'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("proposals")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090620141656)
+Migrating to CreateProposals (20090620141801)
+Migrating to AddTitleToSites (20090620152724)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProposals (20090620141801)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "proposals"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20090620141801'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090620141656)
+Migrating to CreateProposals (20090620141801)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "proposals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "site_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090620141801')[0m
+Migrating to AddTitleToSites (20090620152724)
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "sites" ADD "title" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090620152724')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("proposals")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("sites")[0m
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:35:05) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (2.0ms)
+Completed in 39ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#edit (for 127.0.0.1 at 2009-06-20 16:35:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/edit
+Completed in 121ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/sites/2/edit]
+
+
+Processing SitesController#update (for 127.0.0.1 at 2009-06-20 16:35:13) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"ZNjIMEzSrXFnvoL5Z3qLgZVC8+JFPYwkdfSW/z43G3M=", "id"=>"2", "site"=>{"latitude"=>"55050", "title"=>"Hope", "description"=>"Somewhere", "longitude"=>"55020"}}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;35;1mSite Update (0.3ms)[0m   [0mUPDATE "sites" SET "updated_at" = '2009-06-20 15:35:13', "title" = 'Hope' WHERE "id" = 2[0m
+Redirected to http://0.0.0.0:3000/sites/2
+Completed in 19ms (DB: 1) | 302 Found [http://0.0.0.0/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-20 16:35:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (0.9ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/sites/2]

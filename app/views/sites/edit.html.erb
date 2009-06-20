@@ -2,7 +2,10 @@
 
 <% form_for(@site) do |f| %>
   <%= f.error_messages %>
-
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
   <p>
     <%= f.label :latitude %><br />
     <%= f.text_field :latitude %>

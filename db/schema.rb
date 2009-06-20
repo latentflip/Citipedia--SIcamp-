@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090620141801) do
+ActiveRecord::Schema.define(:version => 20090620152724) do
 
   create_table "proposals", :force => true do |t|
     t.text     "description"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20090620141801) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
   end
 
 end
