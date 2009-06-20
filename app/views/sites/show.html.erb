@@ -1,0 +1,19 @@
+<p>
+  <b>Latitude:</b>
+  <%=h @site.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%=h @site.longitude %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @site.description %>
+</p>
+<% @proposals=@site.proposals %>
+<%=  render :partial=>'proposals/list'%>
+
+<%= link_to 'Edit', edit_site_path(@site) %> |
+<%= link_to 'Back', sites_path %>
