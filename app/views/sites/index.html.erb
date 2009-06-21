@@ -1,9 +1,6 @@
 <% content_for :head do %>
-
-	<script src="http://gmaps-utility-library.googlecode.com/svn/trunk/markermanager/release/src/markermanager.js"></script>
 	
 	<script type="text/javascript">
-	//<![CDATA[
 
 	var IMAGES = [ "sun", "rain", "snow", "storm" ];
 	var ICONS = [];
@@ -72,7 +69,7 @@
 	$(document).ready(function() {
 		setupMap();
 	});
-		window.onunload=GUnload();
+		$(window).unload(function() { GUnload(); } );
 	</script>
 <% end %>
 

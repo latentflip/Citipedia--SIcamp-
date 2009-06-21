@@ -9359,3 +9359,2556 @@ ActionController::RoutingError (No route matches "/proposal/8/comments/8" with {
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 02:25:04) [GET]
+
+ActionController::RoutingError (No route matches "/proposal/8/comments/8" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 02:25:06) [GET]
+
+ActionController::RoutingError (No route matches "/proposal/8/comments/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 02:25:23) [GET]
+
+ActionController::RoutingError (No route matches "/sites/9/proposals/6/comment" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 02:25:25) [GET]
+
+ActionController::RoutingError (No route matches "/sites/9/proposals/6/comments" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-06-21 02:25:31) [GET]
+  Parameters: {"proposal_id"=>"6"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".proposal_id = 6) [0m
+Rendering template within layouts/comments
+Rendering comments/index
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/proposals/6/comments]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:25:33) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Proposal without an ID):
+  app/controllers/comments_controller.rb:29:in `new'
+
+Rendered rescues/_trace (33.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:25:46) [GET]
+  Parameters: {"proposal_id"=>"6"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 89ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/proposals/6/comments/new]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 02:25:49) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal_id"=>"6", "comment"=>{"name"=>"asdf", "title"=>"", "content"=>""}}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("name", "updated_at", "title", "content", "proposal_id", "created_at") VALUES('asdf', '2009-06-21 01:25:49', '', '', 6, '2009-06-21 01:25:49')[0m
+Redirected to http://127.0.0.1:3000/comments/9
+Completed in 17ms (DB: 1) | 302 Found [http://127.0.0.1/proposals/6/comments]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 02:25:49) [GET]
+  Parameters: {"id"=>"9"}
+
+ActiveRecord::RecordNotFound (Couldn't find Proposal without an ID):
+  app/controllers/comments_controller.rb:17:in `show'
+
+Rendered rescues/_trace (33.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 02:26:02) [GET]
+
+ActionController::RoutingError (No route matches "/proposal/6/comments" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-06-21 02:26:09) [GET]
+  Parameters: {"proposal_id"=>"6"}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6) [0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".proposal_id = 6) [0m
+Rendering template within layouts/comments
+Rendering comments/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6) [0m
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/proposals/6/comments]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 02:36:02) [GET]
+
+ActionController::RoutingError (No route matches "/sites/14/proposals/6/comments/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#new (for 127.0.0.1 at 2009-06-21 02:36:07) [GET]
+  Parameters: {"site_id"=>"14"}
+  [4;35;1mSite Load (0.5ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+Rendering template within layouts/proposals
+Rendering proposals/new
+Completed in 27ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sites/14/proposals/new]
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 02:36:08) [GET]
+  Parameters: {"site_id"=>"14"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 14) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+Rendered proposals/_list (3.3ms)
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/sites/14/proposals]
+
+
+Processing ProposalsController#create (for 127.0.0.1 at 2009-06-21 02:36:12) [POST]
+  Parameters: {"site_id"=>"14", "commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal"=>{"description"=>"asf"}}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+  [4;36;1mProposal Create (0.4ms)[0m   [0;1mINSERT INTO "proposals" ("site_id", "updated_at", "description", "created_at") VALUES(14, '2009-06-21 01:36:12', 'asf', '2009-06-21 01:36:12')[0m
+Redirected to http://127.0.0.1:3000/sites/14/proposals/11
+Completed in 17ms (DB: 1) | 302 Found [http://127.0.0.1/sites/14/proposals]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 02:36:12) [GET]
+  Parameters: {"site_id"=>"14", "id"=>"11"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 11 AND ("proposals".site_id = 14)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".proposal_id = 11) [0m
+Rendered comments/_list (0.8ms)
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/sites/14/proposals/11]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:36:15) [GET]
+  Parameters: {"proposal_id"=>"11"}
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 11) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 15ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/proposals/11/comments/new]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 02:36:18) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal_id"=>"11", "comment"=>{"name"=>"asdf", "title"=>"", "content"=>""}}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 11) [0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("name", "updated_at", "title", "content", "proposal_id", "created_at") VALUES('asdf', '2009-06-21 01:36:18', '', '', 11, '2009-06-21 01:36:18')[0m
+Redirected to http://127.0.0.1:3000/comments/10
+Completed in 16ms (DB: 1) | 302 Found [http://127.0.0.1/proposals/11/comments]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 02:36:18) [GET]
+  Parameters: {"id"=>"10"}
+
+ActiveRecord::RecordNotFound (Couldn't find Proposal without an ID):
+  app/controllers/comments_controller.rb:17:in `show'
+
+Rendered rescues/_trace (37.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090620141656)
+Migrating to CreateProposals (20090620141801)
+Migrating to AddTitleToSites (20090620152724)
+Migrating to AddPhotoToSite (20090620153925)
+Migrating to ChangeIntegersToFloat (20090620175811)
+Migrating to CreateComments (20090621002619)
+Migrating to AddInfoToTables (20090621013105)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (16.2ms)[0m   [0mALTER TABLE "sites" ADD "status" varchar(255)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "proposals" ADD "title" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "comments" ADD "avatar" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090621013105')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("proposals")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 02:43:34) [GET]
+  Parameters: {"site_id"=>"14", "id"=>"11"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 11 AND ("proposals".site_id = 14)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".proposal_id = 11) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 11) [0m
+Rendered comments/_list (4.8ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sites/14/proposals/11]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 02:46:10) [GET]
+  Parameters: {"site_id"=>"14", "id"=>"11"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 11 AND ("proposals".site_id = 14)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".proposal_id = 11) [0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 11) [0m
+Rendered comments/_list (6.2ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sites/14/proposals/11]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:46:12) [GET]
+  Parameters: {"proposal_id"=>"11"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 11) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 92ms (View: 80, DB: 0) | 200 OK [http://127.0.0.1/proposals/11/comments/new]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 02:47:48) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal_id"=>"11", "comment"=>{"name"=>"Phil", "title"=>"Title", "content"=>"Content text", "avatar"=>"http://s3.amazonaws.com/twitpic/photos/full/13234667.jpg?AWSAccessKeyId=0ZRYP5X5F6FSMBCCSE82&Expires=1245549834&Signature=hoeu00LBFnZELPKBSmHHcoQLMWQ%3D"}}
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 11) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("name", "updated_at", "title", "content", "avatar", "proposal_id", "created_at") VALUES('Phil', '2009-06-21 01:47:48', 'Title', 'Content text', 'http://s3.amazonaws.com/twitpic/photos/full/13234667.jpg?AWSAccessKeyId=0ZRYP5X5F6FSMBCCSE82&Expires=1245549834&Signature=hoeu00LBFnZELPKBSmHHcoQLMWQ%3D', 11, '2009-06-21 01:47:48')[0m
+Redirected to http://127.0.0.1:3000/comments/11
+Completed in 18ms (DB: 1) | 302 Found [http://127.0.0.1/proposals/11/comments]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 02:47:48) [GET]
+  Parameters: {"id"=>"11"}
+
+ActiveRecord::RecordNotFound (Couldn't find Proposal without an ID):
+  app/controllers/comments_controller.rb:17:in `show'
+
+Rendered rescues/_trace (37.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 02:47:57) [GET]
+
+ActionController::RoutingError (No route matches "/proposal/11/comment/11" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 02:48:04) [GET]
+  Parameters: {"id"=>"11", "proposal_id"=>"11"}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 11) [0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 11 AND ("comments".proposal_id = 11)) [0m
+Rendering template within layouts/comments
+Rendering comments/show
+Completed in 17ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/proposals/11/comments/11]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 02:48:47) [GET]
+  Parameters: {"id"=>"11", "proposal_id"=>"11"}
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 11) [0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 11 AND ("comments".proposal_id = 11)) [0m
+Rendering template within layouts/comments
+Rendering comments/show
+Completed in 19ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/proposals/11/comments/11]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 02:48:53) [GET]
+  Parameters: {"id"=>"11", "proposal_id"=>"11"}
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 11) [0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 11 AND ("comments".proposal_id = 11)) [0m
+Rendering template within layouts/comments
+Rendering comments/show
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/proposals/11/comments/11]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 02:49:40) [GET]
+  Parameters: {"id"=>"11", "proposal_id"=>"11"}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 11) [0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 11 AND ("comments".proposal_id = 11)) [0m
+Rendering template within layouts/comments
+Rendering comments/show
+Completed in 18ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/proposals/11/comments/11]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:00:48) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+
+ActionView::TemplateError (undefined method `javascript_link_tag' for #<ActionView::Base:0x2320b48>) on line #2 of app/views/sites/show.html.erb:
+1: <% content_for :head do %>
+2: <%= javascript_link_tag 'multimarker' %>
+3: <% end %>
+4: 
+5: 
+
+    app/views/sites/show.html.erb:2
+    app/views/sites/show.html.erb:1
+    app/controllers/sites_controller.rb:43:in `show'
+
+Rendered rescues/_trace (49.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:00:56) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+
+ActionView::TemplateError (undefined method `script_link_tag' for #<ActionView::Base:0x23434b8>) on line #2 of app/views/sites/show.html.erb:
+1: <% content_for :head do %>
+2: <%= script_link_tag 'multimarker' %>
+3: <% end %>
+4: 
+5: 
+
+    app/views/sites/show.html.erb:2
+    app/views/sites/show.html.erb:1
+    app/controllers/sites_controller.rb:43:in `show'
+
+Rendered rescues/_trace (50.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:01:14) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.6ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (9.1ms)
+Completed in 30ms (View: 21, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:01:16) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (1.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (8.8ms)
+Completed in 26ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing ProposalsController#edit (for 127.0.0.1 at 2009-06-21 03:01:23) [GET]
+  Parameters: {"site_id"=>"9", "id"=>"6"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6 AND ("proposals".site_id = 9)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/edit
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/sites/9/proposals/6/edit]
+
+
+Processing ProposalsController#update (for 127.0.0.1 at 2009-06-21 03:01:26) [PUT]
+  Parameters: {"site_id"=>"9", "commit"=>"Update", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "id"=>"6", "proposal"=>{"title"=>"asgdf", "description"=>"asdf"}}
+  [4;36;1mSite Load (0.5ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6 AND ("proposals".site_id = 9)) [0m
+  [4;36;1mProposal Update (0.4ms)[0m   [0;1mUPDATE "proposals" SET "title" = 'asgdf', "updated_at" = '2009-06-21 02:01:26' WHERE "id" = 6[0m
+Redirected to http://127.0.0.1:3000/sites/9/proposals/6
+Completed in 16ms (DB: 1) | 302 Found [http://127.0.0.1/sites/9/proposals/6]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 03:01:26) [GET]
+  Parameters: {"site_id"=>"9", "id"=>"6"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6 AND ("proposals".site_id = 9)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".proposal_id = 6) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6) [0m
+Rendered comments/_list (5.5ms)
+Completed in 23ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/sites/9/proposals/6]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 03:01:31) [GET]
+  Parameters: {"site_id"=>"9", "id"=>"6"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6 AND ("proposals".site_id = 9)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".proposal_id = 6) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6) [0m
+Rendered comments/_list (5.9ms)
+Completed in 23ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/sites/9/proposals/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:01:36) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.8ms)
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:01:56) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (1.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (9.8ms)
+Completed in 27ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:03:46) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (8.5ms)
+Completed in 37ms (View: 26, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:03:47) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.7ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (9.5ms)
+Completed in 25ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:04:26) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.6ms)
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:04:27) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.7ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (8.3ms)
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:05:06) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (8.1ms)
+Completed in 104ms (View: 97, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:05:07) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.1ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:06:20) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.9ms)
+Completed in 27ms (View: 19, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:06:21) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.5ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (9.3ms)
+Completed in 24ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:07:01) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.6ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (8.8ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:07:02) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.4ms)
+Completed in 121ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:07:50) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (8.0ms)
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:07:51) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.8ms)
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:07:51) [GET]
+  [4;35;1mSite Load (1.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:11:12) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.5ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.6ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (8.4ms)
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:11:13) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.4ms)
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:11:14) [GET]
+  [4;36;1mSite Load (2.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 17ms (View: 3, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:11:24) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.3ms)
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:11:25) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.5ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (8.8ms)
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:11:25) [GET]
+  [4;35;1mSite Load (1.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:11:41) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.3ms)
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:11:42) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.6ms)
+Completed in 23ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:11:42) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 105ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:17:57) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.5ms)
+Completed in 25ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:17:58) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.6ms)
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:17:58) [GET]
+  [4;35;1mSite Load (1.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:18:02) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.5ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.0ms)
+Completed in 24ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:18:03) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (1.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (8.2ms)
+Completed in 26ms (View: 14, DB: 2) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:18:04) [GET]
+  [4;36;1mSite Load (3.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 16ms (View: 3, DB: 3) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:21:54) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.7ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (8.1ms)
+Completed in 27ms (View: 19, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:21:55) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.5ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.3ms)
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:21:55) [GET]
+  [4;35;1mSite Load (1.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:22:14) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.5ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.5ms)
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:22:15) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.7ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (9.7ms)
+Completed in 109ms (View: 102, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:22:15) [GET]
+  [4;36;1mSite Load (1.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:22:27) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.2ms)
+Completed in 26ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:22:28) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (9.7ms)
+Completed in 25ms (View: 16, DB: 3) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:22:28) [GET]
+  [4;35;1mSite Load (1.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:23:05) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.5ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.9ms)
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:23:06) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.4ms)
+Completed in 120ms (View: 112, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:23:06) [GET]
+  [4;36;1mSite Load (1.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:23:11) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.0ms)
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:23:12) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.5ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.8ms)
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:23:12) [GET]
+  [4;35;1mSite Load (1.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:23:55) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.6ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.9ms)
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:23:56) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.6ms)
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:23:56) [GET]
+  [4;36;1mSite Load (1.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:24:11) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.6ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.2ms)
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:24:12) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.5ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.7ms)
+Completed in 24ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:24:12) [GET]
+  [4;35;1mSite Load (1.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:24:20) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.1ms)
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:24:29) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.6ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (8.6ms)
+Completed in 27ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:24:29) [GET]
+  [4;36;1mSite Load (99.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 110ms (View: 2, DB: 99) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:24:35) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.6ms)
+Completed in 22ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:25:07) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.5ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.7ms)
+Completed in 24ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:25:08) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.4ms)
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:25:10) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:25:35) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.0ms)
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:25:36) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (9.7ms)
+Completed in 27ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:25:38) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:25:49) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.5ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.8ms)
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:25:50) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.4ms)
+Completed in 24ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:25:52) [GET]
+  [4;36;1mSite Load (1.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:26:34) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.5ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.1ms)
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:26:35) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.8ms)
+Completed in 24ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:26:52) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.9ms)
+Completed in 104ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:26:53) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.5ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.5ms)
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:26:54) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (10.6ms)
+Completed in 28ms (View: 18, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:27:07) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.2ms)
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:27:08) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.1ms)
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:27:10) [GET]
+  [4;36;1mSite Load (1.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:28:09) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.7ms)
+Completed in 104ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:28:11) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.5ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (9.4ms)
+Completed in 26ms (View: 18, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:28:12) [GET]
+  [4;35;1mSite Load (2.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:28:31) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.5ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.6ms)
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:28:33) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.5ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.7ms)
+Completed in 24ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:28:35) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:29:19) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (91.2ms)
+Completed in 106ms (View: 98, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:29:20) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (9.9ms)
+Completed in 26ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:29:22) [GET]
+  [4;35;1mSite Load (1.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 3, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:29:47) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.1ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:29:48) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.8ms)
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:29:49) [GET]
+  [4;36;1mSite Load (1.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:30:00) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (86.1ms)
+Completed in 104ms (View: 96, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 03:30:02) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.7ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (10.3ms)
+Completed in 28ms (View: 18, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:30:03) [GET]
+  [4;35;1mSite Load (1.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 03:31:00) [GET]
+  [4;36;1mSite Load (1.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 21ms (View: 13, DB: 2) | 200 OK [http://127.0.0.1/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 03:32:28) [GET]
+  [4;35;1mSite Load (1.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 03:32:36) [GET]
+  [4;36;1mSite Load (1.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 03:32:40) [GET]
+  [4;35;1mSite Load (1.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 18, DB: 2) | 200 OK [http://127.0.0.1/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 03:32:42) [GET]
+  [4;36;1mSite Load (4.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 20ms (View: 2, DB: 4) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 03:44:45) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 03:45:46) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 03:46:21) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 22ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 03:47:54) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 03:56:18) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 03:58:17) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 03:58:28) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 03:58:43) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 03:59:27) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 03:59:55) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:00:03) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:00:30) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:01:56) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:02:10) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 84ms (View: 79, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:02:31) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:02:37) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:02:48) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 20ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:03:17) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:03:33) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:07:07) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 20ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:07:22) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:07:34) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:07:50) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:08:29) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 88ms (View: 83, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:10:53) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:11:29) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:12:01) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:12:11) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:12:43) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:13:18) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:13:31) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:13:31) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:14:35) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-21 04:15:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "site"=>{"photo"=>"", "latitude"=>"55.87299953559883", "title"=>"", "description"=>"", "longitude"=>"-4.35333251953125"}}
+  [4;35;1mSite Create (0.4ms)[0m   [0mINSERT INTO "sites" ("photo", "status", "latitude", "updated_at", "title", "description", "longitude", "created_at") VALUES('', NULL, 55.8729995355988, '2009-06-21 03:15:12', '', '', -4.35333251953125, '2009-06-21 03:15:12')[0m
+Redirected to http://127.0.0.1:3000/sites/15
+Completed in 13ms (DB: 0) | 302 Found [http://127.0.0.1/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 04:15:12) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 15) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 15) [0m
+Rendered proposals/_list (1.0ms)
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sites/15]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 04:15:47) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 15, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 04:16:06) [GET]
+  [4;35;1mSite Load (1.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 22ms (View: 14, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 04:18:10) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 15, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 04:18:35) [GET]
+  [4;35;1mSite Load (1.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 22ms (View: 14, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:18:49) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 106ms (View: 99, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 04:19:18) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.5ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.7ms)
+Completed in 24ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 04:19:35) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (9.5ms)
+Completed in 29ms (View: 19, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 04:19:35) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.1ms)
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 04:19:36) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.6ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.0ms)
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 04:19:40) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.0ms)
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 04:19:41) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.7ms)
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 04:19:43) [GET]
+  [4;36;1mSite Load (1.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 04:19:44) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (5.8ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 04:20:07) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.7ms)
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 04:20:08) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.6ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.3ms)
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 04:20:08) [GET]
+  [4;36;1mSite Load (1.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 04:20:10) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.4ms)
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 04:20:13) [GET]
+  [4;36;1mSite Load (2.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 22ms (View: 14, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 04:20:28) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.5ms)
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 04:20:49) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (1.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.6ms)
+Completed in 22ms (View: 13, DB: 2) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 04:21:17) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (7.1ms)
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 04:21:33) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.4ms)
+Completed in 24ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 04:21:33) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (6.1ms)
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 04:21:39) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 04:21:46) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 04:21:47) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 21ms (View: 13, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 04:21:59) [GET]
+  [4;35;1mSite Load (1.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 04:22:01) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 20ms (View: 12, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 04:22:09) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 04:22:10) [GET]
+  [4;36;1mSite Load (1.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 04:22:56) [GET]
+  [4;35;1mSite Load (1.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 04:23:12) [GET]
+  [4;36;1mSite Load (1.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 04:23:13) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 3, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:23:23) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:24:41) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 73ms (View: 65, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 04:25:02) [GET]
+  [4;36;1mSite Load (1.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 22ms (View: 14, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:25:09) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 04:30:48) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 20ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-21 04:33:21) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"/xEyN2ReXfmHYIqFUCUOXxhkDVp3lTmrKXSApDN2Xfo=", "site"=>{"photo"=>"", "latitude"=>"55.876947923361534", "title"=>"", "description"=>"", "longitude"=>"-4.071807861328125"}}
+  [4;35;1mSite Create (0.4ms)[0m   [0mINSERT INTO "sites" ("photo", "status", "latitude", "updated_at", "title", "description", "longitude", "created_at") VALUES('', NULL, 55.8769479233615, '2009-06-21 03:33:21', '', '', -4.07180786132812, '2009-06-21 03:33:21')[0m
+Redirected to http://127.0.0.1:3000/sites/16
+Completed in 12ms (DB: 0) | 302 Found [http://127.0.0.1/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 04:33:21) [GET]
+  Parameters: {"id"=>"16"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 16) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 16) [0m
+Rendered proposals/_list (0.6ms)
+Completed in 92ms (View: 84, DB: 0) | 200 OK [http://127.0.0.1/sites/16]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 07:57:45) [GET]
+  Parameters: {"id"=>"16"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 16) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 16) [0m
+Rendered proposals/_list (0.9ms)
+Completed in 20ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/sites/16]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 07:59:30) [GET]
+  [4;36;1mSite Load (3.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 14, DB: 4) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:01:36) [GET]
+  [4;35;1mSite Load (2.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 26ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 08:01:38) [GET]
+  [4;36;1mSite Load (1.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:05:20) [GET]
+  [4;35;1mSite Load (1.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 27ms (View: 21, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 08:05:21) [GET]
+  [4;36;1mSite Load (2.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 108ms (View: 3, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:06:51) [GET]
+  [4;35;1mSite Load (1.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 27ms (View: 20, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 08:06:52) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:08:00) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 20ms (View: 13, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 08:08:01) [GET]
+  [4;36;1mSite Load (1.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 08:08:07) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 08:08:19) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (5.2ms)
+Completed in 107ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/sites/6/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:08:27) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 15, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:09:12) [GET]
+  [4;35;1mSite Load (1.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 08:09:13) [GET]
+  [4;36;1mSite Load (1.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 08:09:19) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (3.8ms)
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 08:09:23) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (4.7ms)
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 08:09:24) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (5.2ms)
+Completed in 112ms (View: 105, DB: 1) | 200 OK [http://127.0.0.1/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 08:09:25) [GET]
+  Parameters: {"id"=>"asdf"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=asdf):
+  app/controllers/sites_controller.rb:41:in `show'
+
+Rendered rescues/_trace (34.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 08:09:25) [GET]
+  [4;35;1mSite Load (1.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 08:09:30) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (4.3ms)
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 08:09:31) [GET]
+  Parameters: {"id"=>"asdf"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=asdf):
+  app/controllers/sites_controller.rb:41:in `show'
+
+Rendered rescues/_trace (38.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 08:09:31) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 08:19:17) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (3.9ms)
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 08:19:18) [GET]
+  Parameters: {"id"=>"asdf"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=asdf):
+  app/controllers/sites_controller.rb:41:in `show'
+
+Rendered rescues/_trace (137.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 08:19:18) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:19:31) [GET]
+  [4;36;1mSite Load (1.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 21ms (View: 14, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:19:36) [GET]
+  [4;35;1mSite Load (2.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 14, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 08:19:37) [GET]
+  [4;36;1mSite Load (1.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 08:20:00) [GET]
+  Parameters: {"id"=>"heatmap"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=heatmap):
+  app/controllers/sites_controller.rb:41:in `show'
+
+Rendered rescues/_trace (114.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 08:20:06) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 42ms (View: 35, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 08:20:15) [GET]
+  [4;35;1mSite Load (1.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 08:20:17) [GET]
+  [4;36;1mSite Load (2.2ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 3, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 08:20:38) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 08:21:01) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 08:21:03) [GET]
+  [4;35;1mSite Load (1.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 08:21:17) [GET]
+  [4;36;1mSite Load (1.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 101ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 08:21:48) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 16ms (View: 3, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 08:52:17) [GET]
+  [4;36;1mSite Load (2.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 08:52:19) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 08:52:19) [GET]
+  [4;36;1mSite Load (2.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 13ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 08:52:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/spacer.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:52:34) [GET]
+  [4;35;1mSite Load (1.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 14, DB: 2) | 200 OK [http://127.0.0.1/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:52:56) [GET]
+  [4;36;1mSite Load (2.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 21ms (View: 13, DB: 2) | 200 OK [http://127.0.0.1/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:55:43) [GET]
+  [4;35;1mSite Load (1.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 17, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 08:55:55) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (4.8ms)
+Completed in 25ms (View: 14, DB: 1) | 200 OK [http://localhost/sites/6/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 08:56:04) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (8.5ms)
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/sites/6/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 08:56:04) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.6ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (4.6ms)
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://localhost/sites/6/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 08:56:04) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (4.6ms)
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/6/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 08:56:04) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (5.2ms)
+Completed in 97ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/6/]
+
+
+Processing SitesController#6 (for 127.0.0.1 at 2009-06-21 08:56:05) [GET]
+  Parameters: {"id"=>"asdf"}
+
+ActionController::UnknownAction (No action responded to 6. Actions: create, data, destroy, edit, heatmap, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 08:56:06) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 3, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 08:56:06) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (4.5ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/6/]
+
+
+Processing SitesController#6 (for 127.0.0.1 at 2009-06-21 08:56:06) [GET]
+  Parameters: {"id"=>"asdf"}
+
+ActionController::UnknownAction (No action responded to 6. Actions: create, data, destroy, edit, heatmap, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:56:13) [GET]
+  [4;35;1mSite Load (1.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 20ms (View: 14, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:56:15) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 103ms (View: 95, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:56:15) [GET]
+  [4;35;1mSite Load (1.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:56:15) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:56:15) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:56:15) [GET]
+  [4;36;1mSite Load (1.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:56:15) [GET]
+  [4;35;1mSite Load (1.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 20ms (View: 13, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:56:16) [GET]
+  [4;36;1mSite Load (1.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 108ms (View: 14, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 08:56:18) [GET]
+  [4;35;1mSite Load (2.3ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 3, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:56:18) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:56:24) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 21ms (View: 14, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 08:56:25) [GET]
+  [4;36;1mSite Load (2.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 16ms (View: 2, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:56:26) [GET]
+  [4;35;1mSite Load (2.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 14, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 08:56:55) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 08:56:59) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 08:56:59) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 08:56:59) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 22ms (View: 10, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 08:56:59) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 08:57:01) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-21 08:57:23) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Ebn4HKdazMpZf5fZUniKcJOdho6L8KqqCXAtltmO76g=", "site"=>{"photo"=>"", "latitude"=>"55.88243647829715", "title"=>"Blah", "description"=>"", "longitude"=>"-4.245700836181641"}}
+  [4;36;1mSite Create (0.5ms)[0m   [0;1mINSERT INTO "sites" ("photo", "status", "latitude", "updated_at", "title", "description", "longitude", "created_at") VALUES('', NULL, 55.8824364782972, '2009-06-21 07:57:23', 'Blah', '', -4.24570083618164, '2009-06-21 07:57:23')[0m
+Redirected to http://localhost:3000/sites/17
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 08:57:23) [GET]
+  Parameters: {"id"=>"17"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 17) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 17) [0m
+Rendered proposals/_list (0.6ms)
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://localhost/sites/17]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:58:40) [GET]
+  [4;35;1mSite Load (1.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 27ms (View: 21, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:59:12) [GET]
+  [4;36;1mSite Load (2.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 16, DB: 3) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 08:59:13) [GET]
+  [4;35;1mSite Load (3.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 22ms (View: 3, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:59:14) [GET]
+  [4;36;1mSite Load (2.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]

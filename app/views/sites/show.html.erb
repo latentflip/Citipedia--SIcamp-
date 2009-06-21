@@ -1,4 +1,11 @@
-<h1>Site <%= h @site.title %> at: <%=h @site.latitude %> <%=h @site.longitude %> </h1>
+<% content_for :head do %>
+<%= javascript_include_tag 'multimarker.js' %>
+<% end %>
+
+
+
+
+<h1>Site <%=h @site.title %> at: <%=h @site.latitude %> <%=h @site.longitude %> </h1>
 
 <img src="<%= @site.photo%>"> </img>
 
@@ -6,6 +13,8 @@
   <b>Description:</b>
   <%=h @site.description %>
 </p>
+
+<div id="map" style="margin: 5px auto; width: 350px; height: 200px"></div>
 
 <h2>Proposals for this site</h2>
 
@@ -16,3 +25,10 @@
 
 <%= link_to 'Edit', edit_site_path(@site) %> |
 <%= link_to 'Back', sites_path %>
+
+<div style="display:none">
+	<span id="map_lat"><%=@site.latitude%></span>
+	<span id="map_lon"><%=@site.longitude%></span>
+	<span id="map_controls">0</span>
+	<span id="map_zoom">13</span>
+</div>

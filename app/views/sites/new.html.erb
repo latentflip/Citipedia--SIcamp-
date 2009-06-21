@@ -13,12 +13,45 @@
     if (GBrowserIsCompatible()) {
       map = new GMap2(document.getElementById("map_canvas"));
       map.setCenter(new GLatLng(55.8667230193505, -4.24999237060547), 13);
-      map.addControl(new GSmallZoomControl());
+      map.addControl(new GLargeMapControl());
       geocoder = new GClientGeocoder();
       GEvent.addListener(map, "click", clicked);
-      map.openInfoWindow(map.getCenter(), "Click the map!");
+
+	  var amarker = new GMarker(map.getCenter(), {draggable: true});
+	
+	
+	GEvent.addListener(amarker, "dragstart", function() {
+	  map.closeInfoWindow();
+	  });
+
+	GEvent.addListener(amarker, "dragend", function() {
+		var latlng = amarker.getLatLng();
+		alert(latlng);
+		if (latlng) {
+		     geocoder.getLocations(latlng, function(addresses) {
+		       if(addresses.Status.code != 200) {
+				    var myHtml = latlng;
+				    amarker.openInfoWindow(myHtml);    
+				} else {
+		         	address = addresses.Placemark[0];
+		         	var myHtml = address.address;
+				  	updateCoordForm(latlng.y, latlng.x);
+				    amarker.openInfoWindow(myHtml);   
+       			}
+			});
+		}
+	  });
+	
+	
+	
+	
+
+      map.addOverlay(amarker);
+	  amarker.openInfoWindow('Drag me');
     }
   }
+
+	
 
   function clicked(overlay, latlng) {
     if (latlng) {
@@ -26,13 +59,15 @@
         if(addresses.Status.code != 200) {
           //alert("reverse geocoder failed to find an address for " + latlng.toUrlValue());
 	    var myHtml = latlng;
-	    map.openInfoWindow(latlng, myHtml);          
+	    map.openInfoWindow(latlng, myHtml);      
+		map.addOverlay(new GMarker(latlng));    
 	}
         else {
           address = addresses.Placemark[0];
           var myHtml = address.address;
 		  updateCoordForm(latlng.y, latlng.x);
           map.openInfoWindow(latlng, myHtml);
+		  map.addOverlay(new GMarker(latlng));
         }
       });
     }
@@ -43,7 +78,7 @@
 		$(document).ready(function() {
 			initialize();
 		});
-		window.onunload=GUnload();
+		$(window).unload(function() { GUnload(); } );
 	</script>
 
 

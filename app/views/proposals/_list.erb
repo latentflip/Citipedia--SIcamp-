@@ -2,7 +2,7 @@
 
 <% @proposals.each do |proposal| %>
   <tr>
-    <td><%=h proposal.description %></td>
+    <td><%=h proposal.title %></td>
     <td><%= link_to 'Show', proposal %></td>
     <td><%= link_to 'Edit', edit_site_proposal_path(proposal.site,proposal) %></td>
     <td><%= link_to 'Destroy', proposal, :confirm => 'Are you sure?', :method => :delete %></td>
