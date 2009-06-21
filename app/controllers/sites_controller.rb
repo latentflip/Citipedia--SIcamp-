@@ -6,7 +6,8 @@ class SitesController < ApplicationController
       data = @sites.map do |site|
       {
         :label => site.title,
-        :latlng => "#{site.latitude},#{site.longitude}",
+        :lat => "#{site.latitude}",
+        :long => "#{site.longitude}",
         :details => site.description
       }
     end
@@ -23,6 +24,14 @@ class SitesController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @sites }
+    end
+  end
+  
+  def heatmap
+    @sites = Site.all
+    
+    respond_to do |format|
+      format.html
     end
   end
 

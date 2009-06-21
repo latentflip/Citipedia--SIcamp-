@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.connect 'sites/data.json', :controller => 'sites', :action => 'data'
+  map.connect 'heatmap', :controller => 'sites', :action => 'heatmap'
   map.resources :proposals
 
   map.resources :sites, :has_many => :proposals
@@ -8,7 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
   # Keep in mind you can assign values other than :controller and :action
-
+  
   # Sample of named route:
   #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
   # This route can be invoked with purchase_url(:id => product.id)
