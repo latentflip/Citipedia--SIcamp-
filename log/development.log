@@ -11912,3 +11912,2422 @@ Processing SitesController#index (for 127.0.0.1 at 2009-06-21 08:59:14) [GET]
 Rendering template within layouts/sites
 Rendering sites/index
 Completed in 25ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:02:22) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:02:28) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:02:29) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:02:32) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-21 09:02:53) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Ebn4HKdazMpZf5fZUniKcJOdho6L8KqqCXAtltmO76g=", "site"=>{"photo"=>"", "latitude"=>"55.86587216086187", "title"=>"asdfasdf", "description"=>"", "longitude"=>"-4.260292053222656"}}
+  [4;35;1mSite Create (0.4ms)[0m   [0mINSERT INTO "sites" ("photo", "status", "latitude", "updated_at", "title", "description", "longitude", "created_at") VALUES('', NULL, 55.8658721608619, '2009-06-21 08:02:53', 'asdfasdf', '', -4.26029205322266, '2009-06-21 08:02:53')[0m
+Redirected to http://localhost:3000/sites/18
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:02:53) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 18) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 18) [0m
+Rendered proposals/_list (1.0ms)
+Completed in 20ms (View: 12, DB: 0) | 200 OK [http://localhost/sites/18]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:03:10) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 18) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 18) [0m
+Rendered proposals/_list (0.8ms)
+Completed in 20ms (View: 10, DB: 1) | 200 OK [http://localhost/sites/18]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:03:11) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 18) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 18) [0m
+Rendered proposals/_list (0.7ms)
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://localhost/sites/18]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:03:11) [GET]
+  [4;36;1mSite Load (2.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 3, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:03:12) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 18) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 18) [0m
+Rendered proposals/_list (0.7ms)
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://localhost/sites/18]
+
+
+Processing ProposalsController#new (for 127.0.0.1 at 2009-06-21 09:03:29) [GET]
+  Parameters: {"site_id"=>"18"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 18) [0m
+Rendering template within layouts/proposals
+Rendering proposals/new
+Completed in 96ms (View: 84, DB: 0) | 200 OK [http://localhost/sites/18/proposals/new]
+
+
+Processing ProposalsController#new (for 127.0.0.1 at 2009-06-21 09:03:29) [GET]
+  Parameters: {"site_id"=>"18"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 18) [0m
+Rendering template within layouts/proposals
+Rendering proposals/new
+Completed in 15ms (View: 4, DB: 0) | 200 OK [http://localhost/sites/18/proposals/new]
+
+
+Processing ProposalsController#create (for 127.0.0.1 at 2009-06-21 09:03:38) [POST]
+  Parameters: {"site_id"=>"18", "commit"=>"Create", "authenticity_token"=>"Ebn4HKdazMpZf5fZUniKcJOdho6L8KqqCXAtltmO76g=", "proposal"=>{"title"=>"New proposal", "description"=>""}}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 18) [0m
+  [4;36;1mProposal Create (0.5ms)[0m   [0;1mINSERT INTO "proposals" ("site_id", "updated_at", "title", "description", "created_at") VALUES(18, '2009-06-21 08:03:38', 'New proposal', '', '2009-06-21 08:03:38')[0m
+Redirected to http://localhost:3000/sites/18/proposals/12
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/sites/18/proposals]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 09:03:38) [GET]
+  Parameters: {"site_id"=>"18", "id"=>"12"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 18) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 12 AND ("proposals".site_id = 18)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".proposal_id = 12) [0m
+Rendered comments/_list (0.7ms)
+Completed in 31ms (View: 20, DB: 1) | 200 OK [http://localhost/sites/18/proposals/12]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 09:03:38) [GET]
+  Parameters: {"site_id"=>"18", "id"=>"12"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 18) [0m
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 12 AND ("proposals".site_id = 18)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;36;1mComment Load (1.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".proposal_id = 12) [0m
+Rendered comments/_list (2.1ms)
+Completed in 20ms (View: 8, DB: 2) | 200 OK [http://localhost/sites/18/proposals/12]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 09:03:58) [GET]
+  Parameters: {"proposal_id"=>"12"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 12) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 14ms (View: 3, DB: 0) | 200 OK [http://localhost/proposals/12/comments/new]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 09:03:58) [GET]
+  Parameters: {"proposal_id"=>"12"}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 12) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 14ms (View: 3, DB: 0) | 200 OK [http://localhost/proposals/12/comments/new]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 09:04:01) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Ebn4HKdazMpZf5fZUniKcJOdho6L8KqqCXAtltmO76g=", "proposal_id"=>"12", "comment"=>{"name"=>"asdfaf", "title"=>"", "content"=>"", "avatar"=>""}}
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 12) [0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("name", "updated_at", "title", "content", "avatar", "proposal_id", "created_at") VALUES('asdfaf', '2009-06-21 08:04:01', '', '', '', 12, '2009-06-21 08:04:01')[0m
+Redirected to http://localhost:3000/comments/12
+Completed in 101ms (DB: 1) | 302 Found [http://localhost/proposals/12/comments]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 09:04:01) [GET]
+  Parameters: {"id"=>"12"}
+
+ActiveRecord::RecordNotFound (Couldn't find Proposal without an ID):
+  app/controllers/comments_controller.rb:17:in `show'
+
+Rendered rescues/_trace (38.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 09:04:01) [GET]
+  Parameters: {"id"=>"12"}
+
+ActiveRecord::RecordNotFound (Couldn't find Proposal without an ID):
+  app/controllers/comments_controller.rb:17:in `show'
+
+Rendered rescues/_trace (33.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 09:04:54) [GET]
+  Parameters: {"proposal_id"=>"12"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 12) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+
+ActionView::TemplateError (undefined local variable or method `site_proposal_comments_path' for #<ActionView::Base:0x257761c>) on line #27 of app/views/comments/new.html.erb:
+24:   </p>
+25: <% end %>
+26: 
+27: <%= link_to 'Back', site_proposal_comments_path %>
+
+    app/views/comments/new.html.erb:27
+    app/controllers/comments_controller.rb:32:in `new'
+
+Rendered rescues/_trace (44.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 09:04:56) [GET]
+  Parameters: {"proposal_id"=>"12"}
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 12) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+
+ActionView::TemplateError (undefined local variable or method `site_proposal_comments_path' for #<ActionView::Base:0x229d644>) on line #27 of app/views/comments/new.html.erb:
+24:   </p>
+25: <% end %>
+26: 
+27: <%= link_to 'Back', site_proposal_comments_path %>
+
+    app/views/comments/new.html.erb:27
+    app/controllers/comments_controller.rb:32:in `new'
+
+Rendered rescues/_trace (46.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 09:04:57) [GET]
+  Parameters: {"proposal_id"=>"12"}
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 12) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+
+ActionView::TemplateError (undefined local variable or method `site_proposal_comments_path' for #<ActionView::Base:0x22e6178>) on line #27 of app/views/comments/new.html.erb:
+24:   </p>
+25: <% end %>
+26: 
+27: <%= link_to 'Back', site_proposal_comments_path %>
+
+    app/views/comments/new.html.erb:27
+    app/controllers/comments_controller.rb:32:in `new'
+
+Rendered rescues/_trace (46.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 09:08:38) [GET]
+  Parameters: {"proposal_id"=>"12"}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 12) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+
+ActionView::TemplateError (undefined local variable or method `site_proposal_comments_path' for #<ActionView::Base:0x232a3a0>) on line #27 of app/views/comments/new.html.erb:
+24:   </p>
+25: <% end %>
+26: 
+27: <%= link_to 'Back', site_proposal_comments_path %>
+
+    app/views/comments/new.html.erb:27
+    app/controllers/comments_controller.rb:32:in `new'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 09:08:38) [GET]
+  Parameters: {"proposal_id"=>"12"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 12) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+
+ActionView::TemplateError (undefined local variable or method `site_proposal_comments_path' for #<ActionView::Base:0x2355b54>) on line #27 of app/views/comments/new.html.erb:
+24:   </p>
+25: <% end %>
+26: 
+27: <%= link_to 'Back', site_proposal_comments_path %>
+
+    app/views/comments/new.html.erb:27
+    app/controllers/comments_controller.rb:32:in `new'
+
+Rendered rescues/_trace (47.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 09:08:39) [GET]
+  Parameters: {"proposal_id"=>"12"}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 12) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+
+ActionView::TemplateError (undefined local variable or method `site_proposal_comments_path' for #<ActionView::Base:0x237c150>) on line #27 of app/views/comments/new.html.erb:
+24:   </p>
+25: <% end %>
+26: 
+27: <%= link_to 'Back', site_proposal_comments_path %>
+
+    app/views/comments/new.html.erb:27
+    app/controllers/comments_controller.rb:32:in `new'
+
+Rendered rescues/_trace (112.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 09:08:39) [GET]
+  Parameters: {"proposal_id"=>"12"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 12) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+
+ActionView::TemplateError (undefined local variable or method `site_proposal_comments_path' for #<ActionView::Base:0x23ad3a4>) on line #27 of app/views/comments/new.html.erb:
+24:   </p>
+25: <% end %>
+26: 
+27: <%= link_to 'Back', site_proposal_comments_path %>
+
+    app/views/comments/new.html.erb:27
+    app/controllers/comments_controller.rb:32:in `new'
+
+Rendered rescues/_trace (114.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 09:08:42) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Site without an ID):
+  app/controllers/proposals_controller.rb:5:in `index'
+
+Rendered rescues/_trace (34.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 09:08:42) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Site without an ID):
+  app/controllers/proposals_controller.rb:5:in `index'
+
+Rendered rescues/_trace (114.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:08:47) [GET]
+  [4;36;1mSite Load (3.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 29ms (View: 19, DB: 3) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:09:00) [GET]
+  [4;35;1mSite Load (1.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 26ms (View: 19, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:09:00) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:09:06) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 27ms (View: 18, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:09:07) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 18, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:09:13) [GET]
+  [4;35;1mSite Load (1.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 18, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:09:13) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 17, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:09:19) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 26ms (View: 19, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:09:21) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 16, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:09:26) [GET]
+  [4;35;1mSite Load (2.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 26ms (View: 16, DB: 3) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:09:30) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 27ms (View: 17, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:09:55) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 26ms (View: 19, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:09:56) [GET]
+  [4;36;1mSite Load (2.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 17ms (View: 4, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:09:56) [GET]
+  [4;35;1mSite Load (2.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 16, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:10:01) [GET]
+  [4;36;1mSite Load (2.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 119ms (View: 3, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:10:04) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:10:17) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:10:19) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:11:26) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:11:29) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:11:39) [GET]
+  [4;35;1mSite Load (1.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 21ms (View: 14, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:11:40) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 22ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:11:49) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:11:51) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 26ms (View: 16, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:12:16) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 26ms (View: 18, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:12:17) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 16ms (View: 4, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:12:18) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 115ms (View: 107, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:12:24) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:13:36) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:13:38) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:13:51) [GET]
+  [4;36;1mSite Load (1.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 8ms (View: 1, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:14:30) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 8ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:14:45) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:14:47) [GET]
+  [4;35;1mSite Load (2.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 21ms (View: 4, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:14:47) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 122ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:14:56) [GET]
+  [4;35;1mSite Load (2.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:14:58) [GET]
+  [4;36;1mSite Load (3.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 17ms (View: 3, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:14:58) [GET]
+  [4;35;1mSite Load (3.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 3) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:15:08) [GET]
+  [4;36;1mSite Load (1.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 8ms (View: 1, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:15:09) [GET]
+  [4;35;1mSite Load (3.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 18ms (View: 4, DB: 4) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:15:09) [GET]
+  [4;36;1mSite Load (2.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 19ms (View: 2, DB: 3) | 200 OK [http://localhost/heatmap]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 09:15:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/spacer.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:15:16) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:15:17) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 22ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:15:28) [GET]
+  [4;35;1mSite Load (2.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 27ms (View: 19, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:15:29) [GET]
+  [4;36;1mSite Load (2.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 17ms (View: 3, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:15:30) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 26ms (View: 17, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:15:41) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (4.0ms)
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:15:45) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (90.3ms)
+Completed in 106ms (View: 99, DB: 1) | 200 OK [http://localhost/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:15:46) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.5ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (7.0ms)
+Completed in 23ms (View: 14, DB: 1) | 200 OK [http://localhost/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:15:46) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (4.5ms)
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:15:47) [GET]
+  Parameters: {"id"=>"asdf"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=asdf):
+  app/controllers/sites_controller.rb:41:in `show'
+
+Rendered rescues/_trace (35.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:15:47) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 3, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:15:48) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (4.1ms)
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:15:48) [GET]
+  Parameters: {"id"=>"asdf"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=asdf):
+  app/controllers/sites_controller.rb:41:in `show'
+
+Rendered rescues/_trace (36.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:16:29) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (4.8ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:16:30) [GET]
+  Parameters: {"id"=>"asdf"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=asdf):
+  app/controllers/sites_controller.rb:41:in `show'
+
+Rendered rescues/_trace (136.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:16:31) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 23ms (View: 7, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:16:31) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (4.7ms)
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:16:31) [GET]
+  Parameters: {"id"=>"asdf"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=asdf):
+  app/controllers/sites_controller.rb:41:in `show'
+
+Rendered rescues/_trace (32.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:17:00) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (4.4ms)
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:17:01) [GET]
+  Parameters: {"id"=>"asdf"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=asdf):
+  app/controllers/sites_controller.rb:41:in `show'
+
+Rendered rescues/_trace (35.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:17:01) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 2, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:17:02) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (4.9ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:17:02) [GET]
+  Parameters: {"id"=>"asdf"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=asdf):
+  app/controllers/sites_controller.rb:41:in `show'
+
+Rendered rescues/_trace (33.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:17:05) [GET]
+  Parameters: {"id"=>"asdf"}
+  [4;36;1mSite Load (0.5ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=asdf):
+  app/controllers/sites_controller.rb:41:in `show'
+
+Rendered rescues/_trace (35.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:17:05) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 3, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:17:05) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (5.2ms)
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:17:05) [GET]
+  Parameters: {"id"=>"asdf"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=asdf):
+  app/controllers/sites_controller.rb:41:in `show'
+
+Rendered rescues/_trace (34.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:17:07) [GET]
+  Parameters: {"id"=>"asdf"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=asdf):
+  app/controllers/sites_controller.rb:41:in `show'
+
+Rendered rescues/_trace (125.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:17:08) [GET]
+  [4;35;1mSite Load (2.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 3, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:17:08) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (5.2ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:17:08) [GET]
+  Parameters: {"id"=>"asdf"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=asdf):
+  app/controllers/sites_controller.rb:41:in `show'
+
+Rendered rescues/_trace (33.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:17:12) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 109ms (View: 99, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:17:20) [GET]
+  [4;35;1mSite Load (2.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:17:22) [GET]
+  [4;36;1mSite Load (2.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 18ms (View: 4, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:17:23) [GET]
+  [4;35;1mSite Load (4.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 43ms (View: 26, DB: 5) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:17:44) [GET]
+  [4;36;1mSite Load (2.2ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:17:45) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 3, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:17:45) [GET]
+  [4;36;1mSite Load (2.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 26ms (View: 17, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:19:40) [GET]
+  [4;35;1mSite Load (2.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 27ms (View: 19, DB: 3) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:19:42) [GET]
+  [4;36;1mSite Load (3.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 19ms (View: 3, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:19:42) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 27ms (View: 17, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:19:47) [GET]
+  [4;36;1mSite Load (2.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 21ms (View: 3, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:19:48) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 17, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:21:06) [GET]
+  [4;36;1mSite Load (2.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 15, DB: 3) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:21:08) [GET]
+  [4;35;1mSite Load (2.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 18ms (View: 3, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:21:08) [GET]
+  [4;36;1mSite Load (2.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 27ms (View: 17, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:21:24) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:21:25) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 16ms (View: 2, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:21:26) [GET]
+  [4;35;1mSite Load (3.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 15, DB: 3) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:21:29) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:21:31) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 95ms (View: 88, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:23:30) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:23:39) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:23:41) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:23:47) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:28:03) [GET]
+  [4;36;1mSite Load (2.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:28:07) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 14, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:28:08) [GET]
+  [4;36;1mSite Load (2.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 20ms (View: 5, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:28:09) [GET]
+  [4;35;1mSite Load (2.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 28ms (View: 18, DB: 3) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:32:08) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:32:12) [GET]
+  [4;35;1mSite Load (4.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 12ms (View: 2, DB: 4) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:32:13) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 2, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:32:13) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:32:40) [GET]
+  [4;36;1mSite Load (5.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 13ms (View: 2, DB: 6) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:33:02) [GET]
+  [4;35;1mSite Load (2.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 14ms (View: 6, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:33:04) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:33:13) [GET]
+  [4;35;1mSite Load (3.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 12ms (View: 2, DB: 4) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:33:20) [GET]
+  [4;36;1mSite Load (2.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:33:21) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:33:23) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 16ms (View: 2, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:33:39) [GET]
+  [4;35;1mSite Load (1.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 12ms (View: 6, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:33:45) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:33:46) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 2, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:33:49) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 115ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:34:02) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:34:38) [GET]
+  [4;36;1mSite Load (2.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 16ms (View: 2, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:34:59) [GET]
+  [4;35;1mSite Load (2.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 2, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:35:32) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 3, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:35:46) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (5.7ms)
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://localhost/sites/6]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:35:46) [GET]
+  Parameters: {"id"=>"asdf"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=asdf):
+  app/controllers/sites_controller.rb:41:in `show'
+
+Rendered rescues/_trace (119.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:35:47) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:38:55) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:38:59) [GET]
+  [4;35;1mSite Load (2.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 29ms (View: 21, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:38:59) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 26ms (View: 17, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:38:59) [GET]
+  [4;35;1mSite Load (2.3ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:39:00) [GET]
+  [4;36;1mSite Load (3.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 133ms (View: 117, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:39:02) [GET]
+  [4;35;1mSite Load (2.3ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 29ms (View: 18, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:39:16) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:39:22) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:39:24) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 18ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-21 09:39:45) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Ebn4HKdazMpZf5fZUniKcJOdho6L8KqqCXAtltmO76g=", "site"=>{"photo"=>"", "latitude"=>"55.86876179475812", "title"=>"Kelvin Grove Park", "description"=>"Awful", "longitude"=>"-4.283809661865234"}}
+  [4;36;1mSite Create (0.4ms)[0m   [0;1mINSERT INTO "sites" ("photo", "status", "latitude", "updated_at", "title", "description", "longitude", "created_at") VALUES('', NULL, 55.8687617947581, '2009-06-21 08:39:45', 'Kelvin Grove Park', 'Awful', -4.28380966186523, '2009-06-21 08:39:45')[0m
+Redirected to http://localhost:3000/sites/19
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 09:39:45) [GET]
+  Parameters: {"id"=>"19"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 19) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 19) [0m
+Rendered proposals/_list (0.7ms)
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://localhost/sites/19]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:40:11) [GET]
+  [4;35;1mSite Load (3.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 26ms (View: 16, DB: 3) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:40:12) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:40:13) [GET]
+  [4;35;1mSite Load (2.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 30ms (View: 19, DB: 2) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:45:14) [GET]
+  [4;36;1mSite Load (2.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 14, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:45:21) [GET]
+  [4;35;1mSite Load (2.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 27ms (View: 18, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:45:22) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 18ms (View: 4, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:45:23) [GET]
+  [4;35;1mSite Load (2.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 29ms (View: 18, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:48:06) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:48:07) [GET]
+  [4;35;1mSite Load (2.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 17ms (View: 3, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:48:07) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 27ms (View: 19, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 09:48:14) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 15ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:48:23) [GET]
+  [4;35;1mSite Load (2.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 16ms (View: 8, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:48:29) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:48:30) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:48:30) [GET]
+  [4;36;1mSite Load (2.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 16ms (View: 2, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:49:30) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:49:50) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 15ms (View: 7, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:49:50) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:49:53) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 8ms (View: 1, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:49:55) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:50:03) [GET]
+  [4;36;1mSite Load (2.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 17ms (View: 7, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:50:15) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 89ms (View: 8, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:50:17) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:50:20) [GET]
+  [4;35;1mSite Load (3.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 13ms (View: 2, DB: 4) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:51:15) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:51:19) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:51:27) [GET]
+  [4;36;1mSite Load (2.2ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:51:30) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:51:32) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:51:33) [GET]
+  [4;35;1mSite Load (2.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 3, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:53:14) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 15ms (View: 6, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:53:15) [GET]
+  [4;35;1mSite Load (2.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 3, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:53:16) [GET]
+  [4;36;1mSite Load (2.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 12ms (View: 2, DB: 3) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:53:28) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:53:29) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 3, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:53:30) [GET]
+  [4;35;1mSite Load (2.3ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 13ms (View: 3, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 09:53:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/spacer.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:54:14) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 15ms (View: 7, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:54:15) [GET]
+  [4;35;1mSite Load (2.3ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 18ms (View: 4, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:54:17) [GET]
+  [4;36;1mSite Load (2.2ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 18ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 09:54:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/spacer.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:54:50) [GET]
+  [4;35;1mSite Load (2.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 15ms (View: 6, DB: 3) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:54:51) [GET]
+  [4;36;1mSite Load (3.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 24ms (View: 4, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:54:51) [GET]
+  [4;35;1mSite Load (2.3ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 09:54:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/spacer.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:55:34) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 15ms (View: 8, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:55:35) [GET]
+  [4;35;1mSite Load (2.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 16ms (View: 3, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:55:36) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 09:55:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/spacer.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:58:07) [GET]
+  [4;35;1mSite Load (3.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 105ms (View: 95, DB: 4) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:58:21) [GET]
+  [4;36;1mSite Load (72.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 83ms (View: 5, DB: 72) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:58:22) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:58:23) [GET]
+  [4;36;1mSite Load (2.2ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 1, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:58:24) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:58:46) [GET]
+  [4;36;1mSite Load (2.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 13ms (View: 5, DB: 3) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:58:48) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:59:30) [GET]
+  [4;36;1mSite Load (3.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 15ms (View: 7, DB: 3) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:59:31) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 91ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:59:31) [GET]
+  [4;36;1mSite Load (2.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 09:59:32) [GET]
+  [4;35;1mSite Load (3.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 12ms (View: 2, DB: 3) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:59:41) [GET]
+  [4;36;1mSite Load (2.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 27ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:59:52) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:59:57) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 09:59:58) [GET]
+  [4;35;1mSite Load (2.3ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 19ms (View: 3, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 09:59:59) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:00:08) [GET]
+  [4;35;1mSite Load (34.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 42ms (View: 2, DB: 35) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:00:14) [GET]
+  [4;36;1mSite Load (2.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 3) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:00:21) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:00:22) [GET]
+  [4;36;1mSite Load (2.2ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:00:23) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:00:43) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 15ms (View: 7, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:00:44) [GET]
+  [4;35;1mSite Load (2.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 92ms (View: 3, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:00:44) [GET]
+  [4;36;1mSite Load (3.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 26ms (View: 4, DB: 3) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 10:00:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/spacer.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:01:04) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 13ms (View: 6, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:01:05) [GET]
+  [4;36;1mSite Load (6.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 19ms (View: 2, DB: 7) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:01:05) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 10:01:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/spacer.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:01:16) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:01:27) [GET]
+  [4;35;1mSite Load (2.3ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 81ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:02:16) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:02:22) [GET]
+  [4;35;1mSite Load (2.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 12ms (View: 2, DB: 3) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:02:23) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:02:31) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:02:33) [GET]
+  [4;36;1mSite Load (3.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 17ms (View: 3, DB: 3) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:02:35) [GET]
+  [4;35;1mSite Load (2.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 10:02:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/spacer.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:03:15) [GET]
+  [4;36;1mSite Load (21.2ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 158ms (View: 130, DB: 21) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:03:16) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 3, DB: 2) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:03:16) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 28ms (View: 20, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:03:25) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 45ms (View: 23, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:03:52) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 50ms (View: 45, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:03:54) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:04:01) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:04:08) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:04:11) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:04:33) [GET]
+  [4;35;1mSite Load (29.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 37ms (View: 2, DB: 29) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:06:03) [GET]
+  [4;36;1mSite Load (2.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 24ms (View: 2, DB: 3) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:08:39) [GET]
+  [4;35;1mSite Load (2.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:08:58) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 45ms (View: 35, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:09:00) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:09:03) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:09:32) [GET]
+  [4;35;1mSite Load (2.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 3) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:09:35) [GET]
+  [4;36;1mSite Load (3.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 12ms (View: 2, DB: 3) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:10:46) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:10:49) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:11:01) [GET]
+  [4;35;1mSite Load (43.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 55ms (View: 6, DB: 43) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:11:04) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:11:12) [GET]
+  [4;35;1mSite Load (2.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:11:15) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:11:24) [GET]
+  [4;35;1mSite Load (16.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 105ms (View: 80, DB: 17) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:11:30) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:11:30) [GET]
+  [4;35;1mSite Load (2.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:11:31) [GET]
+  [4;36;1mSite Load (2.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 12ms (View: 2, DB: 3) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:11:32) [GET]
+  [4;35;1mSite Load (4.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 27ms (View: 2, DB: 4) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:11:34) [GET]
+  [4;36;1mSite Load (2.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 15ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 10:11:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/spacer.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:12:20) [GET]
+  [4;35;1mSite Load (15.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 27ms (View: 6, DB: 15) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:12:21) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 2, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:12:21) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 10:12:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/spacer.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:12:31) [GET]
+  [4;36;1mSite Load (3.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 3) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:12:32) [GET]
+  [4;35;1mSite Load (2.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 21ms (View: 4, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:12:32) [GET]
+  [4;36;1mSite Load (2.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 20ms (View: 3, DB: 3) | 200 OK [http://localhost/heatmap]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 10:12:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/spacer.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:14:25) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:14:30) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:14:31) [GET]
+  [4;35;1mSite Load (3.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 23ms (View: 5, DB: 4) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:14:31) [GET]
+  [4;36;1mSite Load (2.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 14ms (View: 3, DB: 3) | 200 OK [http://localhost/heatmap]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 10:14:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/spacer.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:15:16) [GET]
+  [4;35;1mSite Load (2.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 13ms (View: 6, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:15:17) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 2, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:15:17) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 13ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 10:15:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/spacer.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:15:56) [GET]
+  [4;36;1mSite Load (15.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 28ms (View: 7, DB: 15) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:16:29) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 19ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:16:30) [GET]
+  [4;36;1mSite Load (2.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 17ms (View: 2, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:16:31) [GET]
+  [4;35;1mSite Load (5.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 18ms (View: 2, DB: 5) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:21:24) [GET]
+  [4;36;1mSite Load (13.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 21ms (View: 2, DB: 14) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:21:30) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:24:29) [GET]
+  [4;35;1mSite Load (2.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 11ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 10:24:44) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:24:46) [GET]
+  [4;35;1mSite Load (2.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 3, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:25:09) [GET]
+  [4;36;1mSite Load (17.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 72ms (View: 16, DB: 18) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:25:24) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 17, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:25:33) [GET]
+  [4;36;1mSite Load (2.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 17, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:28:56) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:29:12) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 22ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:29:16) [GET]
+  [4;35;1mSite Load (2.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 28ms (View: 18, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:29:20) [GET]
+  [4;36;1mSite Load (2.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 29ms (View: 20, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:29:21) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 29ms (View: 20, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:29:24) [GET]
+  [4;36;1mSite Load (2.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 28ms (View: 18, DB: 3) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:31:19) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:31:34) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:31:49) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 117ms (View: 9, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:31:54) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:32:06) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:33:07) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:33:20) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:34:08) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:34:16) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 84ms (View: 75, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:34:29) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 22ms (View: 13, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:34:30) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:34:49) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:35:06) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:36:19) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 19ms (View: 11, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:36:31) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 90ms (View: 84, DB: 0) | 200 OK [http://localhost/sites/new/]
