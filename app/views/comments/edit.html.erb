@@ -1,6 +1,6 @@
 <h1>Editing comment</h1>
 
-<% form_for(@comment) do |f| %>
+<% form_for([@site,@comment]) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -20,13 +20,7 @@
     <%= f.text_area :content %>
   </p>
   <p>
-    <%= f.label :proposal %><br />
-    <%= f.text_field :proposal %>
-  </p>
-  <p>
     <%= f.submit 'Update' %>
   </p>
 <% end %>
-
-<%= link_to 'Show', @comment %> |
-<%= link_to 'Back', comments_path %>
+<%= link_to 'Back', site_comments_path %>

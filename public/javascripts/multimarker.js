@@ -4,6 +4,28 @@ var ICONS = [];
 var map = null;
 var mgr = null;
 
+function createMarker(point,html,icon) {
+	if(!icon) {icon="residential";}
+
+	var theIcon = new GIcon(G_DEFAULT_ICON);
+	theIcon.image = "/images/"+icon+".png";
+    theIcon.iconAnchor = new GPoint(16, 16);
+    theIcon.infoWindowAnchor = new GPoint(16, 0);
+    theIcon.iconSize = new GSize(32, 32);
+    theIcon.shadow = "/images/" 
+		+ icon + "-shadow.png";
+    theIcon.shadowSize = new GSize(59, 32);
+			
+	markerOptions = { icon:theIcon };
+	
+
+  var marker = new GMarker(point, markerOptions);
+  GEvent.addListener(marker, "click", function() {
+    marker.openInfoWindowHtml(html);
+  });
+  return marker;
+}
+
 function setupMap(lat, long, controls, init_zoom) {
     if (typeof lat == 'undefined' ) lat = 55.8667230193505;
     if (typeof lon == 'undefined' ) lon = -4.24999237060547;
@@ -27,25 +49,32 @@ function getWeatherIcon(name) {
     icon.iconAnchor = new GPoint(16, 16);
     icon.infoWindowAnchor = new GPoint(16, 0);
     icon.iconSize = new GSize(32, 32);
-    icon.shadow = "/images/" 
-		+ name + "-shadow.png";
-    icon.shadowSize = new GSize(59, 32);
+    //icon.shadow = "/images/" 
+	//	+ name + "-shadow.png";
+    //icon.shadowSize = new GSize(59, 32);
 	return icon
 }
 
 function setupWeatherMarkers() {
-  mgr = new MarkerManager(map);
-  var batch = [];
-	var tmp = 'asdf';
+  //mgr = new MarkerManager(map);
+  //var batch = [];
+	//var tmp = 'asdf';
 	$.getJSON("/sites/data.json", function(data) {
 		$.each(data.items, function(i, item){
-			var loc = new GLatLng(item.lat, item.long);
-			var marker = new GMarker(loc, { icon: getWeatherIcon('rain')  });
-			batch.push(marker);
-			mgr.addMarker(marker, 3);
+			var point = new GLatLng(item.lat, item.long);
+			//var marker = new GMarker(loc, { icon: getWeatherIcon(item.type)  });
+			//batch.push(marker);
+			//mgr.addMarker(marker, 3);
+			var html = '<div style="width:240px">Some stuff to display in the First Info Window. With a <a href="http://www.econym.demon.co.uk">Link<\/a> to my home page<\/div>';
+	        var marker = createMarker(point, item.type)
+	        map.addOverlay(marker);
 		});
 	});
-  mgr.refresh();
+	//mgr.addMarkers(batch, 2);
+  	//mgr.addMarkers(getWeatherMarkers(20), 3);
+  //mgr.addMarkers(getWeatherMarkers(200), 6);
+  //mgr.addMarkers(getWeatherMarkers(1000), 8);
+  //mgr.refresh();
 }
 
  

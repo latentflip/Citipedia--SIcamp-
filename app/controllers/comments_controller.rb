@@ -2,8 +2,8 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.xml
   def index
-    @proposal = Proposal.find(params['proposal_id'])
-    @comments = @proposal .comments.all
+    @site = Site.find(params['site_id'])
+    @comments = @site.comments.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,8 +14,8 @@ class CommentsController < ApplicationController
   # GET /comments/1
   # GET /comments/1.xml
   def show
-    @proposal = Proposal.find(params['proposal_id'])
-    @comment = @proposal.comments.find(params[:id])
+    @site = Site.find(params['site_id'])
+    @comment = @site.comments.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,8 +26,8 @@ class CommentsController < ApplicationController
   # GET /comments/new
   # GET /comments/new.xml
   def new
-    @proposal = Proposal.find(params['proposal_id'])
-    @comment = @proposal.comments.build
+    @site = Site.find(params['site_id'])
+    @comment = @site.comments.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -37,21 +37,21 @@ class CommentsController < ApplicationController
 
   # GET /comments/1/edit
   def edit
-    @proposal = Proposal.find(params['proposal_id'])
-    @comment = @proposal.comments.find(params[:id])
+    @site = Site.find(params['site_id'])
+    @comment = @site.comments.find(params[:id])
   end
 
   # POST /comments
   # POST /comments.xml
   def create
-    @proposal = Proposal.find(params['proposal_id'])
-    @comment = @proposal.comments.build(params[:comment])
+    @site = Site.find(params['site_id'])
+    @comment = @site.comments.build(params[:comment])
 
 
     respond_to do |format|
       if @comment.save
         flash[:notice] = 'Comment was successfully created.'
-        format.html { redirect_to(@comment) }
+        format.html { redirect_to site_comment_url(@site,@comment) }
         format.xml  { render :xml => @comment, :status => :created, :location => @comment }
       else
         format.html { render :action => "new" }
@@ -63,14 +63,14 @@ class CommentsController < ApplicationController
   # PUT /comments/1
   # PUT /comments/1.xml
   def update
-    @proposal = Proposal.find(params['proposal_id'])
-    @comment = @proposal.comments.find(params[:id])
+    @site = Site.find(params['site_id'])
+    @comment = @site.comments.find(params[:id])
 
 
     respond_to do |format|
       if @comment.update_attributes(params[:comment])
         flash[:notice] = 'Comment was successfully updated.'
-        format.html { redirect_to(@comment) }
+        format.html { redirect_to site_comment_url(@site,@comment) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -82,13 +82,13 @@ class CommentsController < ApplicationController
   # DELETE /comments/1
   # DELETE /comments/1.xml
   def destroy
-    @proposal = Proposal.find(params['proposal_id'])
-    @comment = @proposal.comments.find(params[:id])
+    @site = Site.find(params['site_id'])
+    @comment = @site.comments.find(params[:id])
 
     @comment.destroy
 
     respond_to do |format|
-      format.html { redirect_to(comments_url) }
+      format.html { redirect_to(site_comments_url(@site)) }
       format.xml  { head :ok }
     end
   end

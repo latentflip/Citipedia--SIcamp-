@@ -2,11 +2,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect 'sites/data.json', :controller => 'sites', :action => 'data'
   map.connect 'heatmap', :controller => 'sites', :action => 'heatmap'
-  map.resources :comments
-  map.resources :proposals, :has_many => :comments
+  map.resources :sites, :has_many => [:proposals, :comments]
 
-
-  map.resources :sites, :has_many => :proposals
+  map.connect 'sites/:site_id/proposals/:proposal_id/setflash', :controller => 'proposals', :action=> 'setflash'
 
   # The priority is based upon order of creation: first created -> highest priority.
 

@@ -1,83 +1,110 @@
 <% content_for:head do %>
 
-<script type="text/javascript">
-  var map = null;
-  var geocoder = null;
+  <script type="text/javascript">
+    var map = null;
+    var geocoder = null;
 
-	function updateCoordForm(latitude, longitude) {
-	    $('#site_latitude').val(latitude);
-	    $('#site_longitude').val(longitude);
-	}
-	
-  function initialize() {
-    if (GBrowserIsCompatible()) {
-      map = new GMap2(document.getElementById("map_canvas"));
-      map.setCenter(new GLatLng(55.8667230193505, -4.24999237060547), 13);
-      map.addControl(new GLargeMapControl());
-      geocoder = new GClientGeocoder();
-
-	  var amarker = new GMarker(map.getCenter(), {draggable: true});
-	
-	
-	GEvent.addListener(amarker, "dragstart", function() {
-	  map.closeInfoWindow();
-	  });
-
-	GEvent.addListener(amarker, "dragend", function() {
-		var latlng = amarker.getLatLng();
-		if (latlng) {
-		     geocoder.getLocations(latlng, function(addresses) {
-		       if(addresses.Status.code != 200) {
-				    var myHtml = latlng;
-				    amarker.openInfoWindow(myHtml);    
-				} else {
-		         	address = addresses.Placemark[0];
-		         	var myHtml = address.address;
-				  	updateCoordForm(latlng.y, latlng.x);
-				    amarker.openInfoWindow(myHtml);   
-       			}
-			});
-		}
-	  });
-	
-	
-	
-	
-
-      map.addOverlay(amarker);
-	  amarker.openInfoWindow('Drag me');
+    function updateCoordForm(latitude, longitude) {
+      $('#site_latitude').val(latitude);
+      $('#site_longitude').val(longitude);
     }
-  }
 
-	
+    function initialize() {
+      if (GBrowserIsCompatible()) {
+        map = new GMap2(document.getElementById("map_canvas"));
+        map.setCenter(new GLatLng(55.8667230193505, -4.24999237060547), 13);
+        map.addControl(new GLargeMapControl());
+        geocoder = new GClientGeocoder();
+        GEvent.addListener(map, "click", clicked);
+
+        var amarker = new GMarker(map.getCenter(), {draggable: true});
 
 
+        GEvent.addListener(amarker, "dragstart", function() {
+          map.closeInfoWindow();
+        });
+
+        GEvent.addListener(amarker, "dragend", function() {
+          var latlng = amarker.getLatLng();
+          if (latlng) {
+            geocoder.getLocations(latlng, function(addresses) {
+              if(addresses.Status.code != 200) {
+                var myHtml = latlng;
+                amarker.openInfoWindow(myHtml);
+              } else {
+                address = addresses.Placemark[0];
+                var myHtml = address.address;
+                updateCoordForm(latlng.y, latlng.x);
+                amarker.openInfoWindow(myHtml);
+              }
+            });
+          }
+        });
+
+
+
+
+
+        map.addOverlay(amarker);
+        amarker.openInfoWindow('Drag me');
+      }
+    }
+
+
+
+    function clicked(overlay, latlng) {
+      if (latlng) {
+        geocoder.getLocations(latlng, function(addresses) {
+          if(addresses.Status.code != 200) {
+            //alert("reverse geocoder failed to find an address for " + latlng.toUrlValue());
+            var myHtml = latlng;
+            map.openInfoWindow(latlng, myHtml);
+            map.addOverlay(new GMarker(latlng));
+          }
+          else {
+            address = addresses.Placemark[0];
+            var myHtml = address.address;
+            updateCoordForm(latlng.y, latlng.x);
+            map.openInfoWindow(latlng, myHtml);
+            map.addOverlay(new GMarker(latlng));
+          }
+        });
+      }
+    }
   </script>
 
-	<script type="text/javascript"> 
-		$(document).ready(function() {
-			initialize();
-		});
-		$(window).unload(function() { GUnload(); } );
-	</script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      initialize();
+    });
+    $(window).unload(function() { GUnload(); } );
+  </script>
 
 
 <% end %>
-  
+
 </head>
 
 
 <h1>New site</h1>
-    <div id="map_canvas" style="width: 600px; height: 450px"></div>
+<div id="map_canvas" style="width: 600px; height: 450px"></div>
 
 
 
 
 <% form_for(@site) do |f| %>
   <%= f.error_messages %>
-<p>
+  <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :btype %><br />
+    <%= f.text_field :btype %>
   </p>
   <p>
     <%= f.label :photo %><br />
@@ -86,6 +113,11 @@
   <p style="display:none;">
     <%= f.label :latitude %><br />
     <%= f.text_field :latitude %>
+  </p>
+  <p>
+    <%= f.label :tag %><br />
+    <span> (Comma separated) </span>
+    <%= f.text_field :tag %>
   </p>
   <p style="display:none;">
     <%= f.label :longitude %><br />
@@ -109,7 +141,7 @@
 <br />
 <br />
 
-    
+
 
 
 

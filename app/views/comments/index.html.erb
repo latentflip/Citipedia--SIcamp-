@@ -13,14 +13,13 @@
     <td><%=h comment.name %></td>
     <td><%=h comment.title %></td>
     <td><%=h comment.content %></td>
-    <td><%=h comment.proposal %></td>
-    <td><%= link_to 'Show', comment %></td>
-    <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-    <td><%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', site_comment_path(comment.site,comment) %></td>
+    <td><%= link_to 'Edit', edit_site_comment_path(comment.site,comment) %></td>
+    <td><%#= link_to 'Destroy', destroy_site_comment_path(comment.site,comment), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New comment', new_comment_path %>
+<%= link_to 'New comment', new_site_comment_path %>

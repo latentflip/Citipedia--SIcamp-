@@ -34,7 +34,6 @@
 
 	// Generate random lat/lon and value points
 		$.getJSON("/sites/data.json", function(pts) {
-			alert('blah');
 			var myHM = new GEOHeatmap();
 			myHM.Init(700, 600); // Must be same as map size, or same ratio
 			var data = new Array();

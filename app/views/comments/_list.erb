@@ -3,13 +3,13 @@
 <% @comments.each do |comment| %>
   <tr>
     <td><%=h comment.title %></td>
-    <td><%= link_to 'Show', comment %></td>
-    <td><%= link_to 'Edit', edit_proposal_comment_path(comment.proposal,comment) %></td>
-    <td><%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', site_comment_path(comment) %></td>
+    <td><%= link_to 'Edit', edit_site_comment_path(@site,comment) %></td>
+    <td><%= link_to 'Destroy', site_comment_path(@site,comment), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New comment', new_proposal_comment_path(@proposal) %>
+<%= link_to 'New comment', new_site_comment_path(@site,@proposal) %>

@@ -8,7 +8,9 @@ class SitesController < ApplicationController
         :label => site.title,
         :lat => "#{site.latitude}",
         :long => "#{site.longitude}",
-        :details => site.description
+        :details => site.description,
+        :type => site.btype,
+        :image => site.photo
       }
     end
     data.compact!
@@ -19,7 +21,11 @@ class SitesController < ApplicationController
   end
 
   def index
-    @sites = Site.all
+    if params[:tag]
+      @sites = Site.all(:conditions => ["tag LIKE ?", "%#{params[:tag]}%"])
+    else
+      @sites = Site.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb

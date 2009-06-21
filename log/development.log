@@ -14331,3 +14331,3384 @@ Processing SitesController#new (for 127.0.0.1 at 2009-06-21 10:36:31) [GET]
 Rendering template within layouts/sites
 Rendering sites/new
 Completed in 90ms (View: 84, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:51:18) [GET]
+  [4;36;1mSite Load (2.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 33ms (View: 23, DB: 2) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:51:29) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 17, DB: 2) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:52:21) [GET]
+  [4;36;1mSite Load (2.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 15, DB: 3) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:52:24) [GET]
+  [4;35;1mSite Load (2.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 211ms (View: 17, DB: 2) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 10:52:39) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (17.1ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (24.5ms)
+  [4;35;1mComment Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: comments.site_id: SELECT * FROM "comments" WHERE ("comments".site_id = 9) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: comments.site_id: SELECT * FROM "comments" WHERE ("comments".site_id = 9) ) on line #3 of app/views/comments/_list.erb:
+1: <table>
+2: 
+3: <% @comments.each do |comment| %>
+4:   <tr>
+5:     <td><%=h comment.title %></td>
+6:     <td><%= link_to 'Show', site_comment_path(comment) %></td>
+
+    app/views/comments/_list.erb:3
+    app/views/sites/show.html.erb:29
+    app/controllers/sites_controller.rb:43:in `show'
+
+Rendered rescues/_trace (123.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 10:52:47) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendered proposals/_list (3.6ms)
+  [4;35;1mComment Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: comments.site_id: SELECT * FROM "comments" WHERE ("comments".site_id = 6) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: comments.site_id: SELECT * FROM "comments" WHERE ("comments".site_id = 6) ) on line #3 of app/views/comments/_list.erb:
+1: <table>
+2: 
+3: <% @comments.each do |comment| %>
+4:   <tr>
+5:     <td><%=h comment.title %></td>
+6:     <td><%= link_to 'Show', site_comment_path(comment) %></td>
+
+    app/views/comments/_list.erb:3
+    app/views/sites/show.html.erb:29
+    app/controllers/sites_controller.rb:43:in `show'
+
+Rendered rescues/_trace (62.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:52:51) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 58ms (View: 48, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:53:54) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 189ms (View: 182, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:55:50) [GET]
+  [4;36;1mSite Load (4.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 32ms (View: 17, DB: 4) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:55:51) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 3, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:56:09) [GET]
+  [4;36;1mSite Load (2.2ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 26ms (View: 18, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:56:11) [GET]
+  [4;35;1mSite Load (2.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 16ms (View: 3, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:58:24) [GET]
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 27ms (View: 19, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:58:25) [GET]
+  [4;35;1mSite Load (2.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 122ms (View: 2, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:58:27) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 26ms (View: 17, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:58:33) [GET]
+  [4;35;1mSite Load (2.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 29ms (View: 19, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:58:34) [GET]
+  [4;36;1mSite Load (2.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 17ms (View: 3, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:58:46) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:58:47) [GET]
+  [4;36;1mSite Load (3.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 19ms (View: 4, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:58:59) [GET]
+  [4;35;1mSite Load (2.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 111ms (View: 103, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:59:00) [GET]
+  [4;36;1mSite Load (3.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 17ms (View: 3, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 10:59:35) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 17, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 10:59:36) [GET]
+  [4;36;1mSite Load (2.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 17ms (View: 3, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:00:02) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:00:05) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 2, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:00:25) [GET]
+  [4;35;1mSite Load (36.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 615ms (View: 489, DB: 37) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:00:31) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:00:51) [GET]
+  [4;35;1mSite Load (2.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 28ms (View: 19, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:00:52) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 3, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:00:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:01:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (21.7ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090620141656)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" integer, "longitude" integer, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090620141656')[0m
+Migrating to CreateProposals (20090620141801)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "proposals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "site_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090620141801')[0m
+Migrating to AddTitleToSites (20090620152724)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mALTER TABLE "sites" ADD "title" varchar(255)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090620152724')[0m
+Migrating to AddPhotoToSite (20090620153925)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "sites" ADD "photo" varchar(255)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090620153925')[0m
+Migrating to ChangeIntegersToFloat (20090620175811)
+  [4;36;1mSQL (88.1ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" integer, "longitude" integer, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;35;1mSQL (15.5ms)[0m   [0mPRAGMA index_list("sites")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mDROP TABLE "sites"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" integer, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_sites")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDROP TABLE "altered_sites"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" integer, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("sites")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "sites"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" float, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_sites")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDROP TABLE "altered_sites"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090620175811')[0m
+Migrating to CreateComments (20090621002619)
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "content" text, "site_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090621002619')[0m
+Migrating to AddInfoToTables (20090621013105)
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "sites" ADD "status" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "proposals" ADD "title" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "comments" ADD "avatar" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090621013105')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("proposals")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:04:19) [GET]
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+
+ActionView::TemplateError (undefined local variable or method `site' for #<ActionView::Base:0x20b4954>) on line #55 of app/views/sites/index.html.erb:
+52: 		$.getJSON("/sites/data.json", function(data) {
+53: 			$.each(data.items, function(i, item){
+54: 				var loc = new GLatLng(item.lat, item.long);
+55: 				var marker = new GMarker(loc, { icon: getWeatherIcon('<%=h site.type %>')  });
+56: 				batch.push(marker);
+57: 				mgr.addMarker(marker, 3);
+58: 			});
+
+    app/views/sites/index.html.erb:55
+    app/views/sites/index.html.erb:1
+    app/controllers/sites_controller.rb:24:in `index'
+
+Rendered rescues/_trace (49.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090620141656)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" integer, "longitude" integer, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090620141656')[0m
+Migrating to CreateProposals (20090620141801)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "proposals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "site_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090620141801')[0m
+Migrating to AddTitleToSites (20090620152724)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "sites" ADD "title" varchar(255)[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090620152724')[0m
+Migrating to AddPhotoToSite (20090620153925)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mALTER TABLE "sites" ADD "photo" varchar(255)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090620153925')[0m
+Migrating to ChangeIntegersToFloat (20090620175811)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" integer, "longitude" integer, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("sites")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDROP TABLE "sites"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" integer, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_sites")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDROP TABLE "altered_sites"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" integer, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("sites")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "sites"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" float, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("altered_sites")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDROP TABLE "altered_sites"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090620175811')[0m
+Migrating to CreateComments (20090621002619)
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "content" text, "site_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090621002619')[0m
+Migrating to AddInfoToTables (20090621013105)
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "sites" ADD "status" varchar(255)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "proposals" ADD "title" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "comments" ADD "avatar" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090621013105')[0m
+Migrating to AddTagsToSites (20090621094359)
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "sites" ADD "tag" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090621094359')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("proposals")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:09:55) [GET]
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+
+ActionView::TemplateError (undefined local variable or method `site' for #<ActionView::Base:0x22a379c>) on line #55 of app/views/sites/index.html.erb:
+52: 		$.getJSON("/sites/data.json", function(data) {
+53: 			$.each(data.items, function(i, item){
+54: 				var loc = new GLatLng(item.lat, item.long);
+55: 				var marker = new GMarker(loc, { icon: getWeatherIcon('<%=h site.type %>')  });
+56: 				batch.push(marker);
+57: 				mgr.addMarker(marker, 3);
+58: 			});
+
+    app/views/sites/index.html.erb:55
+    app/views/sites/index.html.erb:1
+    app/controllers/sites_controller.rb:24:in `index'
+
+Rendered rescues/_trace (50.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:11:17) [GET]
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+
+ActionView::TemplateError (undefined local variable or method `site' for #<ActionView::Base:0x22c65f8>) on line #55 of app/views/sites/index.html.erb:
+52: 		$.getJSON("/sites/data.json", function(data) {
+53: 			$.each(data.items, function(i, item){
+54: 				var loc = new GLatLng(item.lat, item.long);
+55: 				var marker = new GMarker(loc, { icon: getWeatherIcon('<%=h site.type ? site.type : ''%>')  });
+56: 				batch.push(marker);
+57: 				mgr.addMarker(marker, 3);
+58: 			});
+
+    app/views/sites/index.html.erb:55
+    app/views/sites/index.html.erb:1
+    app/controllers/sites_controller.rb:24:in `index'
+
+Rendered rescues/_trace (52.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:11:19) [GET]
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+
+ActionView::TemplateError (undefined local variable or method `site' for #<ActionView::Base:0x22d6e94>) on line #55 of app/views/sites/index.html.erb:
+52: 		$.getJSON("/sites/data.json", function(data) {
+53: 			$.each(data.items, function(i, item){
+54: 				var loc = new GLatLng(item.lat, item.long);
+55: 				var marker = new GMarker(loc, { icon: getWeatherIcon('<%=h site.type ? site.type : ''%>')  });
+56: 				batch.push(marker);
+57: 				mgr.addMarker(marker, 3);
+58: 			});
+
+    app/views/sites/index.html.erb:55
+    app/views/sites/index.html.erb:1
+    app/controllers/sites_controller.rb:24:in `index'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:11:29) [GET]
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+
+ActionView::TemplateError (undefined local variable or method `item' for #<ActionView::Base:0x22fd1ac>) on line #55 of app/views/sites/index.html.erb:
+52: 		$.getJSON("/sites/data.json", function(data) {
+53: 			$.each(data.items, function(i, item){
+54: 				var loc = new GLatLng(item.lat, item.long);
+55: 				var marker = new GMarker(loc, { icon: getWeatherIcon('<%=h item.type ? item.type : ''%>')  });
+56: 				batch.push(marker);
+57: 				mgr.addMarker(marker, 3);
+58: 			});
+
+    app/views/sites/index.html.erb:55
+    app/views/sites/index.html.erb:1
+    app/controllers/sites_controller.rb:24:in `index'
+
+Rendered rescues/_trace (48.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:12:03) [GET]
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:12:04) [GET]
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 11:12:08) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 115ms (View: 106, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 11:12:16) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 11:12:22) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 31ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-21 11:12:40) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Ebn4HKdazMpZf5fZUniKcJOdho6L8KqqCXAtltmO76g=", "site"=>{"photo"=>"", "latitude"=>"55.86057394033749", "title"=>"Title", "tag"=>"tag1, tag2", "description"=>"", "longitude"=>"-4.252223968505859"}}
+  [4;36;1mSite Create (0.6ms)[0m   [0;1mINSERT INTO "sites" ("photo", "status", "latitude", "updated_at", "title", "tag", "description", "longitude", "created_at") VALUES('', NULL, 55.8605739403375, '2009-06-21 10:12:40', 'Title', 'tag1, tag2', '', -4.25222396850586, '2009-06-21 10:12:40')[0m
+Redirected to http://localhost:3000/sites/1
+Completed in 41ms (DB: 1) | 302 Found [http://localhost/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:12:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (1.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (2.7ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.7ms)
+Completed in 43ms (View: 31, DB: 2) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:12:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (1.0ms)
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:12:41) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:12:48) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:12:49) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:12:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/item.type.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:12:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/item.type-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:18:44) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:18:52) [GET]
+  [4;35;1mSite Load (1.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:18:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/item.type.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:18:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/item.type-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:19:04) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:19:05) [GET]
+  [4;35;1mSite Load (1.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:19:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/item.type.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:19:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/item.type-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:19:33) [GET]
+  [4;36;1mSite Load (0.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:19:34) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:19:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/undefined.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:19:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/undefined-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:19:36) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:19:47) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:19:55) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:19:55) [GET]
+  [4;35;1mSite Load (0.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:19:57) [GET]
+  [4;36;1mSite Load (3.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 1, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:19:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/undefined.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:19:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/undefined-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:20:33) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 11:20:58) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/new/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:21:20) [GET]
+  [4;36;1mSite Load (1.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:23:08) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:23:09) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:23:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:23:30) [GET]
+  [4;35;1mSite Load (1.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 11:23:45) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 11:24:36) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-21 11:24:55) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Ebn4HKdazMpZf5fZUniKcJOdho6L8KqqCXAtltmO76g=", "site"=>{"photo"=>"", "latitude"=>"55.86230798296752", "title"=>"Taylor Street", "tag"=>"", "description"=>"", "longitude"=>"-4.241752624511719"}}
+  [4;36;1mSite Create (0.4ms)[0m   [0;1mINSERT INTO "sites" ("photo", "status", "latitude", "updated_at", "title", "tag", "description", "longitude", "created_at") VALUES('', NULL, 55.8623079829675, '2009-06-21 10:24:55', 'Taylor Street', '', '', -4.24175262451172, '2009-06-21 10:24:55')[0m
+Redirected to http://localhost:3000/sites/2
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:24:55) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (0.9ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (0.8ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:24:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (1.2ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/2]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:24:57) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:26:45) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (0.6ms)
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (0.7ms)
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:26:46) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (1.0ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (0.8ms)
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/2]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:26:46) [GET]
+  [4;36;1mSite Load (1.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 11:28:40) [GET]
+  Parameters: {"site_id"=>"2"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 22ms (View: 10, DB: 0) | 200 OK [http://localhost/sites/2/comments/new]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:28:43) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (0.9ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (0.9ms)
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/2]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 11:28:50) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 23ms (View: 14, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:28:58) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:29:00) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 92ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:29:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090620141656)
+Migrating to CreateProposals (20090620141801)
+Migrating to AddTitleToSites (20090620152724)
+Migrating to AddPhotoToSite (20090620153925)
+Migrating to ChangeIntegersToFloat (20090620175811)
+Migrating to CreateComments (20090621002619)
+Migrating to AddInfoToTables (20090621013105)
+Migrating to AddTagsToSites (20090621094359)
+Migrating to AddTypeToSite (20090621103333)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "sites" ADD "type" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090621103333')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("proposals")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090620141656)
+Migrating to CreateProposals (20090620141801)
+Migrating to AddTitleToSites (20090620152724)
+Migrating to AddPhotoToSite (20090620153925)
+Migrating to ChangeIntegersToFloat (20090620175811)
+Migrating to CreateComments (20090621002619)
+Migrating to AddInfoToTables (20090621013105)
+Migrating to AddTagsToSites (20090621094359)
+Migrating to AddTypeToSite (20090621103333)
+Migrating to AddNameToSite (20090621103426)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "sites" ADD "name" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090621103426')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("proposals")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 11:35:25) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 23ms (View: 14, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 11:36:38) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:36:51) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:36:52) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:36:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/null.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:36:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/null-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#edit (for 127.0.0.1 at 2009-06-21 11:36:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/edit
+Completed in 19ms (View: 11, DB: 0) | 200 OK [http://localhost/sites/1/edit]
+
+
+Processing SitesController#edit (for 127.0.0.1 at 2009-06-21 11:37:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (2.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/edit
+Completed in 21ms (View: 11, DB: 2) | 200 OK [http://localhost/sites/1/edit]
+
+
+Processing SitesController#update (for 127.0.0.1 at 2009-06-21 11:37:47) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Ebn4HKdazMpZf5fZUniKcJOdho6L8KqqCXAtltmO76g=", "id"=>"1", "site"=>{"name"=>"", "photo"=>"", "latitude"=>"55.8605739403375", "title"=>"Title", "tag"=>"tag1, tag2", "type"=>"commercial", "description"=>"", "longitude"=>"-4.25222396850586"}}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;36;1mSite Update (0.5ms)[0m   [0;1mUPDATE "sites" SET "name" = '', "updated_at" = '2009-06-21 10:37:47' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/sites/1
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:37:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.8ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.7ms)
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:38:04) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:38:05) [GET]
+  [4;35;1mSite Load (1.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 1, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:38:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/null.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:38:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/null-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:38:12) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:38:13) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:38:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/null.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:38:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/null-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 11:38:16) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#edit (for 127.0.0.1 at 2009-06-21 11:38:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/edit
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/sites/1/edit]
+
+
+Processing SitesController#edit (for 127.0.0.1 at 2009-06-21 11:38:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.5ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/edit
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://localhost/sites/1/edit]
+
+
+Processing SitesController#update (for 127.0.0.1 at 2009-06-21 11:38:53) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Ebn4HKdazMpZf5fZUniKcJOdho6L8KqqCXAtltmO76g=", "id"=>"1", "site"=>{"name"=>"", "photo"=>"", "latitude"=>"55.8605739403375", "title"=>"Title", "tag"=>"tag1, tag2", "type"=>"commercial", "description"=>"", "longitude"=>"-4.25222396850586"}}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: type
+Redirected to http://localhost:3000/sites/1
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:38:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.9ms)
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:38:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.9ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:38:54) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:38:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/null.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:39:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (1.0ms)
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:39:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (1.3ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (1.1ms)
+Completed in 104ms (View: 95, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:39:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.9ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (1.2ms)
+Completed in 24ms (View: 14, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:39:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (1.1ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (1.0ms)
+Completed in 26ms (View: 17, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:39:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.6ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.7ms)
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:39:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (1.5ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (1.0ms)
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:40:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.6ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (1.0ms)
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:40:16) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:40:17) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:40:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/null.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:40:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/null-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:40:25) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/sites/data.json]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 11:40:57) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 11:41:39) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-21 11:42:09) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Ebn4HKdazMpZf5fZUniKcJOdho6L8KqqCXAtltmO76g=", "site"=>{"photo"=>"", "name"=>"asdf", "latitude"=>"55.86307864373632", "title"=>"Title", "tag"=>"", "type"=>"commercial", "description"=>"", "longitude"=>"-4.242439270019531"}}
+WARNING: Can't mass-assign these protected attributes: type
+  [4;36;1mSite Create (0.4ms)[0m   [0;1mINSERT INTO "sites" ("photo", "status", "name", "latitude", "updated_at", "title", "tag", "type", "description", "longitude", "created_at") VALUES('', NULL, 'asdf', 55.8630786437363, '2009-06-21 10:42:09', 'Title', '', NULL, '', -4.24243927001953, '2009-06-21 10:42:09')[0m
+Redirected to http://localhost:3000/sites/3
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:42:09) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 3) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 3) [0m
+Rendered proposals/_list (0.7ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 3) [0m
+Rendered comments/_list (0.8ms)
+Completed in 119ms (View: 111, DB: 1) | 200 OK [http://localhost/sites/3]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:42:25) [GET]
+  [4;36;1mSite Load (1.2ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:42:26) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:42:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/null.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:42:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/null-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:43:51) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 11:44:24) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:44:31) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=6):
+  app/controllers/sites_controller.rb:46:in `show'
+
+Rendered rescues/_trace (35.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:44:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.8ms)
+Completed in 30ms (View: 21, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:44:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.8ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (1.6ms)
+Completed in 24ms (View: 14, DB: 1) | 200 OK [http://localhost/sites/1/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:45:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.8ms)
+Completed in 22ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/1/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:45:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.5ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.8ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (1.2ms)
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://localhost/sites/1/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:45:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.8ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.8ms)
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/1/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:45:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (1.3ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.9ms)
+Completed in 33ms (View: 19, DB: 1) | 200 OK [http://localhost/sites/1/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:45:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (1.0ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.8ms)
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/1/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:45:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.8ms)
+Completed in 23ms (View: 14, DB: 1) | 200 OK [http://localhost/sites/1/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:45:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.8ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.8ms)
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/1/]
+
+
+Processing SitesController#edit (for 127.0.0.1 at 2009-06-21 11:46:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/edit
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/edit/1/]
+
+
+Processing SitesController#update (for 127.0.0.1 at 2009-06-21 11:46:17) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Ebn4HKdazMpZf5fZUniKcJOdho6L8KqqCXAtltmO76g=", "id"=>"1", "site"=>{"name"=>"", "photo"=>"", "latitude"=>"55.8605739403375", "title"=>"Title", "tag"=>"tag1, tag2", "type"=>"typeasdfads", "description"=>"", "longitude"=>"-4.25222396850586"}}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: type
+Redirected to http://localhost:3000/sites/1
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:46:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.9ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.8ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:46:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.8ms)
+Completed in 24ms (View: 15, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#edit (for 127.0.0.1 at 2009-06-21 11:47:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/edit
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/sites/edit/1]
+
+
+Processing SitesController#update (for 127.0.0.1 at 2009-06-21 11:47:15) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Ebn4HKdazMpZf5fZUniKcJOdho6L8KqqCXAtltmO76g=", "id"=>"1", "site"=>{"name"=>"the name", "photo"=>"", "latitude"=>"55.8605739403375", "title"=>"Title", "tag"=>"tag1, tag2", "type"=>"", "description"=>"", "longitude"=>"-4.25222396850586"}}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;35;1mSite Update (0.4ms)[0m   [0mUPDATE "sites" SET "name" = 'the name', "updated_at" = '2009-06-21 10:47:15' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/sites/1
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:47:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.7ms)
+Completed in 24ms (View: 15, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:47:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.8ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.9ms)
+Completed in 105ms (View: 95, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:47:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.7ms)
+Completed in 23ms (View: 14, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:47:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.8ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.9ms)
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://localhost/sites/1]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddNameToSite (20090621103426)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" float, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255), "status" varchar(255), "tag" varchar(255), "type" varchar(255), "name" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "sites"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" float, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255), "status" varchar(255), "tag" varchar(255), "type" varchar(255)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_sites")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "altered_sites"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090621103426'[0m
+Migrating to AddTypeToSite (20090621103333)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" float, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255), "status" varchar(255), "tag" varchar(255), "type" varchar(255)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("sites")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDROP TABLE "sites"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" float, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255), "status" varchar(255), "tag" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_sites")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDROP TABLE "altered_sites"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20090621103333'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("proposals")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090620141656)
+Migrating to CreateProposals (20090620141801)
+Migrating to AddTitleToSites (20090620152724)
+Migrating to AddPhotoToSite (20090620153925)
+Migrating to ChangeIntegersToFloat (20090620175811)
+Migrating to CreateComments (20090621002619)
+Migrating to AddInfoToTables (20090621013105)
+Migrating to AddTagsToSites (20090621094359)
+Migrating to AddTypeToSite (20090621103333)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "sites" ADD "btype" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090621103333')[0m
+Migrating to AddNameToSite (20090621103426)
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "sites" ADD "name" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090621103426')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("proposals")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+
+
+Processing SitesController#add (for 127.0.0.1 at 2009-06-21 11:49:54) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to add. Actions: create, data, destroy, edit, heatmap, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#add (for 127.0.0.1 at 2009-06-21 11:49:56) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to add. Actions: create, data, destroy, edit, heatmap, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#edit (for 127.0.0.1 at 2009-06-21 11:49:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/edit
+Completed in 20ms (View: 11, DB: 0) | 200 OK [http://localhost/sites/edit/1]
+
+
+Processing SitesController#update (for 127.0.0.1 at 2009-06-21 11:50:07) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Ebn4HKdazMpZf5fZUniKcJOdho6L8KqqCXAtltmO76g=", "id"=>"1", "site"=>{"name"=>"", "photo"=>"", "latitude"=>"55.8605739403375", "title"=>"Title", "tag"=>"tag1, tag2", "description"=>"", "btype"=>"adsf", "longitude"=>"-4.25222396850586"}}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+  [4;36;1mSite Update (0.5ms)[0m   [0;1mUPDATE "sites" SET "btype" = 'adsf', "name" = '', "updated_at" = '2009-06-21 10:50:07' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/sites/1
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:50:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.9ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (1.0ms)
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:50:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.8ms)
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#edit (for 127.0.0.1 at 2009-06-21 11:50:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/edit
+Completed in 16ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/edit/1]
+
+
+Processing SitesController#update (for 127.0.0.1 at 2009-06-21 11:50:27) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Ebn4HKdazMpZf5fZUniKcJOdho6L8KqqCXAtltmO76g=", "id"=>"1", "site"=>{"name"=>"", "photo"=>"", "latitude"=>"55.8605739403375", "title"=>"Title", "tag"=>"tag1, tag2", "description"=>"", "btype"=>"commercial", "longitude"=>"-4.25222396850586"}}
+  [4;36;1mSite Load (0.5ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+  [4;35;1mSite Update (0.4ms)[0m   [0mUPDATE "sites" SET "btype" = 'commercial', "updated_at" = '2009-06-21 10:50:27' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/sites/1
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:50:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.8ms)
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (1.1ms)
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:50:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.8ms)
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:50:33) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+
+ActiveSupport::JSON::CircularReferenceError (object references itself):
+  app/controllers/sites_controller.rb:18:in `data'
+  app/controllers/sites_controller.rb:17:in `data'
+
+Rendered rescues/_trace (71.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:50:44) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:50:45) [GET]
+  [4;36;1mSite Load (0.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 89ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:51:13) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 11:51:14) [GET]
+  [4;36;1mSite Load (0.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:51:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:51:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/null.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 11:51:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/null-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 11:54:08) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/sites/]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090620141656)
+Migrating to CreateProposals (20090620141801)
+Migrating to AddTitleToSites (20090620152724)
+Migrating to AddPhotoToSite (20090620153925)
+Migrating to ChangeIntegersToFloat (20090620175811)
+Migrating to CreateComments (20090621002619)
+Migrating to AddInfoToTables (20090621013105)
+Migrating to AddTagsToSites (20090621094359)
+Migrating to AddFlashToProposal (20090621101954)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "proposals" ADD "flash_data" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090621101954')[0m
+Migrating to AddTypeToSite (20090621103333)
+Migrating to AddNameToSite (20090621103426)
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("proposals")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:59:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.6ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (2.3ms)
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 11:59:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.9ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.9ms)
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:00:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.8ms)
+Completed in 20ms (View: 10, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:00:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.8ms)
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:01:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.8ms)
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:01:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (1.1ms)
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:01:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.8ms)
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:01:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;35;1mComment Load (1.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (2.1ms)
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:01:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.6ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.9ms)
+Completed in 25ms (View: 16, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:02:11) [GET]
+  [4;35;1mSite Load (1.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:02:12) [GET]
+  [4;36;1mSite Load (1.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:02:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:02:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/null.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:02:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/null-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:02:20) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (0.7ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (0.8ms)
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:02:44) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (0.8ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (0.9ms)
+Completed in 22ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:02:53) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (0.7ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (1.7ms)
+Completed in 28ms (View: 16, DB: 1) | 200 OK [http://localhost/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:02:53) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (0.7ms)
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:03:03) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (0.8ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (1.1ms)
+Completed in 113ms (View: 103, DB: 1) | 200 OK [http://localhost/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:03:31) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (0.8ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (0.9ms)
+Completed in 29ms (View: 20, DB: 1) | 200 OK [http://localhost/sites/2]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:03:46) [GET]
+  [4;35;1mSite Load (1.3ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:03:49) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:03:50) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:03:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:03:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/null.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:03:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/null-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:13:43) [GET]
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 22ms (View: 14, DB: 2) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:13:59) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 22ms (View: 15, DB: 1) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:14:06) [GET]
+  [4;36;1mSite Load (0.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:14:07) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:14:58) [GET]
+  [4;36;1mSite Load (19.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 86ms (View: 61, DB: 20) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:14:59) [GET]
+  [4;35;1mSite Load (1.3ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:15:09) [GET]
+  [4;36;1mSite Load (1.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:15:11) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:18:07) [GET]
+  [4;36;1mSite Load (23.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 42ms (View: 14, DB: 23) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:18:08) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:18:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/undefined.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:18:27) [GET]
+  [4;36;1mSite Load (16.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 114ms (View: 90, DB: 16) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:18:28) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:18:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/null.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:20:07) [GET]
+  [4;36;1mSite Load (14.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 35ms (View: 15, DB: 14) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:20:08) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:20:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:20:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/null.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:20:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/null-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:20:36) [GET]
+  [4;36;1mSite Load (23.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 45ms (View: 14, DB: 23) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:20:37) [GET]
+  [4;35;1mSite Load (1.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 1, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:20:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:20:46) [GET]
+  [4;36;1mSite Load (0.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 14, DB: 1) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:20:47) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:20:56) [GET]
+  [4;36;1mSite Load (39.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 131ms (View: 84, DB: 39) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:20:57) [GET]
+  [4;35;1mSite Load (1.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:21:04) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:21:06) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:21:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:21:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:22:07) [GET]
+  [4;36;1mSite Load (0.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:22:08) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 96ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:22:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:22:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:22:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (1.9ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (1.5ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (4.2ms)
+Completed in 209ms (View: 136, DB: 3) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:22:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.8ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.9ms)
+Completed in 102ms (View: 59, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:22:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (1.2ms)
+Completed in 54ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:24:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.8ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.8ms)
+Completed in 445ms (View: 424, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:24:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.5ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.9ms)
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:24:20) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:24:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:24:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#heatmap (for 127.0.0.1 at 2009-06-21 12:24:50) [GET]
+  [4;36;1mSite Load (23.2ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/heatmap
+Completed in 43ms (View: 14, DB: 23) | 200 OK [http://localhost/heatmap]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:26:00) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:26:01) [GET]
+  [4;36;1mSite Load (0.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:26:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:26:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:30:11) [GET]
+  [4;35;1mSite Load (15.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+
+ActionView::TemplateError (undefined local variable or method `item' for #<ActionView::Base:0x23f06e0>) on line #82 of app/views/sites/index.html.erb:
+79: 				//var marker = new GMarker(loc, { icon: getWeatherIcon(item.type)  });
+80: 				//batch.push(marker);
+81: 				//mgr.addMarker(marker, 3);
+82: 				var theHtml = '<div style="width:240px"><%= item.title %><\/div>';
+83: 		        var marker = createMarker(point,theHtml, item.type)
+84: 		        map.addOverlay(marker);
+85: 			});
+
+    app/views/sites/index.html.erb:82
+    app/views/sites/index.html.erb:1
+    app/controllers/sites_controller.rb:29:in `index'
+
+Rendered rescues/_trace (111.8ms)
+Rendered rescues/_request_and_response (50.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:30:29) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 16, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:30:30) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:30:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:30:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:30:47) [GET]
+  [4;36;1mSite Load (0.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 103ms (View: 8, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:30:48) [GET]
+  [4;35;1mSite Load (1.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:30:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:30:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:30:57) [GET]
+  [4;36;1mSite Load (32.2ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 44ms (View: 1, DB: 32) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:31:57) [GET]
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:31:58) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:31:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:31:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:32:35) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:32:36) [GET]
+  [4;36;1mSite Load (1.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:32:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:32:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:33:30) [GET]
+  [4;35;1mSite Load (33.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 46ms (View: 7, DB: 33) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:33:31) [GET]
+  [4;36;1mSite Load (2.2ms)[0m   [0;1mSELECT * FROM "sites" [0m
+
+NoMethodError (undefined method `image' for #<Site:0x21e58a0>):
+  app/controllers/sites_controller.rb:13:in `data'
+  app/controllers/sites_controller.rb:6:in `map'
+  app/controllers/sites_controller.rb:6:in `data'
+
+Rendered rescues/_trace (126.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:34:24) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#edit (for 127.0.0.1 at 2009-06-21 12:34:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/edit
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/1/edit]
+
+
+Processing SitesController#update (for 127.0.0.1 at 2009-06-21 12:34:54) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Ebn4HKdazMpZf5fZUniKcJOdho6L8KqqCXAtltmO76g=", "id"=>"1", "site"=>{"name"=>"", "photo"=>"http://web1.twitpic.com/img/13434443-e17392709e1a4022534af9373d0f1c94.4a3e1ad1-scaled.jpg", "latitude"=>"55.8605739403375", "title"=>"Title", "tag"=>"tag1, tag2", "description"=>"", "btype"=>"commercial", "longitude"=>"-4.25222396850586"}}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+  [4;36;1mSite Update (0.4ms)[0m   [0;1mUPDATE "sites" SET "photo" = 'http://web1.twitpic.com/img/13434443-e17392709e1a4022534af9373d0f1c94.4a3e1ad1-scaled.jpg', "updated_at" = '2009-06-21 11:34:54' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/sites/1
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:34:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.8ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.8ms)
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:35:00) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 42ms (View: 33, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:35:29) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:35:30) [GET]
+  [4;36;1mSite Load (0.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+
+NoMethodError (undefined method `image' for #<Site:0x246bffc>):
+  app/controllers/sites_controller.rb:13:in `data'
+  app/controllers/sites_controller.rb:6:in `map'
+  app/controllers/sites_controller.rb:6:in `data'
+
+Rendered rescues/_trace (43.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:35:39) [GET]
+  [4;35;1mSite Load (21.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 34ms (View: 7, DB: 22) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:35:41) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+
+NoMethodError (undefined method `image' for #<Site:0x21eefe0>):
+  app/controllers/sites_controller.rb:13:in `data'
+  app/controllers/sites_controller.rb:6:in `map'
+  app/controllers/sites_controller.rb:6:in `data'
+
+Rendered rescues/_trace (131.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:35:56) [GET]
+  [4;35;1mSite Load (33.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 47ms (View: 7, DB: 34) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:35:57) [GET]
+  [4;36;1mSite Load (1.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:35:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:35:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:36:44) [GET]
+  [4;35;1mSite Load (15.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 38ms (View: 16, DB: 16) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:36:45) [GET]
+  [4;36;1mSite Load (1.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 20ms (View: 8, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:36:46) [GET]
+  [4;35;1mSite Load (1.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:36:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:36:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:37:15) [GET]
+  [4;36;1mSite Load (60.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 79ms (View: 13, DB: 61) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:37:17) [GET]
+  [4;35;1mSite Load (1.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:37:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:37:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:37:34) [GET]
+  [4;36;1mSite Load (1.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 14, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:37:35) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:37:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:37:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:38:17) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:38:18) [GET]
+  [4;35;1mSite Load (1.3ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:38:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:38:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:43:34) [GET]
+  [4;36;1mSite Load (43.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 95ms (View: 45, DB: 44) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:43:35) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:43:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:43:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:43:37) [GET]
+  [4;36;1mSite Load (1.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#edit (for 127.0.0.1 at 2009-06-21 12:43:38) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/edit
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/sites/2/edit]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:43:44) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.5ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (1.1ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (0.8ms)
+Completed in 103ms (View: 95, DB: 1) | 200 OK [http://localhost/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:43:53) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.5ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (0.9ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (1.3ms)
+Completed in 28ms (View: 16, DB: 1) | 200 OK [http://localhost/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:44:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (2.6ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (3.2ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (0.8ms)
+Completed in 27ms (View: 13, DB: 3) | 200 OK [http://localhost/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:44:08) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (0.9ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (0.8ms)
+Completed in 24ms (View: 15, DB: 1) | 200 OK [http://localhost/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:44:12) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (0.8ms)
+Completed in 27ms (View: 18, DB: 1) | 200 OK [http://localhost/sites/2]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:44:31) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 12:44:32) [GET]
+  [4;36;1mSite Load (1.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:44:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 12:44:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 12:44:41) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:44:45) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (1.0ms)
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/2]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 12:45:25) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (1.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendered proposals/_list (2.1ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 2) [0m
+Rendered comments/_list (1.0ms)
+Completed in 25ms (View: 12, DB: 2) | 200 OK [http://localhost/sites/2]
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 12:45:37) [GET]
+  Parameters: {"site_id"=>"2"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 2) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+Rendered proposals/_list (0.2ms)
+Completed in 32ms (View: 20, DB: 1) | 200 OK [http://localhost/sites/2/proposals]
+
+
+Processing ProposalsController#new (for 127.0.0.1 at 2009-06-21 12:45:39) [GET]
+  Parameters: {"site_id"=>"2"}
+  [4;36;1mSite Load (0.5ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/proposals
+Rendering proposals/new
+Completed in 21ms (View: 7, DB: 1) | 200 OK [http://localhost/sites/2/proposals/new]
+
+
+Processing ProposalsController#create (for 127.0.0.1 at 2009-06-21 12:45:42) [POST]
+  Parameters: {"site_id"=>"2", "commit"=>"Create", "authenticity_token"=>"IjNc04jJb9rqPRpp5kdtEIEew4BL/+P/xUXmGSgee24=", "proposal"=>{"title"=>"asdf", "description"=>""}}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Create (0.4ms)[0m   [0;1mINSERT INTO "proposals" ("site_id", "updated_at", "title", "flash_data", "description", "created_at") VALUES(2, '2009-06-21 11:45:42', 'asdf', NULL, '', '2009-06-21 11:45:42')[0m
+Redirected to http://localhost:3000/sites/2/proposals/1
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/sites/2/proposals]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 12:45:42) [GET]
+  Parameters: {"site_id"=>"2", "id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1 AND ("proposals".site_id = 2)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 20ms (View: 7, DB: 1) | 200 OK [http://localhost/sites/2/proposals/1]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 12:58:58) [GET]
+  Parameters: {"site_id"=>"2", "id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1 AND ("proposals".site_id = 2)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://localhost/sites/2/proposals/1]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 12:59:03) [GET]
+  Parameters: {"site_id"=>"2", "id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1 AND ("proposals".site_id = 2)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://localhost/sites/2/proposals/1]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 13:00:30) [GET]
+  Parameters: {"site_id"=>"2", "id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1 AND ("proposals".site_id = 2)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 16ms (View: 3, DB: 1) | 200 OK [http://localhost/sites/2/proposals/1]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 13:01:59) [GET]
+  Parameters: {"site_id"=>"2", "id"=>"1"}
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1 AND ("proposals".site_id = 2)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 100ms (View: 87, DB: 1) | 200 OK [http://localhost/sites/2/proposals/1]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 13:03:21) [GET]
+  Parameters: {"site_id"=>"2", "id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1 AND ("proposals".site_id = 2)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 16ms (View: 3, DB: 1) | 200 OK [http://localhost/sites/2/proposals/1]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 13:04:26) [GET]
+  Parameters: {"site_id"=>"2", "id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1 AND ("proposals".site_id = 2)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 21ms (View: 9, DB: 1) | 200 OK [http://localhost/sites/2/proposals/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:04:27) [GET]
+
+ActionController::RoutingError (No route matches "/citipedia.swf" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 13:04:47) [GET]
+  Parameters: {"site_id"=>"2", "id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1 AND ("proposals".site_id = 2)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 20ms (View: 8, DB: 1) | 200 OK [http://localhost/sites/2/proposals/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:04:47) [GET]
+
+ActionController::RoutingError (No route matches "/citipedia.swf" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 13:04:49) [GET]
+  Parameters: {"site_id"=>"2", "id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1 AND ("proposals".site_id = 2)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://localhost/sites/2/proposals/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:04:49) [GET]
+
+ActionController::RoutingError (No route matches "/citipedia.swf" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 13:04:49) [GET]
+  Parameters: {"site_id"=>"2", "id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1 AND ("proposals".site_id = 2)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 17ms (View: 5, DB: 1) | 200 OK [http://localhost/sites/2/proposals/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:04:49) [GET]
+
+ActionController::RoutingError (No route matches "/citipedia.swf" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 13:04:49) [GET]
+  Parameters: {"site_id"=>"2", "id"=>"1"}
+  [4;35;1mSite Load (0.5ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1 AND ("proposals".site_id = 2)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 21ms (View: 5, DB: 1) | 200 OK [http://localhost/sites/2/proposals/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:04:50) [GET]
+
+ActionController::RoutingError (No route matches "/citipedia.swf" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 13:04:50) [GET]
+  Parameters: {"site_id"=>"2", "id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1 AND ("proposals".site_id = 2)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 21ms (View: 6, DB: 1) | 200 OK [http://localhost/sites/2/proposals/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:04:50) [GET]
+
+ActionController::RoutingError (No route matches "/citipedia.swf" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 13:04:57) [GET]
+  Parameters: {"site_id"=>"2", "id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1 AND ("proposals".site_id = 2)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 94ms (View: 9, DB: 1) | 200 OK [http://localhost/sites/2/proposals/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:04:57) [GET]
+
+ActionController::RoutingError (No route matches "/citipedia.swf" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 13:05:33) [GET]
+  Parameters: {"site_id"=>"2", "id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1 AND ("proposals".site_id = 2)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://localhost/sites/2/proposals/1]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:06:56) [GET]
+  [4;35;1mSite Load (1.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 16ms (View: 7, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:06:57) [GET]
+  [4;36;1mSite Load (1.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:06:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:06:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:06:58) [GET]
+  [4;35;1mSite Load (0.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 13:07:06) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-21 13:07:22) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"IjNc04jJb9rqPRpp5kdtEIEew4BL/+P/xUXmGSgee24=", "site"=>{"photo"=>"", "name"=>"", "latitude"=>"", "title"=>"blah", "tag"=>"tag1, tag2", "description"=>"", "btype"=>"commercial", "longitude"=>""}}
+  [4;36;1mSite Create (0.5ms)[0m   [0;1mINSERT INTO "sites" ("photo", "status", "name", "latitude", "updated_at", "title", "tag", "description", "btype", "longitude", "created_at") VALUES('', NULL, '', NULL, '2009-06-21 12:07:22', 'blah', 'tag1, tag2', '', 'commercial', NULL, '2009-06-21 12:07:22')[0m
+Redirected to http://localhost:3000/sites/4
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 13:07:22) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 4) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 4) [0m
+Rendered proposals/_list (0.6ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 4) [0m
+Rendered comments/_list (1.0ms)
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/4]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:07:41) [GET]
+  [4;36;1mSite Load (0.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:07:42) [GET]
+  [4;35;1mSite Load (1.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:07:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:07:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 13:07:52) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/sites/new]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-21 13:08:11) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"IjNc04jJb9rqPRpp5kdtEIEew4BL/+P/xUXmGSgee24=", "site"=>{"photo"=>"", "name"=>"", "latitude"=>"55.869724958282944", "title"=>"asdf", "tag"=>"tag1, tag2", "description"=>"", "btype"=>"commercial", "longitude"=>"-4.264411926269531"}}
+  [4;36;1mSite Create (0.4ms)[0m   [0;1mINSERT INTO "sites" ("photo", "status", "name", "latitude", "updated_at", "title", "tag", "description", "btype", "longitude", "created_at") VALUES('', NULL, '', 55.8697249582829, '2009-06-21 12:08:11', 'asdf', 'tag1, tag2', '', 'commercial', -4.26441192626953, '2009-06-21 12:08:11')[0m
+Redirected to http://localhost:3000/sites/5
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 13:08:11) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 5) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 5) [0m
+Rendered proposals/_list (0.8ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 5) [0m
+Rendered comments/_list (1.1ms)
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://localhost/sites/5]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:08:23) [GET]
+  [4;36;1mSite Load (1.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:08:24) [GET]
+  [4;35;1mSite Load (1.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:08:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:08:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:08:31) [GET]
+  Parameters: {"tag"=>"tag1"}
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" WHERE (tag LIKE '%tag1%') [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/sites?tag=tag1]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:08:32) [GET]
+  [4;35;1mSite Load (1.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:08:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:08:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:08:38) [GET]
+  Parameters: {"tag"=>"tag1"}
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" WHERE (tag LIKE '%tag1%') [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/sites?tag=tag1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 13:08:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.5ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.8ms)
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 13:08:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (1.0ms)
+Completed in 26ms (View: 16, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 13:09:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.6ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.9ms)
+Completed in 107ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/1]

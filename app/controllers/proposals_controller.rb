@@ -77,6 +77,14 @@ class ProposalsController < ApplicationController
     end
   end
 
+  def setflash
+    @site = Site.find(params['site_id'])
+    @proposal = @site.proposals.find(params['proposal_id'])
+    @proposal.flash_data=params[:flash]
+    @proposal.save
+    redirect_to site_proposal_url(@site,@proposal)
+  end
+
   # DELETE /proposals/1
   # DELETE /proposals/1.xml
   def destroy

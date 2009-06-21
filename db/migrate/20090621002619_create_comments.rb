@@ -4,7 +4,7 @@ class CreateComments < ActiveRecord::Migration
       t.string :name
       t.string :title
       t.text :content
-      t.references :proposal
+      t.references :site
 
       t.timestamps
     end

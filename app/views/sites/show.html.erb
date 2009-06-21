@@ -1,5 +1,4 @@
 <% content_for :head do %>
-<%= javascript_include_tag 'mmanager.js' %>
 <%= javascript_include_tag 'multimarker.js' %>
 <% end %>
 
@@ -9,6 +8,11 @@
 <h1>Site <%=h @site.title %> at: <%=h @site.latitude %> <%=h @site.longitude %> </h1>
 
 <img src="<%= @site.photo%>"> </img>
+
+<p>Its a <%= @site.btype %></p>
+<p>by <%= @site.name %></p>
+
+<p> Tagged as <%= @site.tag %> </p>
 
 <p>
   <b>Description:</b>
@@ -21,6 +25,11 @@
 
 <% @proposals=@site.proposals %>
 <%=  render :partial=>'proposals/list'%>
+
+<h2>Comments for this site</h2>
+
+<% @comments=@site.comments %>
+<%=  render :partial=>'comments/list'%>
 
 
 

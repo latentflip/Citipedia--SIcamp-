@@ -1,4 +1,5 @@
 <% content_for :head do %>
+	<# javascript_include_tag 'mmanager.js' %>
 	
 	<script type="text/javascript">
 
@@ -6,6 +7,29 @@
 	var ICONS = [];
 	var map = null;
 	var mgr = null;
+
+    function createMarker(point,html,icon) {
+		if(!icon) {icon="residential";}
+
+		var theIcon = new GIcon(G_DEFAULT_ICON);
+		theIcon.image = "/images/"+icon+".png";
+	    theIcon.iconAnchor = new GPoint(16, 16);
+	    theIcon.infoWindowAnchor = new GPoint(16, 0);
+	    theIcon.iconSize = new GSize(32, 32);
+	    theIcon.shadow = "/images/" 
+			+ icon + "-shadow.png";
+	    theIcon.shadowSize = new GSize(59, 32);
+				
+		markerOptions = { icon:theIcon };
+		
+	
+      var marker = new GMarker(point, markerOptions);
+      GEvent.addListener(marker, "click", function() {
+        marker.openInfoWindowHtml(html);
+      });
+      return marker;
+    }
+
 
 	function setupMap() {
 	  if (GBrowserIsCompatible()) {
@@ -46,22 +70,25 @@
 	}
 
 	function setupWeatherMarkers() {
-	  mgr = new MarkerManager(map);
-	  var batch = [];
-		var tmp = 'asdf';
+	  //mgr = new MarkerManager(map);
+	  //var batch = [];
+		//var tmp = 'asdf';
 		$.getJSON("/sites/data.json", function(data) {
 			$.each(data.items, function(i, item){
-				var loc = new GLatLng(item.lat, item.long);
-				var marker = new GMarker(loc, { icon: getWeatherIcon('rain')  });
-				batch.push(marker);
-				mgr.addMarker(marker, 3);
+				var point = new GLatLng(item.lat, item.long);
+				//var marker = new GMarker(loc, { icon: getWeatherIcon(item.type)  });
+				//batch.push(marker);
+				//mgr.addMarker(marker, 3);
+				var theHtml = '<div class="map_popup"><h2>'+item.label+'<\/h2><img src="'+item.image+'"><\/img><\/div>';
+		        var marker = createMarker(point,theHtml, item.type)
+		        map.addOverlay(marker);
 			});
 		});
 		//mgr.addMarkers(batch, 2);
 	  	//mgr.addMarkers(getWeatherMarkers(20), 3);
 	  //mgr.addMarkers(getWeatherMarkers(200), 6);
 	  //mgr.addMarkers(getWeatherMarkers(1000), 8);
-	  mgr.refresh();
+	  //mgr.refresh();
 	}
 	</script>
 
@@ -71,6 +98,11 @@
 	});
 		$(window).unload(function() { GUnload(); } );
 	</script>
+	<style>
+		.map_popup img {width: 100px;display: block;}
+		.map_popup {width: 130px;}
+	</style>
+	
 <% end %>
 
 <table>

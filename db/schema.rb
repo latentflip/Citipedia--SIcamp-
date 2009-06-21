@@ -9,13 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090621013105) do
+ActiveRecord::Schema.define(:version => 20090621103426) do
 
   create_table "comments", :force => true do |t|
     t.string   "name"
     t.string   "title"
     t.text     "content"
-    t.integer  "proposal_id"
+    t.integer  "site_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "avatar"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20090621013105) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"
+    t.string   "flash_data"
   end
 
   create_table "sites", :force => true do |t|
@@ -38,6 +39,9 @@ ActiveRecord::Schema.define(:version => 20090621013105) do
     t.string   "title"
     t.string   "photo"
     t.string   "status"
+    t.string   "tag"
+    t.string   "btype"
+    t.string   "name"
   end
 
 end

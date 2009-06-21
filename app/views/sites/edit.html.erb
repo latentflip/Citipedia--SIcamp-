@@ -10,7 +10,14 @@
     <%= f.label :photo %><br />
     <%= f.text_field :photo %>
   </p>
- 
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :btype %><br />
+    <%= f.text_field :btype %>
+  </p> 
   <p>
     <%= f.label :latitude %><br />
     <%= f.text_field :latitude %>
@@ -18,6 +25,11 @@
   <p>
     <%= f.label :longitude %><br />
     <%= f.text_field :longitude %>
+  </p>
+  <p>
+    <%= f.label :tag %><br />
+    <span> (Comma separated) </span>
+    <%= f.text_field :tag %>
   </p>
   <p>
     <%= f.label :description %><br />
