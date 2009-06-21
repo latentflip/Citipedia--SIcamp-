@@ -7466,3 +7466,1896 @@ Processing SitesController#index (for 127.0.0.1 at 2009-06-21 01:00:07) [GET]
 Rendering template within layouts/sites
 Rendering sites/index
 Completed in 240ms (View: 145, DB: 14) | 200 OK [http://127.0.0.1/sites]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ChangeIntegersToFloat (20090620175811)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE TEMPORARY TABLE "altered_sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" float, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "sites"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" integer, "longitude" float, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_sites")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "altered_sites"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TEMPORARY TABLE "altered_sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" integer, "longitude" float, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDROP TABLE "sites"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" integer, "longitude" integer, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_sites")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "altered_sites"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090620175811'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("proposals")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090620141656)
+Migrating to CreateProposals (20090620141801)
+Migrating to AddTitleToSites (20090620152724)
+Migrating to AddPhotoToSite (20090620153925)
+Migrating to ChangeIntegersToFloat (20090620175811)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE TEMPORARY TABLE "altered_sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" integer, "longitude" integer, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mDROP TABLE "sites"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" integer, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_sites")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDROP TABLE "altered_sites"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TEMPORARY TABLE "altered_sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" integer, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDROP TABLE "sites"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" float, "description" text, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "photo" varchar(255)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_sites")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "altered_sites"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090620175811')[0m
+Migrating to CreateComments (20090621001227)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090621001227')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("proposals")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("sites")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateComments (20090621001227)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mDROP TABLE "comments"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20090621001227'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("proposals")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("sites")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090620141656)
+Migrating to CreateProposals (20090620141801)
+Migrating to AddTitleToSites (20090620152724)
+Migrating to AddPhotoToSite (20090620153925)
+Migrating to ChangeIntegersToFloat (20090620175811)
+Migrating to CreateComments (20090621002619)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "content" text, "proposal_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090621002619')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("proposals")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sites")[0m
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 01:27:30) [GET]
+  [4;36;1mSite Load (1.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 115ms (View: 72, DB: 1) | 200 OK [http://127.0.0.1/sites]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 01:28:08) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 01:28:12) [GET]
+  [4;35;1mSite Load (1.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 01:28:30) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-21 01:28:36) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "site"=>{"photo"=>"", "latitude"=>"55.86219559317137", "title"=>"", "description"=>"", "longitude"=>"-4.242610931396484"}}
+  [4;36;1mSite Create (0.5ms)[0m   [0;1mINSERT INTO "sites" ("photo", "latitude", "updated_at", "title", "description", "longitude", "created_at") VALUES('', 55.8621955931714, '2009-06-21 00:28:36', '', '', -4.24261093139648, '2009-06-21 00:28:36')[0m
+Redirected to http://127.0.0.1:3000/sites/12
+Completed in 38ms (DB: 0) | 302 Found [http://127.0.0.1/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 01:28:36) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 12) [0m
+Rendered proposals/_list (1.9ms)
+Completed in 50ms (View: 44, DB: 1) | 200 OK [http://127.0.0.1/sites/12]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 01:28:37) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 12) [0m
+Rendered proposals/_list (0.6ms)
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/sites/12]
+
+
+Processing ProposalsController#new (for 127.0.0.1 at 2009-06-21 01:28:40) [GET]
+  Parameters: {"site_id"=>"12"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+Rendering template within layouts/proposals
+Rendering proposals/new
+Completed in 40ms (View: 28, DB: 0) | 200 OK [http://127.0.0.1/sites/12/proposals/new]
+
+
+Processing ProposalsController#create (for 127.0.0.1 at 2009-06-21 01:28:45) [POST]
+  Parameters: {"site_id"=>"12", "commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal"=>{"description"=>"this is my proposal"}}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+  [4;35;1mProposal Create (0.4ms)[0m   [0mINSERT INTO "proposals" ("site_id", "updated_at", "description", "created_at") VALUES(12, '2009-06-21 00:28:45', 'this is my proposal', '2009-06-21 00:28:45')[0m
+Redirected to http://127.0.0.1:3000/sites/12/proposals/2
+Completed in 16ms (DB: 1) | 302 Found [http://127.0.0.1/sites/12/proposals]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:28:46) [GET]
+  Parameters: {"site_id"=>"12", "id"=>"2"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 2 AND ("proposals".site_id = 12)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 30ms (View: 19, DB: 1) | 200 OK [http://127.0.0.1/sites/12/proposals/2]
+
+
+Processing ProposalsController#create (for 127.0.0.1 at 2009-06-21 01:30:06) [POST]
+  Parameters: {"site_id"=>"12", "commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal"=>{"description"=>"this is my proposal"}}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+  [4;35;1mProposal Create (0.6ms)[0m   [0mINSERT INTO "proposals" ("site_id", "updated_at", "description", "created_at") VALUES(12, '2009-06-21 00:30:06', 'this is my proposal', '2009-06-21 00:30:06')[0m
+Redirected to http://127.0.0.1:3000/sites/12/proposals/3
+Completed in 16ms (DB: 1) | 302 Found [http://127.0.0.1/sites/12/proposals]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:30:06) [GET]
+  Parameters: {"site_id"=>"12", "id"=>"3"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 3 AND ("proposals".site_id = 12)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/sites/12/proposals/3]
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 01:30:10) [GET]
+  Parameters: {"site_id"=>"12"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 12) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+Rendered proposals/_list (4.5ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/sites/12/proposals]
+
+
+Processing ProposalsController#new (for 127.0.0.1 at 2009-06-21 01:30:11) [GET]
+  Parameters: {"site_id"=>"12"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+Rendering template within layouts/proposals
+Rendering proposals/new
+Completed in 15ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sites/12/proposals/new]
+
+
+Processing ProposalsController#create (for 127.0.0.1 at 2009-06-21 01:30:14) [POST]
+  Parameters: {"site_id"=>"12", "commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal"=>{"description"=>"blah blah"}}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+  [4;36;1mProposal Create (0.5ms)[0m   [0;1mINSERT INTO "proposals" ("site_id", "updated_at", "description", "created_at") VALUES(12, '2009-06-21 00:30:14', 'blah blah', '2009-06-21 00:30:14')[0m
+Redirected to http://127.0.0.1:3000/sites/12/proposals/4
+Completed in 16ms (DB: 1) | 302 Found [http://127.0.0.1/sites/12/proposals]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:30:14) [GET]
+  Parameters: {"site_id"=>"12", "id"=>"4"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 4 AND ("proposals".site_id = 12)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/sites/12/proposals/4]
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 01:30:16) [GET]
+  Parameters: {"site_id"=>"12"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 12) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+Rendered proposals/_list (5.3ms)
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/sites/12/proposals]
+
+
+Processing ProposalsController#edit (for 127.0.0.1 at 2009-06-21 01:30:17) [GET]
+  Parameters: {"site_id"=>"12", "id"=>"2"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 12) [0m
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 2 AND ("proposals".site_id = 12)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/edit
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/sites/12/proposals/2/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 01:30:32) [GET]
+
+ActionController::RoutingError (No route matches "/sites/12/proposals/1/comments/2" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 01:30:35) [GET]
+
+ActionController::RoutingError (No route matches "/sites/12/proposals/1/comments/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-06-21 01:30:41) [GET]
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" [0m
+Rendering template within layouts/comments
+Rendering comments/index
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/comments/]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 01:30:43) [GET]
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/comments/new]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 01:30:48) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "comment"=>{"name"=>"", "title"=>"", "proposal"=>"df", "content"=>""}}
+
+ActiveRecord::AssociationTypeMismatch (Proposal(#18485620) expected, got String(#113650)):
+  app/controllers/comments_controller.rb:43:in `new'
+  app/controllers/comments_controller.rb:43:in `create'
+
+Rendered rescues/_trace (104.3ms)
+Rendered rescues/_request_and_response (28.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 01:33:59) [GET]
+  [4;35;1mSite Load (1.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 01:34:07) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 01:35:07) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/sites/new/]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-21 01:35:25) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "site"=>{"photo"=>"", "latitude"=>"55.86893837603595", "title"=>"aesf", "description"=>"", "longitude"=>"-4.219951629638672"}}
+  [4;36;1mSite Create (0.5ms)[0m   [0;1mINSERT INTO "sites" ("photo", "latitude", "updated_at", "title", "description", "longitude", "created_at") VALUES('', 55.8689383760359, '2009-06-21 00:35:25', 'aesf', '', -4.21995162963867, '2009-06-21 00:35:25')[0m
+Redirected to http://127.0.0.1:3000/sites/13
+Completed in 12ms (DB: 1) | 302 Found [http://127.0.0.1/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 01:35:25) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 13) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 13) [0m
+Rendered proposals/_list (0.6ms)
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/sites/13]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 01:35:26) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 13) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 13) [0m
+Rendered proposals/_list (0.8ms)
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/sites/13]
+
+
+Processing ProposalsController#new (for 127.0.0.1 at 2009-06-21 01:35:29) [GET]
+  Parameters: {"site_id"=>"13"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 13) [0m
+Rendering template within layouts/proposals
+Rendering proposals/new
+Completed in 98ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sites/13/proposals/new]
+
+
+Processing ProposalsController#create (for 127.0.0.1 at 2009-06-21 01:35:33) [POST]
+  Parameters: {"site_id"=>"13", "commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal"=>{"description"=>"jhb"}}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 13) [0m
+  [4;35;1mProposal Create (0.4ms)[0m   [0mINSERT INTO "proposals" ("site_id", "updated_at", "description", "created_at") VALUES(13, '2009-06-21 00:35:33', 'jhb', '2009-06-21 00:35:33')[0m
+Redirected to http://127.0.0.1:3000/sites/13/proposals/5
+Completed in 17ms (DB: 1) | 302 Found [http://127.0.0.1/sites/13/proposals]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:35:33) [GET]
+  Parameters: {"site_id"=>"13", "id"=>"5"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 13) [0m
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 5 AND ("proposals".site_id = 13)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+Completed in 13ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sites/13/proposals/5]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:36:07) [GET]
+  Parameters: {"site_id"=>"13", "id"=>"5"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 13) [0m
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 5 AND ("proposals".site_id = 13)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".proposal_id = 5) [0m
+
+ActionView::TemplateError (undefined method `new_proposal_comment_path' for #<ActionView::Base:0x23bd2cc>) on line #15 of app/views/comments/_list.erb:
+12: 
+13: <br />
+14: 
+15: <%= link_to 'New comment', new_proposal_comment_path(@proposal) %>
+
+    app/views/comments/_list.erb:15
+    app/views/proposals/show.html.erb:9
+    app/controllers/proposals_controller.rb:20:in `show'
+
+Rendered rescues/_trace (53.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:37:03) [GET]
+  Parameters: {"site_id"=>"13", "id"=>"5"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 13) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 5 AND ("proposals".site_id = 13)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".proposal_id = 5) [0m
+Rendered comments/_list (0.8ms)
+Completed in 92ms (View: 81, DB: 1) | 200 OK [http://127.0.0.1/sites/13/proposals/5]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 01:37:07) [GET]
+  Parameters: {"proposal_id"=>"5"}
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/proposals/5/comments/new]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 01:37:11) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "comment"=>{"name"=>"asdf", "title"=>"asdf", "proposal"=>"", "content"=>"asdf"}}
+
+ActiveRecord::AssociationTypeMismatch (Proposal(#19048760) expected, got String(#113650)):
+  app/controllers/comments_controller.rb:43:in `new'
+  app/controllers/comments_controller.rb:43:in `create'
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 01:37:52) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "comment"=>{"name"=>"asdf", "title"=>"asdf", "proposal"=>"", "content"=>"asdf"}}
+
+ActiveRecord::AssociationTypeMismatch (Proposal(#17780950) expected, got String(#113650)):
+  app/controllers/comments_controller.rb:43:in `new'
+  app/controllers/comments_controller.rb:43:in `create'
+
+Rendered rescues/_trace (117.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 01:38:02) [GET]
+  Parameters: {"proposal_id"=>"5"}
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/proposals/5/comments/new]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 01:38:08) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "comment"=>{"name"=>"asdf", "title"=>"", "content"=>""}}
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("name", "updated_at", "title", "content", "proposal_id", "created_at") VALUES('asdf', '2009-06-21 00:38:08', '', '', NULL, '2009-06-21 00:38:08')[0m
+Redirected to http://127.0.0.1:3000/comments/1
+Completed in 10ms (DB: 0) | 302 Found [http://127.0.0.1/comments]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 01:38:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/comments
+Rendering comments/show
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/comments/1]
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-06-21 01:38:17) [GET]
+  Parameters: {"proposal_id"=>"5"}
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" [0m
+Rendering template within layouts/comments
+Rendering comments/index
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/proposals/5/comments]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:38:27) [GET]
+  Parameters: {"id"=>"5"}
+
+ActiveRecord::RecordNotFound (Couldn't find Site without an ID):
+  app/controllers/proposals_controller.rb:17:in `show'
+
+Rendered rescues/_trace (111.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 01:38:40) [GET]
+
+ActionController::RoutingError (No route matches "/site/1/proposals/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 01:38:42) [GET]
+
+ActionController::RoutingError (No route matches "/site/1/proposals/1" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 01:38:45) [GET]
+
+ActionController::RoutingError (No route matches "/site/1/proposals/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 01:38:54) [GET]
+  Parameters: {"site_id"=>"1"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=1):
+  app/controllers/proposals_controller.rb:5:in `index'
+
+Rendered rescues/_trace (108.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 01:38:58) [GET]
+  Parameters: {"site_id"=>"2"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=2):
+  app/controllers/proposals_controller.rb:5:in `index'
+
+Rendered rescues/_trace (35.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 01:39:00) [GET]
+  Parameters: {"site_id"=>"10"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 10) [0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 10) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+Rendered proposals/_list (0.2ms)
+Completed in 11ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/sites/10/proposals/]
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 01:39:05) [GET]
+  Parameters: {"site_id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+Rendered proposals/_list (0.1ms)
+Completed in 12ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/sites/9/proposals/]
+
+
+Processing ProposalsController#new (for 127.0.0.1 at 2009-06-21 01:39:07) [GET]
+  Parameters: {"site_id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/proposals
+Rendering proposals/new
+Completed in 14ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sites/9/proposals/new]
+
+
+Processing ProposalsController#create (for 127.0.0.1 at 2009-06-21 01:39:09) [POST]
+  Parameters: {"site_id"=>"9", "commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal"=>{"description"=>"asdf"}}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mProposal Create (0.4ms)[0m   [0mINSERT INTO "proposals" ("site_id", "updated_at", "description", "created_at") VALUES(9, '2009-06-21 00:39:09', 'asdf', '2009-06-21 00:39:09')[0m
+Redirected to http://127.0.0.1:3000/sites/9/proposals/6
+Completed in 18ms (DB: 1) | 302 Found [http://127.0.0.1/sites/9/proposals]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:39:09) [GET]
+  Parameters: {"site_id"=>"9", "id"=>"6"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6 AND ("proposals".site_id = 9)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".proposal_id = 6) [0m
+Rendered comments/_list (0.7ms)
+Completed in 18ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/sites/9/proposals/6]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 01:39:15) [GET]
+  Parameters: {"proposal_id"=>"6"}
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/proposals/6/comments/new]
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-06-21 01:39:23) [GET]
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" [0m
+Rendering template within layouts/comments
+Rendering comments/index
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/comments]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 01:39:29) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "comment"=>{"name"=>"sdfgsd", "title"=>"sadf", "content"=>"asdf"}}
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("name", "updated_at", "title", "content", "proposal_id", "created_at") VALUES('sdfgsd', '2009-06-21 00:39:29', 'sadf', 'asdf', NULL, '2009-06-21 00:39:29')[0m
+Redirected to http://127.0.0.1:3000/comments/2
+Completed in 12ms (DB: 0) | 302 Found [http://127.0.0.1/comments]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 01:39:29) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 2) [0m
+Rendering template within layouts/comments
+Rendering comments/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/comments/2]
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 01:39:42) [GET]
+  Parameters: {"site_id"=>"6"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+Rendered proposals/_list (0.1ms)
+Completed in 11ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/sites/6/proposals/]
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 01:39:46) [GET]
+  Parameters: {"site_id"=>"9"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (4.0ms)
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/sites/9/proposals/]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:39:47) [GET]
+  Parameters: {"id"=>"6"}
+
+ActiveRecord::RecordNotFound (Couldn't find Site without an ID):
+  app/controllers/proposals_controller.rb:17:in `show'
+
+Rendered rescues/_trace (32.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 01:40:35) [GET]
+  Parameters: {"site_id"=>"9"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (3.5ms)
+Completed in 15ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/sites/9/proposals]
+
+
+Processing ProposalsController#edit (for 127.0.0.1 at 2009-06-21 01:40:41) [GET]
+  Parameters: {"site_id"=>"9", "id"=>"6"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6 AND ("proposals".site_id = 9)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/edit
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sites/9/proposals/6/edit]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:40:50) [GET]
+  Parameters: {"id"=>"6"}
+
+ActiveRecord::RecordNotFound (Couldn't find Site without an ID):
+  app/controllers/proposals_controller.rb:17:in `show'
+
+Rendered rescues/_trace (111.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 01:41:05) [GET]
+
+ActionController::RoutingError (No route matches "/sites/9/proposals/6/show" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:41:12) [GET]
+  Parameters: {"site_id"=>"9", "id"=>"6"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6 AND ("proposals".site_id = 9)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".proposal_id = 6) [0m
+Rendered comments/_list (0.7ms)
+Completed in 58ms (View: 46, DB: 1) | 200 OK [http://127.0.0.1/sites/9/proposals/6/]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:41:38) [GET]
+  Parameters: {"site_id"=>"9", "id"=>"6"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6 AND ("proposals".site_id = 9)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".proposal_id = 6) [0m
+Rendered comments/_list (0.6ms)
+Completed in 19ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/sites/9/proposals/6/]
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 01:41:45) [GET]
+  Parameters: {"site_id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+
+ActionView::TemplateError (undefined method `show_site_proposal_path' for #<ActionView::Base:0x2257bbc>) on line #6 of app/views/proposals/_list.erb:
+3: <% @proposals.each do |proposal| %>
+4:   <tr>
+5:     <td><%=h proposal.description %></td>
+6:     <td><%= link_to 'Show', show_site_proposal_path(proposal.site,proposal) %></td>
+7:     <td><%= link_to 'Edit', edit_site_proposal_path(proposal.site,proposal) %></td>
+8:     <td><%= link_to 'Destroy', proposal, :confirm => 'Are you sure?', :method => :delete %></td>
+9:   </tr>
+
+    app/views/proposals/_list.erb:6
+    app/views/proposals/_list.erb:3:in `each'
+    app/views/proposals/_list.erb:3
+    app/views/proposals/index.html.erb:3
+    app/controllers/proposals_controller.rb:8:in `index'
+
+Rendered rescues/_trace (54.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 01:46:23) [GET]
+  Parameters: {"site_id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+
+ActionView::TemplateError (undefined method `show_site_proposal_path' for #<ActionView::Base:0x22e9800>) on line #6 of app/views/proposals/_list.erb:
+3: <% @proposals.each do |proposal| %>
+4:   <tr>
+5:     <td><%=h proposal.description %></td>
+6:     <td><%= link_to 'Show', show_site_proposal_path(proposal) %></td>
+7:     <td><%= link_to 'Edit', edit_site_proposal_path(proposal.site,proposal) %></td>
+8:     <td><%= link_to 'Destroy', proposal, :confirm => 'Are you sure?', :method => :delete %></td>
+9:   </tr>
+
+    app/views/proposals/_list.erb:6
+    app/views/proposals/_list.erb:3:in `each'
+    app/views/proposals/_list.erb:3
+    app/views/proposals/index.html.erb:3
+    app/controllers/proposals_controller.rb:8:in `index'
+
+Rendered rescues/_trace (52.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 01:46:24) [GET]
+  Parameters: {"site_id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+
+ActionView::TemplateError (undefined method `show_site_proposal_path' for #<ActionView::Base:0x228ca10>) on line #6 of app/views/proposals/_list.erb:
+3: <% @proposals.each do |proposal| %>
+4:   <tr>
+5:     <td><%=h proposal.description %></td>
+6:     <td><%= link_to 'Show', show_site_proposal_path(proposal) %></td>
+7:     <td><%= link_to 'Edit', edit_site_proposal_path(proposal.site,proposal) %></td>
+8:     <td><%= link_to 'Destroy', proposal, :confirm => 'Are you sure?', :method => :delete %></td>
+9:   </tr>
+
+    app/views/proposals/_list.erb:6
+    app/views/proposals/_list.erb:3:in `each'
+    app/views/proposals/_list.erb:3
+    app/views/proposals/index.html.erb:3
+    app/controllers/proposals_controller.rb:8:in `index'
+
+Rendered rescues/_trace (56.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 01:47:00) [GET]
+  Parameters: {"site_id"=>"9"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+
+ActionView::TemplateError (undefined method `show_site_proposal_path' for #<ActionView::Base:0x227ffa4>) on line #6 of app/views/proposals/_list.erb:
+3: <% @proposals.each do |proposal| %>
+4:   <tr>
+5:     <td><%=h proposal.description %></td>
+6:     <td><%= link_to 'Show', show_site_proposal_path(proposal) %></td>
+7:     <td><%= link_to 'Edit', edit_site_proposal_path(proposal.site,proposal) %></td>
+8:     <td><%= link_to 'Destroy', proposal, :confirm => 'Are you sure?', :method => :delete %></td>
+9:   </tr>
+
+    app/views/proposals/_list.erb:6
+    app/views/proposals/_list.erb:3:in `each'
+    app/views/proposals/_list.erb:3
+    app/views/proposals/index.html.erb:3
+    app/controllers/proposals_controller.rb:8:in `index'
+
+Rendered rescues/_trace (54.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 01:48:52) [GET]
+  Parameters: {"site_id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+
+ActionView::TemplateError (undefined method `show_site_proposal_path' for #<ActionView::Base:0x225838c>) on line #6 of app/views/proposals/_list.erb:
+3: <% @proposals.each do |proposal| %>
+4:   <tr>
+5:     <td><%=h proposal.description %></td>
+6:     <td><%= link_to 'Show', show_site_proposal_path(proposal) %></td>
+7:     <td><%= link_to 'Edit', edit_site_proposal_path(proposal.site,proposal) %></td>
+8:     <td><%= link_to 'Destroy', proposal, :confirm => 'Are you sure?', :method => :delete %></td>
+9:   </tr>
+
+    app/views/proposals/_list.erb:6
+    app/views/proposals/_list.erb:3:in `each'
+    app/views/proposals/_list.erb:3
+    app/views/proposals/index.html.erb:3
+    app/controllers/proposals_controller.rb:8:in `index'
+
+Rendered rescues/_trace (54.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:49:08) [GET]
+  Parameters: {"site_id"=>"9", "id"=>"6"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6 AND ("proposals".site_id = 9)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".proposal_id = 6) [0m
+Rendered comments/_list (0.6ms)
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/sites/9/proposals/6/]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 01:49:10) [GET]
+  Parameters: {"proposal_id"=>"6"}
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/proposals/6/comments/new]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 01:49:14) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "comment"=>{"name"=>"this is a comment", "title"=>"", "content"=>""}}
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("name", "updated_at", "title", "content", "proposal_id", "created_at") VALUES('this is a comment', '2009-06-21 00:49:14', '', '', NULL, '2009-06-21 00:49:14')[0m
+Redirected to http://127.0.0.1:3000/comments/3
+Completed in 11ms (DB: 0) | 302 Found [http://127.0.0.1/comments]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 01:49:15) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 3) [0m
+Rendering template within layouts/comments
+Rendering comments/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/comments/3]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:49:31) [GET]
+  Parameters: {"site_id"=>"9", "id"=>"6"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6 AND ("proposals".site_id = 9)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".proposal_id = 6) [0m
+Rendered comments/_list (0.6ms)
+Completed in 21ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/sites/9/proposals/6/]
+
+
+Processing ProposalsController#index (for 127.0.0.1 at 2009-06-21 01:49:34) [GET]
+  Parameters: {"site_id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+Rendering template within layouts/proposals
+Rendering proposals/index
+
+ActionView::TemplateError (undefined method `show_site_proposal_path' for #<ActionView::Base:0x21b61cc>) on line #6 of app/views/proposals/_list.erb:
+3: <% @proposals.each do |proposal| %>
+4:   <tr>
+5:     <td><%=h proposal.description %></td>
+6:     <td><%= link_to 'Show', show_site_proposal_path(proposal) %></td>
+7:     <td><%= link_to 'Edit', edit_site_proposal_path(proposal.site,proposal) %></td>
+8:     <td><%= link_to 'Destroy', proposal, :confirm => 'Are you sure?', :method => :delete %></td>
+9:   </tr>
+
+    app/views/proposals/_list.erb:6
+    app/views/proposals/_list.erb:3:in `each'
+    app/views/proposals/_list.erb:3
+    app/views/proposals/index.html.erb:3
+    app/controllers/proposals_controller.rb:8:in `index'
+
+Rendered rescues/_trace (54.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:49:41) [GET]
+  Parameters: {"site_id"=>"9", "id"=>"7"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 7 AND ("proposals".site_id = 9)) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Proposal with ID=7 AND ("proposals".site_id = 9)):
+  app/controllers/proposals_controller.rb:18:in `show'
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:49:45) [GET]
+  Parameters: {"site_id"=>"9", "id"=>"5"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 5 AND ("proposals".site_id = 9)) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Proposal with ID=5 AND ("proposals".site_id = 9)):
+  app/controllers/proposals_controller.rb:18:in `show'
+
+Rendered rescues/_trace (35.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 01:49:51) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+
+ActionView::TemplateError (undefined method `show_site_proposal_path' for #<ActionView::Base:0x22510c8>) on line #6 of app/views/proposals/_list.erb:
+3: <% @proposals.each do |proposal| %>
+4:   <tr>
+5:     <td><%=h proposal.description %></td>
+6:     <td><%= link_to 'Show', show_site_proposal_path(proposal) %></td>
+7:     <td><%= link_to 'Edit', edit_site_proposal_path(proposal.site,proposal) %></td>
+8:     <td><%= link_to 'Destroy', proposal, :confirm => 'Are you sure?', :method => :delete %></td>
+9:   </tr>
+
+    app/views/proposals/_list.erb:6
+    app/views/proposals/_list.erb:3
+    app/views/sites/show.html.erb:13
+    app/controllers/sites_controller.rb:43:in `show'
+
+Rendered rescues/_trace (58.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 01:50:17) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (5.0ms)
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 01:50:18) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (4.0ms)
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:50:20) [GET]
+  Parameters: {"id"=>"6"}
+
+ActiveRecord::RecordNotFound (Couldn't find Site without an ID):
+  app/controllers/proposals_controller.rb:17:in `show'
+
+Rendered rescues/_trace (33.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 01:50:28) [GET]
+
+ActionController::RoutingError (No route matches "/sites/9/proposal/6" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:50:31) [GET]
+  Parameters: {"site_id"=>"9", "id"=>"6"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6 AND ("proposals".site_id = 9)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".proposal_id = 6) [0m
+Rendered comments/_list (0.9ms)
+Completed in 16ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/sites/9/proposals/6]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 01:50:39) [GET]
+  Parameters: {"proposal_id"=>"6"}
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/proposals/6/comments/new]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 01:51:04) [GET]
+  Parameters: {"proposal_id"=>"6"}
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/proposals/6/comments/new]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 01:51:07) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "comment"=>{"name"=>"nmb", "title"=>"", "content"=>""}}
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("name", "updated_at", "title", "content", "proposal_id", "created_at") VALUES('nmb', '2009-06-21 00:51:07', '', '', NULL, '2009-06-21 00:51:07')[0m
+Redirected to http://127.0.0.1:3000/comments/4
+Completed in 13ms (DB: 0) | 302 Found [http://127.0.0.1/comments]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 01:51:07) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 4) [0m
+Rendering template within layouts/comments
+Rendering comments/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/comments/4]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 01:51:15) [GET]
+  Parameters: {"site_id"=>"9", "id"=>"6"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6 AND ("proposals".site_id = 9)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".proposal_id = 6) [0m
+Rendered comments/_list (0.6ms)
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/sites/9/proposals/6]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 02:00:34) [GET]
+  Parameters: {"site_id"=>"9", "id"=>"6"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6 AND ("proposals".site_id = 9)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".proposal_id = 6) [0m
+Rendered comments/_list (1.0ms)
+Completed in 20ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/sites/9/proposals/6]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:00:41) [GET]
+  Parameters: {"proposal_id"=>"6"}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 6) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.comments):
+  app/controllers/comments_controller.rb:30:in `new'
+
+Rendered rescues/_trace (112.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 02:01:03) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (3.8ms)
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 02:01:03) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendered proposals/_list (4.5ms)
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/sites/9/]
+
+
+Processing ProposalsController#new (for 127.0.0.1 at 2009-06-21 02:01:05) [GET]
+  Parameters: {"site_id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/proposals
+Rendering proposals/new
+Completed in 13ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sites/9/proposals/new]
+
+
+Processing ProposalsController#create (for 127.0.0.1 at 2009-06-21 02:01:09) [POST]
+  Parameters: {"site_id"=>"9", "commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal"=>{"description"=>"sdg"}}
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mProposal Create (0.4ms)[0m   [0mINSERT INTO "proposals" ("site_id", "updated_at", "description", "created_at") VALUES(9, '2009-06-21 01:01:09', 'sdg', '2009-06-21 01:01:09')[0m
+Redirected to http://127.0.0.1:3000/sites/9/proposals/7
+Completed in 17ms (DB: 1) | 302 Found [http://127.0.0.1/sites/9/proposals]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 02:01:09) [GET]
+  Parameters: {"site_id"=>"9", "id"=>"7"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 7 AND ("proposals".site_id = 9)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".proposal_id = 7) [0m
+Rendered comments/_list (0.7ms)
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/sites/9/proposals/7]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:01:12) [GET]
+  Parameters: {"proposal_id"=>"7"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 7) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.comments):
+  app/controllers/comments_controller.rb:30:in `new'
+
+Rendered rescues/_trace (109.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProposalsController#edit (for 127.0.0.1 at 2009-06-21 02:01:17) [GET]
+  Parameters: {"site_id"=>"9", "id"=>"7"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 7 AND ("proposals".site_id = 9)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/edit
+Completed in 15ms (View: 4, DB: 1) | 200 OK [http://127.0.0.1/sites/9/proposals/7/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 02:01:36) [GET]
+
+ActionController::RoutingError (No route matches "/sites/9/proposals/7/comments/new/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:01:45) [GET]
+  Parameters: {"proposal_id"=>"7"}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 7) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.comments):
+  app/controllers/comments_controller.rb:30:in `new'
+
+Rendered rescues/_trace (29.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:02:36) [GET]
+  Parameters: {"proposal_id"=>"7"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 7) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.comments):
+  app/controllers/comments_controller.rb:30:in `new'
+
+Rendered rescues/_trace (33.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:02:37) [GET]
+  Parameters: {"proposal_id"=>"7"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 7) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.comments):
+  app/controllers/comments_controller.rb:30:in `new'
+
+Rendered rescues/_trace (31.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:02:46) [GET]
+  Parameters: {"proposal_id"=>"7"}
+
+ActiveRecord::RecordNotFound (Couldn't find Site without an ID):
+  app/controllers/comments_controller.rb:29:in `new'
+
+Rendered rescues/_trace (36.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:02:47) [GET]
+  Parameters: {"proposal_id"=>"7"}
+
+ActiveRecord::RecordNotFound (Couldn't find Site without an ID):
+  app/controllers/comments_controller.rb:29:in `new'
+
+Rendered rescues/_trace (34.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:02:58) [GET]
+  Parameters: {"proposal_id"=>"7"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 7) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.comments):
+  app/controllers/comments_controller.rb:30:in `new'
+
+Rendered rescues/_trace (108.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:03:45) [GET]
+  Parameters: {"proposal_id"=>"7"}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 7) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New comment</h1>
+2: 
+3: <% form_for([@proposal, @comment]) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:32:in `new'
+
+Rendered rescues/_trace (119.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:05:33) [GET]
+  Parameters: {"proposal_id"=>"7"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 7) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 15ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/proposals/7/comments/new/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 02:05:50) [GET]
+  [4;36;1mSite Load (1.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 02:06:28) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.5ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 6) [0m
+Rendered proposals/_list (1.1ms)
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/sites/6/]
+
+
+Processing SitesController#6 (for 127.0.0.1 at 2009-06-21 02:06:28) [GET]
+  Parameters: {"id"=>"asdf"}
+
+ActionController::UnknownAction (No action responded to 6. Actions: create, data, destroy, edit, heatmap, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#new (for 127.0.0.1 at 2009-06-21 02:06:33) [GET]
+  Parameters: {"site_id"=>"6"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+Rendering template within layouts/proposals
+Rendering proposals/new
+Completed in 14ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sites/6/proposals/new]
+
+
+Processing ProposalsController#create (for 127.0.0.1 at 2009-06-21 02:06:35) [POST]
+  Parameters: {"site_id"=>"6", "commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal"=>{"description"=>"sd"}}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+  [4;35;1mProposal Create (0.4ms)[0m   [0mINSERT INTO "proposals" ("site_id", "updated_at", "description", "created_at") VALUES(6, '2009-06-21 01:06:35', 'sd', '2009-06-21 01:06:35')[0m
+Redirected to http://127.0.0.1:3000/sites/6/proposals/8
+Completed in 17ms (DB: 1) | 302 Found [http://127.0.0.1/sites/6/proposals]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 02:06:37) [GET]
+  Parameters: {"site_id"=>"6", "id"=>"8"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 6) [0m
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8 AND ("proposals".site_id = 6)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".proposal_id = 8) [0m
+Rendered comments/_list (0.6ms)
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/sites/6/proposals/8]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:06:48) [GET]
+  Parameters: {"proposal_id"=>"8"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 14ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/proposals/8/comments/new]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 02:06:51) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal_id"=>"8", "comment"=>{"name"=>"sd", "title"=>"", "content"=>""}}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+
+ArgumentError (Unknown key(s): name, joins, readonly, conditions, title, having, content, include, offset, group, limit, select):
+  app/controllers/comments_controller.rb:48:in `create'
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 02:08:30) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal_id"=>"8", "comment"=>{"name"=>"sd", "title"=>"", "content"=>""}}
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+
+ArgumentError (Unknown key(s): name, joins, readonly, conditions, title, having, content, include, offset, group, limit, select):
+  app/controllers/comments_controller.rb:48:in `create'
+
+Rendered rescues/_trace (34.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 02:09:37) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal_id"=>"8", "comment"=>{"name"=>"sd", "title"=>"", "content"=>""}}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Comment without an ID):
+  app/controllers/comments_controller.rb:48:in `create'
+
+Rendered rescues/_trace (110.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-06-21 02:09:40) [GET]
+  Parameters: {"proposal_id"=>"8"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".proposal_id = 8) [0m
+Rendering template within layouts/comments
+Rendering comments/index
+Completed in 13ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/proposals/8/comments]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:09:41) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Proposal without an ID):
+  app/controllers/comments_controller.rb:29:in `new'
+
+Rendered rescues/_trace (34.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:09:53) [GET]
+  Parameters: {"proposal_id"=>"8"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 15ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/proposals/8/comments/new/]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 02:09:57) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal_id"=>"8", "comment"=>{"name"=>"sd", "title"=>"", "content"=>""}}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Comment without an ID):
+  app/controllers/comments_controller.rb:48:in `create'
+
+Rendered rescues/_trace (34.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-06-21 02:10:08) [GET]
+  Parameters: {"proposal_id"=>"8"}
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".proposal_id = 8) [0m
+Rendering template within layouts/comments
+Rendering comments/index
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/proposals/8/comments]
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-06-21 02:10:12) [GET]
+  Parameters: {"proposal_id"=>"8"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".proposal_id = 8) [0m
+Rendering template within layouts/comments
+Rendering comments/index
+Completed in 11ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/proposals/8/comments]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:10:16) [GET]
+  Parameters: {"proposal_id"=>"8"}
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 17ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/proposals/8/comments/new]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:10:29) [GET]
+  Parameters: {"proposal_id"=>"8"}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 14ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/proposals/8/comments/new]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 02:10:34) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal_id"=>"8", "comment"=>{"name"=>"kl", "title"=>"", "content"=>""}}
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Comment without an ID):
+  app/controllers/comments_controller.rb:48:in `create'
+
+Rendered rescues/_trace (35.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-06-21 02:10:44) [GET]
+  Parameters: {"proposal_id"=>"8"}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".proposal_id = 8) [0m
+Rendering template within layouts/comments
+Rendering comments/index
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/proposals/8/comments]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:10:48) [GET]
+  Parameters: {"proposal_id"=>"8"}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 13ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/proposals/8/comments/new]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 02:10:51) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal_id"=>"8", "comment"=>{"name"=>"", "title"=>"", "content"=>"sdf"}}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+
+ArgumentError (Unknown key(s): name, joins, readonly, conditions, title, having, content, include, offset, group, limit, select):
+  app/controllers/comments_controller.rb:48:in `create'
+
+Rendered rescues/_trace (115.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-06-21 02:11:52) [GET]
+  Parameters: {"proposal_id"=>"8"}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".proposal_id = 8) [0m
+Rendering template within layouts/comments
+Rendering comments/index
+Completed in 13ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/proposals/8/comments/]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:11:57) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Proposal without an ID):
+  app/controllers/comments_controller.rb:29:in `new'
+
+Rendered rescues/_trace (33.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:12:06) [GET]
+  Parameters: {"proposal_id"=>"8"}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 16ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/proposals/8/comments/new]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 02:12:10) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal_id"=>"8", "comment"=>{"name"=>"asdf", "title"=>"", "content"=>""}}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 8) [0m
+
+ArgumentError (Unknown key(s): name, joins, readonly, conditions, title, having, content, include, offset, group, limit, select):
+  app/controllers/comments_controller.rb:48:in `create'
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 02:12:21) [GET]
+  [4;36;1mSite Load (1.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 20ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 02:12:48) [GET]
+  [4;35;1mSite Load (1.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 26ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/sites/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 02:12:59) [GET]
+  Parameters: {"id"=>"list"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Site with ID=list):
+  app/controllers/sites_controller.rb:41:in `show'
+
+Rendered rescues/_trace (123.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#new (for 127.0.0.1 at 2009-06-21 02:14:24) [GET]
+  Parameters: {"site_id"=>"9"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/proposals
+Rendering proposals/new
+Completed in 15ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sites/9/proposals/new/]
+
+
+Processing ProposalsController#create (for 127.0.0.1 at 2009-06-21 02:15:01) [POST]
+  Parameters: {"site_id"=>"9", "commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal"=>{"description"=>"asdfsdfdsf"}}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mProposal Create (0.7ms)[0m   [0mINSERT INTO "proposals" ("site_id", "updated_at", "description", "created_at") VALUES(9, '2009-06-21 01:15:01', 'asdfsdfdsf', '2009-06-21 01:15:01')[0m
+Redirected to http://127.0.0.1:3000/sites/9/proposals/9
+Completed in 20ms (DB: 1) | 302 Found [http://127.0.0.1/sites/9/proposals]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 02:15:01) [GET]
+  Parameters: {"site_id"=>"9", "id"=>"9"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 9 AND ("proposals".site_id = 9)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".proposal_id = 9) [0m
+Rendered comments/_list (0.6ms)
+Completed in 19ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/sites/9/proposals/9]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:15:05) [GET]
+  Parameters: {"proposal_id"=>"9"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 9) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 13ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/proposals/9/comments/new]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:15:45) [GET]
+  Parameters: {"proposal_id"=>"9"}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 9) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 21ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/proposals/9/comments/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 02:15:52) [GET]
+
+ActionController::RoutingError (No route matches "/sites/9/proposals/9/comments/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:16:38) [GET]
+  Parameters: {"proposal_id"=>"9"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 9) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 92ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/proposals/9/comments/new]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 02:16:43) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal_id"=>"9", "comment"=>{"name"=>"mn", "title"=>"", "content"=>"k"}}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 9) [0m
+
+ArgumentError (Unknown key(s): name, joins, readonly, conditions, title, having, content, include, offset, group, limit, select):
+  app/controllers/comments_controller.rb:48:in `create'
+
+Rendered rescues/_trace (35.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 02:18:07) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal_id"=>"9", "comment"=>{"name"=>"mn", "title"=>"", "content"=>"k"}}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 9) [0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("name", "updated_at", "title", "content", "proposal_id", "created_at") VALUES('mn', '2009-06-21 01:18:07', '', 'k', 9, '2009-06-21 01:18:07')[0m
+Redirected to http://127.0.0.1:3000/comments/5
+Completed in 15ms (DB: 1) | 302 Found [http://127.0.0.1/proposals/9/comments]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 02:18:07) [GET]
+  Parameters: {"id"=>"5"}
+
+ActiveRecord::RecordNotFound (Couldn't find Proposal without an ID):
+  app/controllers/comments_controller.rb:17:in `show'
+
+Rendered rescues/_trace (115.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 02:18:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal_id"=>"9", "comment"=>{"name"=>"mn", "title"=>"", "content"=>"k"}}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 9) [0m
+  [4;36;1mComment Create (0.5ms)[0m   [0;1mINSERT INTO "comments" ("name", "updated_at", "title", "content", "proposal_id", "created_at") VALUES('mn', '2009-06-21 01:18:17', '', 'k', 9, '2009-06-21 01:18:17')[0m
+Redirected to http://127.0.0.1:3000/comments/6
+Completed in 17ms (DB: 1) | 302 Found [http://127.0.0.1/proposals/9/comments]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 02:18:17) [GET]
+  Parameters: {"id"=>"6"}
+
+ActiveRecord::RecordNotFound (Couldn't find Proposal without an ID):
+  app/controllers/comments_controller.rb:17:in `show'
+
+Rendered rescues/_trace (36.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#new (for 127.0.0.1 at 2009-06-21 02:18:27) [GET]
+  Parameters: {"site_id"=>"9"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 9) [0m
+Rendering template within layouts/proposals
+Rendering proposals/new
+Completed in 16ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sites/9/proposals/new/]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 02:18:36) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-21 02:18:48) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "site"=>{"photo"=>"", "latitude"=>"", "title"=>"number11?", "description"=>"", "longitude"=>""}}
+  [4;36;1mSite Create (0.4ms)[0m   [0;1mINSERT INTO "sites" ("photo", "latitude", "updated_at", "title", "description", "longitude", "created_at") VALUES('', NULL, '2009-06-21 01:18:48', 'number11?', '', NULL, '2009-06-21 01:18:48')[0m
+Redirected to http://127.0.0.1:3000/sites/14
+Completed in 14ms (DB: 0) | 302 Found [http://127.0.0.1/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 02:18:48) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 14) [0m
+Rendered proposals/_list (0.8ms)
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/sites/14]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 02:18:50) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 14) [0m
+Rendered proposals/_list (0.7ms)
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/sites/14]
+
+
+Processing ProposalsController#new (for 127.0.0.1 at 2009-06-21 02:18:53) [GET]
+  Parameters: {"site_id"=>"14"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+Rendering template within layouts/proposals
+Rendering proposals/new
+Completed in 12ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/sites/14/proposals/new]
+
+
+Processing ProposalsController#create (for 127.0.0.1 at 2009-06-21 02:18:58) [POST]
+  Parameters: {"site_id"=>"14", "commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal"=>{"description"=>"pk"}}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+  [4;35;1mProposal Create (0.6ms)[0m   [0mINSERT INTO "proposals" ("site_id", "updated_at", "description", "created_at") VALUES(14, '2009-06-21 01:18:58', 'pk', '2009-06-21 01:18:58')[0m
+Redirected to http://127.0.0.1:3000/sites/14/proposals/10
+Completed in 15ms (DB: 1) | 302 Found [http://127.0.0.1/sites/14/proposals]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 02:18:58) [GET]
+  Parameters: {"site_id"=>"14", "id"=>"10"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 10 AND ("proposals".site_id = 14)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".proposal_id = 10) [0m
+Rendered comments/_list (0.7ms)
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/sites/14/proposals/10]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 02:19:11) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+Rendered proposals/_list (4.6ms)
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/sites/14]
+
+
+Processing ProposalsController#new (for 127.0.0.1 at 2009-06-21 02:19:14) [GET]
+  Parameters: {"site_id"=>"14"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+Rendering template within layouts/proposals
+Rendering proposals/new
+Completed in 15ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sites/14/proposals/new]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 02:20:11) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+Rendered proposals/_list (3.9ms)
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/sites/14/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 02:20:12) [GET]
+  Parameters: {"id"=>"14"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+Rendered proposals/_list (4.3ms)
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/sites/14/]
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 02:20:14) [GET]
+  Parameters: {"id"=>"10"}
+
+ActiveRecord::RecordNotFound (Couldn't find Site without an ID):
+  app/controllers/proposals_controller.rb:17:in `show'
+
+Rendered rescues/_trace (35.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalsController#show (for 127.0.0.1 at 2009-06-21 02:20:23) [GET]
+  Parameters: {"site_id"=>"14", "id"=>"10"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 14) [0m
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 10 AND ("proposals".site_id = 14)) [0m
+Rendering template within layouts/proposals
+Rendering proposals/show
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".proposal_id = 10) [0m
+Rendered comments/_list (0.7ms)
+Completed in 20ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/sites/14/proposals/10]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:20:25) [GET]
+  Parameters: {"proposal_id"=>"10"}
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 10) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 16ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/proposals/10/comments/new]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 02:20:37) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal_id"=>"10", "comment"=>{"name"=>"", "title"=>"", "content"=>"adsf"}}
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 10) [0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("name", "updated_at", "title", "content", "proposal_id", "created_at") VALUES('', '2009-06-21 01:20:37', '', 'adsf', 10, '2009-06-21 01:20:37')[0m
+Redirected to http://127.0.0.1:3000/comments/7
+Completed in 17ms (DB: 1) | 302 Found [http://127.0.0.1/proposals/10/comments]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 02:20:37) [GET]
+  Parameters: {"id"=>"7"}
+
+ActiveRecord::RecordNotFound (Couldn't find Proposal without an ID):
+  app/controllers/comments_controller.rb:17:in `show'
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-06-21 02:20:46) [GET]
+  Parameters: {"proposal_id"=>"10"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 10) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".proposal_id = 10) [0m
+Rendering template within layouts/comments
+Rendering comments/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 10) [0m
+Completed in 16ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/proposals/10/comments/]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:21:00) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Proposal without an ID):
+  app/controllers/comments_controller.rb:29:in `new'
+
+Rendered rescues/_trace (36.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2009-06-21 02:21:05) [GET]
+  Parameters: {"proposal_id"=>"10"}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 10) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 17ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/proposals/10/comments/new]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-21 02:21:10) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hSJamel9iOBJPOpROzCgWF936Ud1oGWvbqe8O1thcZQ=", "proposal_id"=>"10", "comment"=>{"name"=>"adfasf", "title"=>"", "content"=>""}}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 10) [0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("name", "updated_at", "title", "content", "proposal_id", "created_at") VALUES('adfasf', '2009-06-21 01:21:10', '', '', 10, '2009-06-21 01:21:10')[0m
+Redirected to http://127.0.0.1:3000/comments/8
+Completed in 15ms (DB: 1) | 302 Found [http://127.0.0.1/proposals/10/comments]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 02:21:10) [GET]
+  Parameters: {"id"=>"8"}
+
+ActiveRecord::RecordNotFound (Couldn't find Proposal without an ID):
+  app/controllers/comments_controller.rb:17:in `show'
+
+Rendered rescues/_trace (116.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-06-21 02:21:17) [GET]
+  Parameters: {"proposal_id"=>"10"}
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 10) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".proposal_id = 10) [0m
+Rendering template within layouts/comments
+Rendering comments/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 10) [0m
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/proposals/10/comments/]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2009-06-21 02:22:11) [GET]
+  Parameters: {"id"=>"8"}
+
+ActiveRecord::RecordNotFound (Couldn't find Proposal without an ID):
+  app/controllers/comments_controller.rb:17:in `show'
+
+Rendered rescues/_trace (33.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 02:22:42) [GET]
+
+ActionController::RoutingError (No route matches "/proposal/8/comments/8" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

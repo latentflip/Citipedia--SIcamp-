@@ -3,6 +3,10 @@
   <%=h @proposal.description %>
 </p>
 
+<h2>Comments for this proposal</h2>
+
+<% @comments=@proposal.comments %>
+<%=  render :partial=>'comments/list'%>
 
 <%= link_to 'Edit', edit_site_proposal_path(@site,@proposal) %> |
 <%= link_to 'Back', site_proposals_path %>

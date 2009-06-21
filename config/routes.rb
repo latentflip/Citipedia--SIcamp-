@@ -1,7 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+
   map.connect 'sites/data.json', :controller => 'sites', :action => 'data'
   map.connect 'heatmap', :controller => 'sites', :action => 'heatmap'
-  map.resources :proposals
+  map.resources :comments
+  map.resources :proposals, :has_many => :comments
+
 
   map.resources :sites, :has_many => :proposals
 

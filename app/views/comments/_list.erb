@@ -1,0 +1,15 @@
+<table>
+
+<% @comments.each do |comment| %>
+  <tr>
+    <td><%=h comment.title %></td>
+    <td><%= link_to 'Show', comment %></td>
+    <td><%= link_to 'Edit', edit_proposal_comment_path(comment.proposal,comment) %></td>
+    <td><%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New comment', new_proposal_comment_path(@proposal) %>
