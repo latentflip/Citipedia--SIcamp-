@@ -10,7 +10,8 @@ class SitesController < ApplicationController
         :long => "#{site.longitude}",
         :details => site.description,
         :type => site.btype,
-        :image => site.photo
+        :image => site.photo,
+        :id => site.id,
       }
     end
     data.compact!

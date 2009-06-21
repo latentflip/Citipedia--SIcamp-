@@ -79,7 +79,8 @@
 				//var marker = new GMarker(loc, { icon: getWeatherIcon(item.type)  });
 				//batch.push(marker);
 				//mgr.addMarker(marker, 3);
-				var theHtml = '<div class="map_popup"><h2>'+item.label+'<\/h2><img src="'+item.image+'"><\/img><\/div>';
+				//var theHtml = '<div class="map_popup"><a href="/sites/'+5+'"<\/a><\/div>';
+				var theHtml = '<div class="map_popup"><h2><a href="\/sites\/'+item.id+'">'+item.label+'<\/a><\/h2><img src="'+item.image+'"><\/img><\/div>';
 		        var marker = createMarker(point,theHtml, item.type)
 		        map.addOverlay(marker);
 			});

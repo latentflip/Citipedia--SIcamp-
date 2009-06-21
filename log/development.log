@@ -17712,3 +17712,539 @@ Rendered proposals/_list (0.6ms)
   [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
 Rendered comments/_list (0.9ms)
 Completed in 107ms (View: 11, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 13:30:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (1.9ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (2.0ms)
+Completed in 175ms (View: 132, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 13:30:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (1.3ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.9ms)
+Completed in 22ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:30:47) [GET]
+  [4;36;1mSite Load (2.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 26ms (View: 16, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:30:48) [GET]
+  [4;35;1mSite Load (1.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 21ms (View: 3, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:30:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:30:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:31:26) [GET]
+  [4;36;1mSite Load (1.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:31:27) [GET]
+  [4;35;1mSite Load (1.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:31:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:31:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:31:31) [GET]
+  [4;36;1mSite Load (1.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/sites]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 13:31:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSite Load (1.5ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 1) [0m
+Rendered proposals/_list (0.6ms)
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 1) [0m
+Rendered comments/_list (0.7ms)
+Completed in 22ms (View: 11, DB: 2) | 200 OK [http://localhost/sites/1]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:34:58) [GET]
+  [4;36;1mSite Load (1.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 96ms (View: 90, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:35:15) [GET]
+  [4;35;1mSite Load (1.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:35:16) [GET]
+  [4;36;1mSite Load (2.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 17ms (View: 3, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:35:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:35:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:35:18) [GET]
+  [4;35;1mSite Load (1.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:35:22) [GET]
+  [4;36;1mSite Load (1.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:36:23) [GET]
+  [4;35;1mSite Load (1.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 83ms (View: 8, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:36:24) [GET]
+  [4;36;1mSite Load (1.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:36:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:36:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:36:49) [GET]
+  [4;35;1mSite Load (1.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:39:48) [GET]
+  [4;36;1mSite Load (1.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:39:49) [GET]
+  [4;35;1mSite Load (1.3ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 17ms (View: 4, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:39:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:39:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:39:54) [GET]
+  [4;36;1mSite Load (1.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:39:56) [GET]
+  [4;35;1mSite Load (1.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:39:58) [GET]
+  [4;36;1mSite Load (2.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 14ms (View: 2, DB: 3) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:39:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:39:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:40:05) [GET]
+  [4;35;1mSite Load (1.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:40:53) [GET]
+  [4;36;1mSite Load (1.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:40:54) [GET]
+  [4;35;1mSite Load (1.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 19ms (View: 3, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:40:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:41:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:41:21) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 15, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:41:22) [GET]
+  [4;35;1mSite Load (1.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:41:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:41:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:41:31) [GET]
+  [4;36;1mSite Load (1.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:42:28) [GET]
+  [4;35;1mSite Load (1.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 22ms (View: 15, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:42:29) [GET]
+  [4;36;1mSite Load (1.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Completed in 17ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:42:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:42:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:42:34) [GET]
+  [4;35;1mSite Load (2.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 88ms (View: 80, DB: 2) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:42:55) [GET]
+  [4;36;1mSite Load (1.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:43:01) [GET]
+  [4;35;1mSite Load (1.3ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:43:38) [GET]
+  [4;36;1mSite Load (0.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:43:39) [GET]
+  [4;35;1mSite Load (1.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 13ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:43:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:43:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:44:18) [GET]
+  [4;36;1mSite Load (1.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 22ms (View: 15, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:44:19) [GET]
+  [4;35;1mSite Load (1.3ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 3, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:44:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:44:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:45:03) [GET]
+  [4;36;1mSite Load (1.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:45:04) [GET]
+  [4;35;1mSite Load (1.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 15ms (View: 1, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:45:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:45:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:45:30) [GET]
+  [4;36;1mSite Load (1.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:45:31) [GET]
+  [4;35;1mSite Load (1.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 17ms (View: 2, DB: 1) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:45:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:45:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:47:04) [GET]
+  [4;36;1mSite Load (1.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 25ms (View: 18, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#data (for 127.0.0.1 at 2009-06-21 13:47:05) [GET]
+  [4;35;1mSite Load (2.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Completed in 16ms (View: 2, DB: 2) | 200 OK [http://localhost/sites/data.json]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:47:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/commercial-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-21 13:47:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/residential-shadow.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 13:47:10) [GET]
+  [4;36;1mSite Load (1.2ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/sites/]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 13:47:22) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 5) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".site_id = 5) [0m
+Rendered proposals/_list (0.8ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".site_id = 5) [0m
+Rendered comments/_list (0.8ms)
+Completed in 48ms (View: 41, DB: 1) | 200 OK [http://localhost/sites/5]
+
+
+Processing SitesController#show (for 127.0.0.1 at 2009-06-21 13:47:31) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 5) [0m
+Rendering template within layouts/sites
+Rendering sites/show
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".site_id = 5) [0m
+Rendered proposals/_list (0.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".site_id = 5) [0m
+Rendered comments/_list (0.9ms)
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://localhost/sites/5]
