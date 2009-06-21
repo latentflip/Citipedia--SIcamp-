@@ -29,12 +29,20 @@ class SitesController < ApplicationController
     end
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { }# index.html.erb
       format.xml  { render :xml => @sites }
     end
   end
   
   def heatmap
+    @sites = Site.all
+    
+    respond_to do |format|
+      format.html
+    end
+  end
+  
+  def home
     @sites = Site.all
     
     respond_to do |format|

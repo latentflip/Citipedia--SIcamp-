@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Citipedia - making where you live better</title>
+		
+		<link rel="stylesheet" href="/stylesheets/reset.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="/stylesheets/layout.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="/stylesheets/site.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="/stylesheets/cover.css" type="text/css" media="screen" />
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$("#main li h2").each(function(i) {
+				$(this).prepend((i + 1) + '. ');
+			});
+			$('#listings li').addClass('tabbed').click(function() {
+				$('#list');
+			}).eq(0).addClass("active");
+		});
+		</script>
+		
+	</head>
+	<body>
+		<div id="container">
+			
+			<div id="header-home">
+				<h1>Citipedia</h1>
+				<span id="strapline">Making where you live better</span>
+			</div>
+			
+			<div id="intro">
+				<h2>What can I do?</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eros leo, cursus sit amet venenatis sed, 
+				dictum ac ligula. Curabitur consequat elit nulla, eget hendrerit nunc. Nullam mattis mollis quam eu 
+				malesuada. Aenean varius dui sit amet eros commodo aliquet. Phasellus ac dui dui, nec tempor magna. 
+				Donec dolor risus, luctus ac eleifend et, ornare ac nisi. Integer malesuada, lacus quis ultricies lobortis, 
+				eros mauris lobortis justo, ac sodales leo justo eu felis. Sed eu vehicula lorem. Donec at gravida neque.</p>
+			</div>
+			
+			<div id="actions">
+				<%= link_to 'Add a place', new_site_path %>
+			</div>
+			
+			<ol id="main">
+				<li id="identify">
+					<h2>Identify</h2>
+					<p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eros leo, cursus sit amet venenatis sed, 
+					dictum ac ligula. Curabitur consequat elit nulla, eget hendrerit nunc. Nullam mattis mollis quam eu 
+					malesuada. Aenean varius dui sit amet eros commodo aliquet. Phasellus ac dui dui, nec tempor magna. 
+					Donec dolor risus, luctus ac eleifend et, ornare ac nisi.</p>
+					<form id="postcode-search" action="/sites/" method="get">
+						<label for="postcode">Postcode search</label>
+						<input id="postcode" name="postcode" type="text" value="" />
+						<input type="image" value="Go" src="images/go.png" />
+					</form>
+					<form id="keyword-search" action="/sites/" method="get">
+						<label for="tag">Keyword search</label>
+						<input id="tag" name="tag" type="text" value="" />
+						<input type="image" value="Go" src="images/go.png" />
+					</form>
+				</li>
+				<li id="explore">
+					<h2>Explore</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eros leo, cursus sit amet venenatis sed, 
+					dictum ac ligula.</p>
+				</li>
+				<li id="act">
+					<h2>Act</h2>
+					<img src="/images/flash-screenshot.jpg" alt="Screenshot of space design tool" />
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eros leo, cursus sit amet venenatis sed.</p>
+					<a href="#" title="Find out more about our Flash engine">Learn more</a>
+				</li>
+			</ol>
+			
+			<ul id="listings">
+				<li id="top">
+					<h3>Top rated</h3>
+					<ol class="listing">
+						<li>
+							<a href="#"><img src="/images/place-thumb.jpg" alt="A building somehwere" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="/images/place-thumb.jpg" alt="A building somehwere" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="/images/place-thumb.jpg" alt="A building somehwere" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="/images/place-thumb.jpg" alt="A building somehwere" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="/images/place-thumb.jpg" alt="A building somehwere" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="/images/place-thumb.jpg" alt="A building somehwere" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="/images/place-thumb.jpg" alt="A building somehwere" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="/images/place-thumb.jpg" alt="A building somehwere" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="/images/place-thumb.jpg" alt="A building somehwere" /></a>
+						</li>
+					</ol>
+				</li>
+				<li id="recent">
+					<h3>Recent</h3>
+				</li>
+				<li id="myplaces">
+					<h3>My Places</h3>
+				</li>
+			</ul>
+			
+			<div id="footer">
+				Website designed and built by the Citipiedia SI Camp Team &copy; 2009 Citipedia
+			</div>
+		</div>
+	</body>
+</html>

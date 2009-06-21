@@ -1,0 +1,208 @@
+/* =header-home */
+#header-home {
+	width: 100%;
+}
+
+#header-home #strapline {
+	display: none;
+}
+
+#header-home h1, #header-home span#strapline {
+	text-indent: -9999px;
+}
+
+#header-home h1 {
+	width: 335px;
+	height: 274px;
+	background: transparent url(../images/logo.png) no-repeat;
+	margin: 0px auto;
+}
+
+/* =intro */
+#intro {
+	padding: 20px 0px;
+	clear: both;
+	width: 700px;
+	float: left;
+	margin-top: -75px;
+	color: #444;
+}
+
+#intro h2 {
+	font-size: 1.4em;
+	padding-bottom: 10px;
+	color: #00AFEF;
+}
+
+/* =actions */
+#actions {
+	width: 220px;
+	float: right;
+	line-height: 7em;
+	text-align: center;
+	margin-top: -50px;
+}
+
+#actions a {
+	padding: 10px;
+	display: inline-block;
+	border: 1px solid #00AFEF;
+	color: #fff;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	line-height: 1em;
+	font-size: 1.2em;
+	padding-left: 40px;
+	background: #00AFEF url(../images/add-bg.png) no-repeat 10px 9px;
+	text-decoration: none;
+}
+
+/* =main */
+#main {
+	position: relative;
+	clear: both;
+	padding-bottom: 20px;
+}
+
+#main li {
+	float: left;
+}
+
+#main h2 {
+	color: #fff;
+}
+
+/* =identify */
+#identify {
+	width: 690px;
+	border:  5px solid #00AFEF;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	position: relative;
+	background-color: #fff;
+}
+
+#identify h2 {
+	padding: 10px;
+	font-size: 1.8em;
+	background-color: #00AFEF;
+}
+
+#identify form {
+	padding: 20px;
+	float: left;
+	width: 240px;
+	font-size: 1.5em;
+}
+
+#identify input[type="text"] {
+	padding: 5px;
+	float: left;
+}
+
+#identify label {
+	display: block;
+	width: 100%;
+	padding-bottom: 5px;
+}
+
+#identify p.blurb {
+	float: right;
+	width: 360px;
+	margin-top: 20px;
+	padding-right: 20px;
+}
+
+#identify input[type="image"] {
+	height: 100%;
+	padding-left: 5px;
+}
+
+/* =explore, =act */
+#explore, #act {
+	width: 220px;
+	padding: 10px 0px 10px 20px;
+	background-color: #9FDBF9;
+	font-size: 0.8em;
+	color: #494949;
+	font-weight: bold;
+}
+
+#explore h2, #act h2 {
+	font-size: 1.2em;
+	padding-bottom: 5px;
+}
+
+#explore {
+	margin-top: 30px;
+	-moz-border-radius-topright: 20px;
+	-webkit-border-top-right-radius: 20px;
+}
+
+#explore h2 {
+	display: inline-block;
+	height: 23px;
+	line-height: 23px;
+	padding-right: 30px;
+	background: transparent url(../images/explore-bg.png) no-repeat top right;
+}
+
+#act {
+	-moz-border-radius-bottomright: 20px;
+	-webkit-border-bottom-right-radius: 20px;
+}
+
+#act img {
+	float: left;
+	padding-bottom: 5px;
+	padding-right: 5px;
+}
+
+#act a {
+	color: #F04A44;
+	text-decoration: none;
+	padding-top: 5px;
+}
+
+/* =listings */
+#listings {
+	position: relative;
+	padding-top: 45px;
+}
+
+#listings h3 {
+	font-size: 1.2em;
+	padding: 10px;
+	color: #fff;
+	background-color: #31C5F4;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	position: absolute;
+	top: 0px;
+	width: 120px;
+	text-align: center;
+}
+
+#listings .active h3 {
+	background-color: #00AFEF;
+}
+
+#listings #recent h3 {
+	left: 145px;
+}
+
+#listings #myplaces h3 {
+	left: 290px;
+}
+
+#listings .listing {
+	border-top: 2px solid #31C5F4;
+	border-right: 2px solid #31C5F4;
+}
+
+/* =footer */
+#footer {
+	color: #00AFEF;
+	font-size: 0.8em;
+	padding: 20px 0px 50px;
+}

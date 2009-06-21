@@ -1,0 +1,134 @@
+/*  layout.css
+  
+This file should only contain positional styles for key structural elements on
+the page. No typography, colour, background, or other display styles should be
+set here.
+
+Yeah right....
+
+12:30 pm on Sunday means I don't give a fuck...
+
+*/
+
+/* Clear-fix hack for clearing floated elements
+http://www.positioniseverything.net/easyclearing.html */
+.clearfix:after, #main:after, ol.listing:after, #nav:after, #search:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* =container */
+div#container {
+	width:  940px;
+	margin: 0px auto;
+	padding: 10px;
+	position: relative;
+}
+
+/* =header */
+#header h1, #header #strapline {
+	text-indent: -9999px;
+}
+
+#header h1 {
+	width: 321px;
+	height: 78px;
+	background: transparent url(../images/logo-sub.png) no-repeat;
+	float: left;
+}
+
+#header #strapline {
+	display: none;
+}
+
+/* =nav */
+#nav {
+	height: 78px;
+	position: relative;
+	width: 619px;
+}
+
+#nav, #nav li {
+	float: left;
+}
+
+#nav li a {
+	display: block;
+	font-size: 17px;
+	padding: 10px;
+	padding-left: 30px;
+	padding-bottom: 0px;
+	color: #fff;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	text-align: center;
+	text-decoration: none;
+	margin-right: 5px;
+	height: 20px;
+	margin-top: 48px;
+}
+
+#nav li.add a, #nav li.help a {
+	background-color: #31C5F4;
+}
+
+#nav li.add a {
+	background-image: url(../images/add-bg.png);
+	background-repeat: no-repeat;
+	background-position: 5px 5px;
+}
+
+#nav li.find a {
+	background-color: #65D4F7;
+}
+
+#nav li.find a {
+	background-image: url(../images/find-bg.png);
+	background-repeat: no-repeat;
+	background-position: 5px 5px;
+}
+
+#nav li.explore a {
+	background-color: #98E2FA;
+}
+
+#nav li.explore a {
+	background-image: url(../images/explore-bg.png);
+	background-repeat: no-repeat;
+	background-position: 5px 5px;
+}
+
+#nav li.help a {
+	padding-left: 10px;
+	margin-right: 0px;
+}
+
+#nav li.help {
+	float: right;
+	text-transform: uppercase;
+}
+
+/* =content */
+#content {
+	clear: both;
+	border: 10px solid #31C5F4;
+	background-color: #fff;
+}
+
+/* =listing */
+ol.listing {
+}
+
+ol.listing li {
+	padding: 10px;
+	position: relative;
+	float: left;
+}
+
+ol.listing li img {
+	float: left;
+	border: 2px solid #00AFEF;
+}

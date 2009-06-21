@@ -1,0 +1,50 @@
+/* When I figure out what should go here I'll let you know... */
+
+body {
+	font-family: "Helvetic Neue", Helvetica, Arial, sans-serif;
+	background: #FDE990 url(../images/bg.jpg) repeat-x;
+}
+
+/* =search */
+#search {
+	margin: 5px;
+	background: transparent url(../images/search-bg.png) no-repeat;
+	font-size: 17px;
+	line-height: 17px;
+}
+
+#search h2, #search label, #search input {
+	float: left;
+	height: 17px;
+	padding: 4px;
+}
+
+#search label {
+	display: none; /* cheat */
+}
+
+#search h2 {
+	width: 317px;
+	color: #fff;
+	margin-right: 10px;
+}
+
+#search input[type="text"] {
+	width: 160px;
+}
+
+#search input[type="image"] {
+	height: 23px;
+	width: 23px;
+	padding-right: 20px;
+}
+
+/* =footer */
+#footer {
+	color: #31C5F4;
+	background-color: #fff;
+	border: 10px solid #31C5F4;
+	border-top: none;
+	font-size: 0.8em;
+	padding: 10px;
+}

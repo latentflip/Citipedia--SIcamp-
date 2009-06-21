@@ -1,5 +1,4 @@
-<% content_for :head do %>
-	<# javascript_include_tag 'mmanager.js' %>
+<% content_for :head do %>	
 	
 	<script type="text/javascript">
 
@@ -32,13 +31,13 @@
 
 
 	function setupMap() {
-	  if (GBrowserIsCompatible()) {
+	  //if (GBrowserIsCompatible()) {
 	    map = new GMap2(document.getElementById("map"));
 	    map.addControl(new GLargeMapControl());
 	    map.setCenter(new GLatLng(55.8667230193505, -4.24999237060547), 13);
 	    map.enableDoubleClickZoom();
 	    window.setTimeout(setupWeatherMarkers, 0);
-	  }
+	  //}
 	}
 
 	function getWeatherIcon(name) {
@@ -106,32 +105,39 @@
 	
 <% end %>
 
-<table>
-  <tr>
-    <th>Latitude</th>
-    <th>Longitude</th>
-    <th>Description</th>
-  </tr>
-
-<% @sites.each do |site| %>
-  <tr>
-    <td><%=h site.latitude %></td>
-    <td><%=h site.longitude %></td>
-    <td><%=h site.description %></td>
-    <td><%= link_to 'Show', site %></td>
-    <td><%= link_to 'Edit', edit_site_path(site) %></td>
-    <td><%= link_to 'Destroy', site, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New site', new_site_path %>
-
-<br /><br /><br /><br /><br />
-
-
-<div id="map" style="margin: 5px auto; width: 650px; height: 400px"></div>
+<div id="container">
+	
+	<div id="header">
+		<h1>Citipedia</h1>
+		<span id="strapline">Making where you live better</span>
+	</div>
+	
+	<!-- template starts here -->
+	
+	<!-- common nav -->
+	<ul id="nav">
+		<li class="add"><a href="#">Add a place</a></li>
+		<li class="find"><a href="#">Find a place</a></li>
+		<li class="explore"><a href="#">Explore area</a></li>
+		<li class="help"><a href="#">Help</a></li>
+	</ul>
+	
+	<div id="content">
+		<div id="search">
+			<h2>Start a new search</h2>
+			<form id="postcode-search" action="" method="get">
+				<label for="postcode">Postcode search</label>
+				<input id="postcode" name="postcode" type="text" value="Postcode search" />
+				<input type="image" value="Go" src="images/go.png" />
+			</form>
+			<form id="keyword-search" action="" method="get">
+				<label for="p">Keyword search</label>
+				<input id="p" name="p" type="text" value="Keyword search" />
+				<input type="image" value="Go" src="images/go.png" />
+			</form>
+		</div>
+		
+		<div id="map" style="margin: 5px auto; width: 800px; height: 400px"></div>
+	</div>
 
 
