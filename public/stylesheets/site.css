@@ -48,3 +48,48 @@ body {
 	font-size: 0.8em;
 	padding: 10px;
 }
+
+#add-place {
+	background-color: #31C5F4;
+	width: 340px;
+}
+
+#add-place form {
+	padding: 10px;
+}
+
+#add-place h2 {
+	color: #fff;
+	border-bottom: 2px solid #fff;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+#add-place label {
+	font-size: 0.8em;
+	width: 100px;
+	display: inline-block;
+}
+
+#add-place input[type="text"] {
+	width: 200px;
+}
+
+#add-place #name label {
+	width: 100%;
+}
+
+#add-place #name input[type="text"] {
+	width: 310px;
+	font-size: 1.2em;
+	padding: 5px;
+}
+
+#add-place p {
+	margin-bottom: 10px;
+}
+
+#add-place textarea {
+	width: 320px;
+	height: 250px;
+}

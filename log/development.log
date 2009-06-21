@@ -19672,3 +19672,146 @@ Processing SitesController#new (for 127.0.0.1 at 2009-06-21 14:34:42) [GET]
 Rendering template within layouts/sites
 Rendering sites/new
 Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 14:36:09) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 50ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 14:36:12) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 14:38:35) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#new (for 127.0.0.1 at 2009-06-21 14:38:37) [GET]
+Rendering template within layouts/sites
+Rendering sites/new
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/sites/new]
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:40:05) [GET]
+  [4;36;1mSite Load (1.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:40:34) [GET]
+  [4;35;1mSite Load (1.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:40:35) [GET]
+  [4;36;1mSite Load (1.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 8ms (View: 1, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:42:39) [GET]
+  [4;35;1mSite Load (1.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 82ms (View: 75, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:42:40) [GET]
+  [4;36;1mSite Load (1.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:43:17) [GET]
+  [4;35;1mSite Load (1.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:43:17) [GET]
+  [4;36;1mSite Load (1.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:43:50) [GET]
+  [4;35;1mSite Load (1.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:43:50) [GET]
+  [4;36;1mSite Load (1.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:44:33) [GET]
+  [4;35;1mSite Load (1.0ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 77ms (View: 72, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:44:34) [GET]
+  [4;36;1mSite Load (1.0ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:44:44) [GET]
+  [4;35;1mSite Load (1.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:44:44) [GET]
+  [4;36;1mSite Load (1.1ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:44:57) [GET]
+  [4;35;1mSite Load (1.2ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:45:17) [GET]
+  [4;36;1mSite Load (1.2ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:45:52) [GET]
+  [4;35;1mSite Load (1.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:46:05) [GET]
+  [4;36;1mSite Load (1.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/]
