@@ -19815,3 +19815,34 @@ Processing SitesController#home (for 127.0.0.1 at 2009-06-21 14:46:05) [GET]
 Rendering template within layouts/sites
 Rendering sites/home
 Completed in 8ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 19:48:58) [GET]
+  Parameters: {"postcode"=>"", "x"=>"9", "y"=>"18"}
+  [4;35;1mSite Load (1.9ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/sites/?postcode=&x=9&y=18]
+
+
+Processing SitesController#images to png (for 127.0.0.1 at 2009-06-21 19:48:58) [GET]
+  Parameters: {"id"=>"go"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, data, destroy, edit, heatmap, home, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#home (for 127.0.0.1 at 2009-06-21 23:11:18) [GET]
+  [4;36;1mSite Load (1.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/home
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing SitesController#index (for 127.0.0.1 at 2009-06-21 23:11:31) [GET]
+  [4;35;1mSite Load (3.1ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/sites
+Rendering sites/index
+Completed in 11ms (View: 1, DB: 3) | 200 OK [http://127.0.0.1/sites]
